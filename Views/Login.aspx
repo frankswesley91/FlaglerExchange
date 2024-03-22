@@ -76,7 +76,9 @@ nav li a.indexNava:hover{
 /*CSS FOR LOGIN/PASSWORD FEATURE*/
 body {
     font-family: 'Times New Roman';
-    
+    justify-content: center;
+    align-items: center;
+  
 }
 
 .login-container {
@@ -162,20 +164,23 @@ aside {
 
 <!---------------------------------------Login and Password Portion--------------------------------------------->
 
-    <body>
+    
+     <body>   
     <div class="login-container">
-        <h1 "justify-content:left">Login</h1>
+        <h1>Login</h1>
         
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Please enter your Email:" required>
-            <p></p>
+            <input type="text" id="username" name="username" placeholder="Please enter your Flagler Email:" required>
+            <br />
+            <br />
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Please enter your Password:" required>
-            <p></p>
+            <input type="password" id="password" name="password" placeholder="Please enter your Flagler Password:" required>
+            <br />
+            <br />
             <button type="submit">Login</button>
-        
     </div>
-</body>
+
+    </body>
 
 
 

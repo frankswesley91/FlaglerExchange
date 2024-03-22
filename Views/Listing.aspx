@@ -85,5 +85,12 @@ nav li a.indexNava:hover{
         <li class="indexNavList"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
     </ul>
 </nav>
+
+<!---------------------------------------------- Main Body Content for this page--------------------------------------->
+    <body>
+        <p style="font-size:xx-large">
+            KILLIAN
+        </p>
+    </body>
 </asp:Content>
 
