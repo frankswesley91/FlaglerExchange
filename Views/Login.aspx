@@ -29,6 +29,7 @@ html {
 body {
   margin-bottom: 60px;
   background-color: #9e2339;
+  
 }
  .title{
     font-family: 'Times New Roman', Times, serif;
@@ -86,6 +87,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-style: groove;
+    
 }
 
 h1 {
@@ -93,10 +95,7 @@ h1 {
     color: #333333;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
+
 
 label {
     margin-top: 10px;
@@ -108,6 +107,7 @@ input[type="password"] {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 3px;
+    width: 700px;
 }
 
 button[type="submit"] {
@@ -115,36 +115,37 @@ button[type="submit"] {
     padding: 10px;
     background-color: #fdb924;
     color: #ffffff;
-    border: none;
-    border-radius: 3px;
+    border:solid;
+    border-radius: 10px;
     cursor: pointer;
+  
+
+
+   
+ 
+
 }
 
     button[type="submit"]:hover {
         background-color: #9e2339;
+        
     }
 
+   
     /*IMAGE CSS*/
-img.FlaglerImage1 {
-    display: block;
-    float:left;
-    margin-left: auto;
-    margin-right: auto;
+
+aside {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  justify-content: center;
 }
 
-
-img.FlaglerImage2 {
-    display:block;
-    margin-left: auto;
-    max-width: auto;
-}
 </style>
 
     <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
 <div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
-    <!--WHY IS NOTHING CONNECTING HAHAHAHAHHA! IM LOSING MY MIND!!!! :D-->
-    <img src="Images/Flagler.jpeg" alt="Flagler Logo"/>
+    <img src="Flagler.jpeg" alt="Flagler Logo"/>
     <p class="slogan"style="color:white">An easy platform to trade your items!</p>
 </div>
 
@@ -162,26 +163,23 @@ img.FlaglerImage2 {
 <!---------------------------------------Login and Password Portion--------------------------------------------->
 
     <body>
-    <div class="FlaglerImage1">
+    <aside>
     <!--Flagler Picture #1-->
-    <img src="Images/Flaglerlogo.jpeg" alt="FLAGLERIMAGE1" />
-    <img src="Images/Flaglerlogo.jpeg" alt="FLAGLERIMAGE2" />
-    </div>
+    <img src="Flaglerlogo.jpeg" alt="FLAGLERIMAGE1" />
+    </aside>
+    
 
-    <div class="FlaglerImage2"
-    <img src="Images/Flaglerlogo.jpeg" alt="FLAGLERIMAGE2" />
-    </div>
     <div class="login-container">
-        <h1>Login</h1>
-        <form>
+        <h1 "justify-content:left">Login</h1>
+        
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Please enter your Flagler Email:" required>
-
+            <input type="text" id="username" name="username" placeholder="Please enter your Email:" required>
+            <p></p>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Please enter your Flagler Password:" required>
-
+            <input type="password" id="password" name="password" placeholder="Please enter your Password:" required>
+            <p></p>
             <button type="submit">Login</button>
-        </form>
+        
     </div>
 </body>
 
