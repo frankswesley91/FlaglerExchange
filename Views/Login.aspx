@@ -154,9 +154,9 @@ aside {
     <ul class="indexNavUL">
         <!--Why are the links not working again?-->
         <li class="indexNavList"><a class="indexNava" href="/Views/Home.aspx">Home</a></li>
-        <li class="indexNavList"><a class="indexNava" href="Components/Login.razor">Login</a></li>
-        <li class="indexNavList"><a class="indexNava" href="Components/Listing.razor">List</a></li>
-        <li class="indexNavList"><a class="indexNava" href="Components/Profile.razor">Profile</a></li>
+        <li class="indexNavList"><a class="indexNava" href="/Views/Login.aspx">Login</a></li>
+        <li class="indexNavList"><a class="indexNava" href="/Views/Listing.aspx">List</a></li>
+        <li class="indexNavList"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
     </ul>
 </nav>
 
@@ -165,7 +165,7 @@ aside {
     <body>
     <aside>
     <!--Flagler Picture #1-->
-    <img src="Flaglerlogo.jpeg" alt="FLAGLERIMAGE1" />
+    <img src="Images/Flaglerlogo.jpeg" alt="FLAGLERIMAGE1" />
     </aside>
     
 
