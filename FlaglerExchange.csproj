@@ -124,6 +124,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Flagler.jpeg" />
+    <Content Include="Images\Flaglerlogo.jpeg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -277,7 +279,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
