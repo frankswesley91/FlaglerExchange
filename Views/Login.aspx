@@ -145,7 +145,7 @@ aside {
     <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
 <div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
-    <img src="Flagler.jpeg" alt="Flagler Logo"/>
+    <img src="/Images/Flagler.jpeg" alt="Flagler Logo"/>
     <p class="slogan"style="color:white">An easy platform to trade your items!</p>
 </div>
 
@@ -163,12 +163,6 @@ aside {
 <!---------------------------------------Login and Password Portion--------------------------------------------->
 
     <body>
-    <aside>
-    <!--Flagler Picture #1-->
-    <img src="Images/Flaglerlogo.jpeg" alt="FLAGLERIMAGE1" />
-    </aside>
-    
-
     <div class="login-container">
         <h1 "justify-content:left">Login</h1>
         

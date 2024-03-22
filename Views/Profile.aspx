@@ -72,7 +72,7 @@ nav li a.indexNava:hover{
 
     <div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
-    <img src="Flagler.jpeg" alt="Flagler Logo"/>
+    <img src="/Images/Flagler.jpeg" alt="Flagler Logo"/>
     <p class="slogan"style="color:white">An easy platform to trade your items!</p>
 </div>
 
