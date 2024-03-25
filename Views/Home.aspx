@@ -66,6 +66,21 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
+/*Search Button CSS*/
+button.Search{
+     margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: #ffffff;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ button.Search:hover {
+        background-color: #9e2339;
+        
+    }
 
     </style>
 
@@ -79,17 +94,25 @@ nav li a.indexNava:hover{
 <!--Basic Nav bar allowing for the navigation to different parts of the site (THIS WILL BE CHANGED OBVIOUSLY)-->
 <nav class="indexNav">
     <ul class="indexNavUL">
-        <li class="indexNavList"><a class="indexNava" href="/Views/Home.aspx">Home</a></li>
-        <li class="indexNavList"><a class="indexNava" href="/Views/Login.aspx">Login</a></li>
-        <li class="indexNavList"><a class="indexNava" href="/Views/Listing.aspx">List</a></li>
-        <li class="indexNavList"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
+        <li class="indexNavList">
+            <a href="/Views/Home.aspx">
+            <img src="/Images/FlaglerExchangeLogo.png" style="border-style:groove" width="80" height="75" alt="Home">
+            </a>
+        </li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Login.aspx">Login</a></li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Listing.aspx">List</a></li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
     </ul>
 </nav>
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
-        <p style="font-size:xx-large">
-            TBD, probably wesley when he is done with login.
+        <p style="font-size:xx-large; font-family:'Times New Roman'">
+            Welcome back, "StudentName"
         </p>
+        <div>
+            <input type="text" placeholder="Search..." name="search">
+            <button class="Search"type="submit">Search</button>
+        </div>
     </body>
 </asp:Content>
