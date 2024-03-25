@@ -82,6 +82,41 @@ button.Search{
         
     }
 
+
+
+
+ /*Product CSS*/
+ .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 1 0 300px; /* Adjust the width as needed */
+  margin: 10px;
+  text-align: center;
+}
+
+img.Product {
+  max-width: 100%;
+  height: auto;
+
+}
+
+.more-info {
+   margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: #ffffff;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button.more-info:hover{
+    background-color: #9e2339;
+}
     </style>
 
 
@@ -114,5 +149,34 @@ button.Search{
             <input type="text" placeholder="Search..." name="search">
             <button class="Search"type="submit">Search</button>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <!----------------------------IMAGES OF THE PRODUCTS AND THEIR MORE INFO BUTTONS!--------------------------------->
+
+
+        <!--Row #1-->
+     <div class="row">
+        <div class="column">
+             <img class="Product" src="product1.jpg" alt="Product 1">
+             <button class="more-info">More Info</button>
+        </div>
+        <div class="column">
+             <img class="Product" src="product2.jpg" alt="Product 2">
+             <button class="more-info">More Info</button>
+        </div>
+        <div class="column">
+             <img class="Product" src="product3.jpg" alt="Product 3">
+             <button class="more-info">More Info</button>
+       </div>
+   </div>
+
+
+
+
+
+
+
     </body>
 </asp:Content>
