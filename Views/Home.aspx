@@ -66,6 +66,21 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
+/*Search Button CSS*/
+button.Search{
+     margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: #ffffff;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+ button.Search:hover {
+        background-color: #9e2339;
+        
+    }
 
     </style>
 
@@ -92,8 +107,12 @@ nav li a.indexNava:hover{
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
-        <p style="font-size:xx-large">
-            TBD, probably wesley when he is done with login.
+        <p style="font-size:xx-large; font-family:'Times New Roman'">
+            Welcome back, "StudentName"
         </p>
+        <div>
+            <input type="text" placeholder="Search..." name="search">
+            <button class="Search"type="submit">Search</button>
+        </div>
     </body>
 </asp:Content>

@@ -120,12 +120,6 @@ button[type="submit"] {
     border:solid;
     border-radius: 10px;
     cursor: pointer;
-  
-
-
-   
- 
-
 }
 
     button[type="submit"]:hover {
