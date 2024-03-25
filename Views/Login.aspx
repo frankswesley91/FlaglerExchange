@@ -157,12 +157,12 @@ aside {
         <!--Image logo that sends the user to the home screen!-->
         <li class="indexNavList">
             <a href="/Views/Home.aspx">
-            <img src="/Images/FlaglerExchangeLogo.png" style="border-style:groove" width="80" height="70" alt="Home">
+            <img src="/Images/FlaglerExchangeLogo.png" style="border-style:groove" width="80" height="75" alt="Home">
             </a>
         </li>
-        <li class="indexNavList"><a class="indexNava" href="/Views/Login.aspx">Login</a></li>
-        <li class="indexNavList"><a class="indexNava" href="/Views/Listing.aspx">List</a></li>
-        <li class="indexNavList"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Login.aspx">Login</a></li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Listing.aspx">List</a></li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
     </ul>
 </nav>
 
@@ -181,7 +181,8 @@ aside {
             <input type="password" id="password" name="password" placeholder="Please enter your Flagler Password:" required>
             <br />
             <br />
-            <button type="submit">Login</button>
+            <!--SOMEONE PLEASE HELP ME WITH THIS BUTTON SOS, IT WONT CENTER :( -->
+            <button type="submit" style="display: inline-block; margin: 0 auto;">Login</button>
     </div>
 
     </body>
