@@ -170,11 +170,39 @@ button.more-info:hover{
              <img class="Product" src="product3.jpg" alt="Product 3">
              <button class="more-info">More Info</button>
        </div>
-   </div>
+    </div>
 
+        <!--Row #2-->
+      <div class="row">
+        <div class="column">
+             <img class="Product" src="product1.jpg" alt="Product 4">
+             <button class="more-info">More Info</button>
+        </div>
+        <div class="column">
+             <img class="Product" src="product2.jpg" alt="Product 5">
+             <button class="more-info">More Info</button>
+        </div>
+        <div class="column">
+             <img class="Product" src="product3.jpg" alt="Product 6">
+             <button class="more-info">More Info</button>
+        </div>
+     </div>
 
-
-
+        <!--Row #3-->
+      <div class="row">
+        <div class="column">
+             <img class="Product" src="product1.jpg" alt="Product 7">
+             <button class="more-info">More Info</button>
+        </div>
+        <div class="column">
+             <img class="Product" src="product2.jpg" alt="Product 8">
+             <button class="more-info">More Info</button>
+        </div>
+        <div class="column">
+             <img class="Product" src="product3.jpg" alt="Product 9">
+             <button class="more-info">More Info</button>
+        </div>
+      </div>
 
 
 
