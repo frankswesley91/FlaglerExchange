@@ -154,8 +154,12 @@ aside {
 <!--Basic Nav bar allowing for the navigation to different parts of the site (THIS WILL BE CHANGED OBVIOUSLY)-->
 <nav class="indexNav">
     <ul class="indexNavUL">
-        <!--Why are the links not working again?-->
-        <li class="indexNavList"><a class="indexNava" href="/Views/Home.aspx">Home</a></li>
+        <!--Image logo that sends the user to the home screen!-->
+        <li class="indexNavList">
+            <a href="/Views/Home.aspx">
+            <img src="/Images/FlaglerExchangeLogo.png" style="border-style:groove" width="80" height="70" alt="Home">
+            </a>
+        </li>
         <li class="indexNavList"><a class="indexNava" href="/Views/Login.aspx">Login</a></li>
         <li class="indexNavList"><a class="indexNava" href="/Views/Listing.aspx">List</a></li>
         <li class="indexNavList"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
@@ -181,9 +185,5 @@ aside {
     </div>
 
     </body>
-
-
-
-
 
 </asp:Content>
