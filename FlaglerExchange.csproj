@@ -124,6 +124,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Cat.jpeg" />
     <Content Include="Images\Flagler.jpeg" />
     <Content Include="Images\FlaglerExchangeLogo.png" />
     <Content Include="Images\Flaglerlogo.jpeg" />

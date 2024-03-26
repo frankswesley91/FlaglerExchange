@@ -241,15 +241,15 @@ button:hover {
         <!--Row #1-->
      <div class="row">
         <div class="column">
-             <img class="Product" src="product1.jpg" alt="Product 1">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 1">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product2.jpg" alt="Product 2">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 2">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product3.jpg" alt="Product 3">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 3">
              <button class="more-info">More Info</button>
        </div>
     </div>
@@ -257,15 +257,15 @@ button:hover {
         <!--Row #2-->
       <div class="row">
         <div class="column">
-             <img class="Product" src="product1.jpg" alt="Product 4">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 4">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product2.jpg" alt="Product 5">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 5">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product3.jpg" alt="Product 6">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 6">
              <button class="more-info">More Info</button>
         </div>
      </div>
@@ -273,15 +273,15 @@ button:hover {
         <!--Row #3-->
       <div class="row">
         <div class="column">
-             <img class="Product" src="product1.jpg" alt="Product 7">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 7">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product2.jpg" alt="Product 8">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 8">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product3.jpg" alt="Product 9">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 9">
              <button class="more-info">More Info</button>
         </div>
       </div>
