@@ -1,7 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Listing.aspx.cs" Inherits="FlaglerExchange.Views.Listing" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateAccount.aspx.cs" Inherits="FlaglerExchange.Views.CreateAccount" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
-        html {
+
+
+
+
+
+
+
+    
+
+<style>
+
+/*BASE HTML CSS!*/
+html {
   font-size: 14px;
 }
 
@@ -67,10 +78,46 @@ nav li a.indexNava:hover{
     color: white;
 }
 
-    </style>
+
+/*CSS FOR LOGIN/PASSWORD FEATURE*/
+body {
+    font-family: 'Times New Roman';
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.login-container {
+    width: 500px;
+    margin: 200px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-style: groove;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
 
 
-    <div class="text-center">
+
+   
+    /*IMAGE CSS*/
+
+aside {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+</style>
+
+    <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
+<div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
     <img src="/Images/Flagler.jpeg" alt="Flagler Logo"/>
     <p class="slogan"style="color:white">An easy platform to trade your items!</p>
@@ -79,6 +126,7 @@ nav li a.indexNava:hover{
 <!--Basic Nav bar allowing for the navigation to different parts of the site (THIS WILL BE CHANGED OBVIOUSLY)-->
 <nav class="indexNav">
     <ul class="indexNavUL">
+        <!--Image logo that sends the user to the home screen!-->
         <li class="indexNavList">
             <a href="/Views/Home.aspx">
             <img src="/Images/FlaglerExchangeLogo.png" style="border-style:groove" width="80" height="75" alt="Home">
@@ -90,11 +138,7 @@ nav li a.indexNava:hover{
     </ul>
 </nav>
 
-<!---------------------------------------------- Main Body Content for this page--------------------------------------->
-    <body>
-        <p style="font-size:xx-large">
-            KILLIAN
-        </p>
-    </body>
-</asp:Content>
 
+
+
+</asp:Content>
