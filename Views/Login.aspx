@@ -177,7 +177,16 @@ aside {
             <br />
             <br />
             <!--SOMEONE PLEASE HELP ME WITH THIS BUTTON SOS, IT WONT CENTER :( -->
+            
+
+            <!--submit sends you to home screen-->
+            <a href="Home.aspx">
             <button type="submit" style="display: inline-block; margin: 0 auto;">Login</button>
+            </a> 
+            <!--create account sends you to the create account page screen-->
+            <a href="CreateAccount.aspx">
+            <button type="submit" style="display: inline-block; margin: 0 auto;">Create Account</button>
+            </a>
     </div>
 
     </body>
