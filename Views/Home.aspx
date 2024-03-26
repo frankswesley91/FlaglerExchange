@@ -75,6 +75,7 @@ button.Search{
     border:solid;
     border-radius: 10px;
     cursor: pointer;
+    font-family: 'Times New Roman';
 }
 
  button.Search:hover {
@@ -112,6 +113,7 @@ img.Product {
     border:solid;
     border-radius: 10px;
     cursor: pointer;
+    font-family: 'Times New Roman';
 }
 
 button.more-info:hover{
@@ -156,7 +158,9 @@ button.ApplyFilter {
     color: #ffffff;
     border:solid;
     border-radius: 10px;
+    border-color: black;
     cursor: pointer;
+    font-family: 'Times New Roman';
 }
 
 button:hover {
