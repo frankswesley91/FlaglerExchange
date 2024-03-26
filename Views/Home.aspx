@@ -66,7 +66,7 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
-/*Search Button CSS*/
+/*-----------------Search Button CSS---------------------*/
 button.Search{
      margin-top: 20px;
     padding: 10px;
@@ -85,7 +85,7 @@ button.Search{
 
 
 
- /*Product CSS*/
+ /*-------------Product CSS-------------------------------*/
  .row {
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +117,55 @@ img.Product {
 button.more-info:hover{
     background-color: #9e2339;
 }
-    </style>
+
+
+
+/*-------------------------Category css TENTATIVE-----------------------*/
+
+
+.sidebar {
+    font-family: 'Times New Roman';
+    width: 250px;
+    background-color: #fdb924;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.main-content {
+    margin-left: 270px; /* Adjust this margin according to your sidebar width */
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.checkbox {
+    margin-bottom: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button.ApplyFilter {
+   margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: #ffffff;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+     background-color: #9e2339;
+}
+
+
+</style>
+
 
 
     <div class="text-center">
@@ -142,7 +190,7 @@ button.more-info:hover{
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
-        <p style="font-size:xx-large; font-family:'Times New Roman'">
+        <p style="font-size:xx-large; font-family:'Times New Roman'; color: white">
             Welcome back, "StudentName"
         </p>
         <div>
@@ -153,7 +201,37 @@ button.more-info:hover{
         <br />
         <br />
         <br />
-        <!----------------------------IMAGES OF THE PRODUCTS AND THEIR MORE INFO BUTTONS!--------------------------------->
+
+
+        <!------------------------------Category Filtration-------------------------------------------------------------->
+     
+
+    <div class="sidebar">
+        <h2>Filter Products</h2>
+        <form id="filterForm">
+            <div class="checkbox">
+                <input type="checkbox" id="category1" name="category" value="category1">
+                <label for="category1">Category 1</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="category2" name="category" value="category2">
+                <label for="category2">Category 2</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="category3" name="category" value="category3">
+                <label for="category3">Category 3</label>
+            </div>
+            <!-- Add more checkboxes as needed -->
+            <button class="ApplyFilter" type="submit">Apply Filter</button>
+        </form>
+    </div>
+    <div class="main-content">
+        <!-- Your main content goes here -->
+    </div>
+
+
+
+ <!----------------------------IMAGES OF THE PRODUCTS AND THEIR MORE INFO BUTTONS!--------------------------------->
 
 
         <!--Row #1-->
