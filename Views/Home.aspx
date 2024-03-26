@@ -213,17 +213,85 @@ button:hover {
     <div class="sidebar">
         <h2>Filter Products</h2>
         <form id="filterForm">
+            <!----Filter#1------>
             <div class="checkbox">
                 <input type="checkbox" id="category1" name="category" value="category1">
-                <label for="category1">Category 1</label>
+                <label for="category1">Electronics</label>
             </div>
+            <!----Filter#2------>
             <div class="checkbox">
                 <input type="checkbox" id="category2" name="category" value="category2">
-                <label for="category2">Category 2</label>
+                <label for="category2">Pets</label>
             </div>
+            <!----Filter#3------>
             <div class="checkbox">
                 <input type="checkbox" id="category3" name="category" value="category3">
-                <label for="category3">Category 3</label>
+                <label for="category3">Books</label>
+            </div>
+            <!----Filter#4------>
+             <div class="checkbox">
+                <input type="checkbox" id="category4" name="category" value="category3">
+                <label for="category3">Furniture</label>
+            </div>
+            <!----Filter#5------>
+             <div class="checkbox">
+                <input type="checkbox" id="category5" name="category" value="category3">
+                <label for="category3">Tools</label>
+            </div>
+            <!----Filter#6------>
+             <div class="checkbox">
+                <input type="checkbox" id="category6" name="category" value="category3">
+                <label for="category3">Games</label>
+            </div>
+            <!----Filter#7------>
+             <div class="checkbox">
+                <input type="checkbox" id="category7" name="category" value="category3">
+                <label for="category3">Clothing</label>
+            </div>
+            <!----Filter#8------>
+             <div class="checkbox">
+                <input type="checkbox" id="category8" name="category" value="category3">
+                <label for="category3">Vehicles</label>
+            </div>
+            <!----Filter#9------>
+             <div class="checkbox">
+                <input type="checkbox" id="category9" name="category" value="category3">
+                <label for="category3">Tools</label>
+            </div>
+            <!----Filter#10------>
+             <div class="checkbox">
+                <input type="checkbox" id="category10" name="category" value="category3">
+                <label for="category3">Games</label>
+            </div>
+            <!----Filter#11------>
+             <div class="checkbox">
+                <input type="checkbox" id="category11" name="category" value="category3">
+                <label for="category3">Clothing</label>
+            </div>
+            <!----Filter#12------>
+             <div class="checkbox">
+                <input type="checkbox" id="category12" name="category" value="category3">
+                <label for="category3">Vehicles</label>
+            </div>
+            <!----Filter#13------>
+             <div class="checkbox">
+                <input type="checkbox" id="category9" name="category" value="category3">
+                <label for="category3">Tools</label>
+            </div>
+            <!----Filter#14------>
+             <div class="checkbox">
+                <input type="checkbox" id="category10" name="category" value="category3">
+                <label for="category3">Games</label>
+            </div>
+            <!----Filter#15------>
+             <div class="checkbox">
+                <input type="checkbox" id="category11" name="category" value="category3">
+                <label for="category3">Clothing</label>
+            </div>
+            <!----Filter#16------>
+             <div class="checkbox">
+                <input type="checkbox" id="category12" name="category" value="category3">
+                <label for="category3">Vehicles</label>
             </div>
             <!-- Add more checkboxes as needed -->
             <button class="ApplyFilter" type="submit">Apply Filter</button>
