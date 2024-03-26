@@ -186,9 +186,9 @@ button:hover {
             <img src="/Images/FlaglerExchangeLogo.png" style="border-style:groove" width="80" height="75" alt="Home">
             </a>
         </li>
-        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Login.aspx">Login</a></li>
-        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Listing.aspx">List</a></li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Listing.aspx">My Listings</a></li>
         <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
+        <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Login.aspx">Logout</a></li>
     </ul>
 </nav>
 
@@ -198,7 +198,7 @@ button:hover {
             Welcome back, "StudentName"
         </p>
         <div>
-            <input type="text" placeholder="Search..." name="search">
+            <input type="text"placeholder="Search..." name="search">
             <button class="Search"type="submit">Search</button>
         </div>
         <br />
@@ -213,17 +213,85 @@ button:hover {
     <div class="sidebar">
         <h2>Filter Products</h2>
         <form id="filterForm">
+            <!----Filter#1------>
             <div class="checkbox">
                 <input type="checkbox" id="category1" name="category" value="category1">
-                <label for="category1">Category 1</label>
+                <label for="category1">Electronics</label>
             </div>
+            <!----Filter#2------>
             <div class="checkbox">
                 <input type="checkbox" id="category2" name="category" value="category2">
-                <label for="category2">Category 2</label>
+                <label for="category2">Pets</label>
             </div>
+            <!----Filter#3------>
             <div class="checkbox">
                 <input type="checkbox" id="category3" name="category" value="category3">
-                <label for="category3">Category 3</label>
+                <label for="category3">Books</label>
+            </div>
+            <!----Filter#4------>
+             <div class="checkbox">
+                <input type="checkbox" id="category4" name="category" value="category3">
+                <label for="category3">Furniture</label>
+            </div>
+            <!----Filter#5------>
+             <div class="checkbox">
+                <input type="checkbox" id="category5" name="category" value="category3">
+                <label for="category3">Tools</label>
+            </div>
+            <!----Filter#6------>
+             <div class="checkbox">
+                <input type="checkbox" id="category6" name="category" value="category3">
+                <label for="category3">Games</label>
+            </div>
+            <!----Filter#7------>
+             <div class="checkbox">
+                <input type="checkbox" id="category7" name="category" value="category3">
+                <label for="category3">Clothing</label>
+            </div>
+            <!----Filter#8------>
+             <div class="checkbox">
+                <input type="checkbox" id="category8" name="category" value="category3">
+                <label for="category3">Vehicles</label>
+            </div>
+            <!----Filter#9------>
+             <div class="checkbox">
+                <input type="checkbox" id="category9" name="category" value="category3">
+                <label for="category3">Tools</label>
+            </div>
+            <!----Filter#10------>
+             <div class="checkbox">
+                <input type="checkbox" id="category10" name="category" value="category3">
+                <label for="category3">Games</label>
+            </div>
+            <!----Filter#11------>
+             <div class="checkbox">
+                <input type="checkbox" id="category11" name="category" value="category3">
+                <label for="category3">Clothing</label>
+            </div>
+            <!----Filter#12------>
+             <div class="checkbox">
+                <input type="checkbox" id="category12" name="category" value="category3">
+                <label for="category3">Vehicles</label>
+            </div>
+            <!----Filter#13------>
+             <div class="checkbox">
+                <input type="checkbox" id="category9" name="category" value="category3">
+                <label for="category3">Tools</label>
+            </div>
+            <!----Filter#14------>
+             <div class="checkbox">
+                <input type="checkbox" id="category10" name="category" value="category3">
+                <label for="category3">Games</label>
+            </div>
+            <!----Filter#15------>
+             <div class="checkbox">
+                <input type="checkbox" id="category11" name="category" value="category3">
+                <label for="category3">Clothing</label>
+            </div>
+            <!----Filter#16------>
+             <div class="checkbox">
+                <input type="checkbox" id="category12" name="category" value="category3">
+                <label for="category3">Vehicles</label>
             </div>
             <!-- Add more checkboxes as needed -->
             <button class="ApplyFilter" type="submit">Apply Filter</button>
@@ -241,15 +309,15 @@ button:hover {
         <!--Row #1-->
      <div class="row">
         <div class="column">
-             <img class="Product" src="product1.jpg" alt="Product 1">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 1">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product2.jpg" alt="Product 2">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 2">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product3.jpg" alt="Product 3">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 3">
              <button class="more-info">More Info</button>
        </div>
     </div>
@@ -257,15 +325,15 @@ button:hover {
         <!--Row #2-->
       <div class="row">
         <div class="column">
-             <img class="Product" src="product1.jpg" alt="Product 4">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 4">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product2.jpg" alt="Product 5">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 5">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product3.jpg" alt="Product 6">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 6">
              <button class="more-info">More Info</button>
         </div>
      </div>
@@ -273,15 +341,15 @@ button:hover {
         <!--Row #3-->
       <div class="row">
         <div class="column">
-             <img class="Product" src="product1.jpg" alt="Product 7">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 7">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product2.jpg" alt="Product 8">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 8">
              <button class="more-info">More Info</button>
         </div>
         <div class="column">
-             <img class="Product" src="product3.jpg" alt="Product 9">
+             <img class="Product" src="/Images/Cat.jpeg" alt="Product 9">
              <button class="more-info">More Info</button>
         </div>
       </div>

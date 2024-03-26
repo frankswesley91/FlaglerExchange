@@ -1,7 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="FlaglerExchange.Views.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateAccount.aspx.cs" Inherits="FlaglerExchange.Views.CreateAccount" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
+
+
+
+
+
+    
 
 <style>
 
@@ -99,35 +105,6 @@ h1 {
 
 
 
-label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="password"] {
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    width: 700px;
-}
-
-button[type="submit"] {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #fdb924;
-    color: #ffffff;
-    border:solid;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Times New Roman';
-}
-
-    button[type="submit"]:hover {
-        background-color: #9e2339;
-        
-    }
-
    
     /*IMAGE CSS*/
 
@@ -161,34 +138,7 @@ aside {
     </ul>
 </nav>
 
-<!---------------------------------------Login and Password Portion--------------------------------------------->
 
-    
-     <body>   
-    <div class="login-container">
-        <h1>Login</h1>
-        
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Please enter your Flagler Email:" required>
-            <br />
-            <br />
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Please enter your Flagler Password:" required>
-            <br />
-            <br />
-            <!--SOMEONE PLEASE HELP ME WITH THIS BUTTON SOS, IT WONT CENTER :( -->
-            
 
-            <!--submit sends you to home screen-->
-            <a href="Home.aspx">
-            <button type="submit" style="display: inline-block; margin: 0 auto;">Login</button>
-            </a> 
-            <!--create account sends you to the create account page screen-->
-            <a href="CreateAccount.aspx">
-            <button type="submit" style="display: inline-block; margin: 0 auto;">Create Account</button>
-            </a>
-    </div>
-
-    </body>
 
 </asp:Content>
