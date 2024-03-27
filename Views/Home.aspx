@@ -68,10 +68,10 @@ nav li a.indexNava:hover{
 }
 /*-----------------Search Button CSS---------------------*/
 button.Search{
-     margin-top: 20px;
+      margin-top: 20px;
     padding: 10px;
     background-color: #fdb924;
-    color: #ffffff;
+    color: black;
     border:solid;
     border-radius: 10px;
     cursor: pointer;
@@ -80,10 +80,16 @@ button.Search{
 
  button.Search:hover {
         background-color: #9e2339;
+         color: white;
         
     }
 
-
+ .search-bar {
+     width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
 
 
  /*-------------Product CSS-------------------------------*/
@@ -199,8 +205,8 @@ button:hover {
         <p style="font-size:xx-large; font-family:'Times New Roman'; color: white">
             Welcome back, "StudentName"
         </p>
-        <div>
-            <input type="text"placeholder="Search..." name="search">
+        <div class="search-elements">
+            <input type="text" placeholder="Search for anything" name="search" class="search-bar" style="width: 1000px">
             <button class="Search"type="submit">Search</button>
         </div>
         <br />

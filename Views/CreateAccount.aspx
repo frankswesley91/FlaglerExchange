@@ -232,14 +232,14 @@ button.create-account-button[type="submit"]:hover {
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <button type="submit" class="create-account-button">Create Account</button>
-            </div>
+            
+                <button type="submit" class="create-account-button"><a href="/Views/Home.aspx" style="text-decoration: none; color: white">Create account</button>
+            
         </form>
     </div>
 </body>
-</html>
-    </body>
+
+    
 
 
 </asp:Content>
