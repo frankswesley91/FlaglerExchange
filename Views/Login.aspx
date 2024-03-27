@@ -61,7 +61,7 @@ nav li.indexNavList{
 
 nav li a.indexNava {
     display: block;
-    color: #9e2339;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

@@ -56,7 +56,7 @@ nav li.indexNavList{
 
 nav li a.indexNava {
     display: block;
-    color: #9e2339;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -100,8 +100,8 @@ button.Search{
 }
 
 img.Product {
-  max-width: 100%;
-  height: auto;
+  max-width: 180px;
+  height: 180px;
 
 }
 
@@ -109,7 +109,7 @@ img.Product {
    margin-top: 20px;
     padding: 10px;
     background-color: #fdb924;
-    color: #ffffff;
+    color: black;
     border:solid;
     border-radius: 10px;
     cursor: pointer;
@@ -118,6 +118,7 @@ img.Product {
 
 button.more-info:hover{
     background-color: #9e2339;
+    color: white;
 }
 
 
@@ -154,7 +155,7 @@ h2 {
 button.ApplyFilter {
    margin-top: 20px;
     padding: 10px;
-    background-color: #fdb924;
+    background-color: #9e2339;
     color: #ffffff;
     border:solid;
     border-radius: 10px;
@@ -164,7 +165,8 @@ button.ApplyFilter {
 }
 
 button:hover {
-     background-color: #9e2339;
+     background-color: #fdb924;
+     color: black;
 }
 
 
@@ -275,24 +277,40 @@ button:hover {
             </div>
             <!----Filter#13------>
              <div class="checkbox">
-                <input type="checkbox" id="category9" name="category" value="category3">
+                <input type="checkbox" id="category13" name="category" value="category3">
                 <label for="category3">Tools</label>
             </div>
             <!----Filter#14------>
              <div class="checkbox">
-                <input type="checkbox" id="category10" name="category" value="category3">
+                <input type="checkbox" id="category14" name="category" value="category3">
                 <label for="category3">Games</label>
             </div>
             <!----Filter#15------>
              <div class="checkbox">
-                <input type="checkbox" id="category11" name="category" value="category3">
+                <input type="checkbox" id="category15" name="category" value="category3">
                 <label for="category3">Clothing</label>
             </div>
             <!----Filter#16------>
              <div class="checkbox">
-                <input type="checkbox" id="category12" name="category" value="category3">
+                <input type="checkbox" id="category16" name="category" value="category3">
                 <label for="category3">Vehicles</label>
             </div>
+             <!----Filter#17------>
+             <div class="checkbox">
+                <input type="checkbox" id="category17" name="category" value="category3">
+                <label for="category3">Food</label>
+            </div>
+            <!----Filter#18------>
+             <div class="checkbox">
+                <input type="checkbox" id="category18" name="category" value="category3">
+                <label for="category3">Sports</label>
+            </div>
+            <!----Filter#19------>
+             <div class="checkbox">
+                <input type="checkbox" id="category19" name="category" value="category3">
+                <label for="category3">Home Improvement</label>
+            </div>
+            
             <!-- Add more checkboxes as needed -->
             <button class="ApplyFilter" type="submit">Apply Filter</button>
         </form>
@@ -316,14 +334,14 @@ button:hover {
              padding: 10px;">$78.99</label>
         </div>
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 2">
+             <img class="Product" src="/Images/backpack.jpeg" alt="Product 2">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product2-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$99.99</label>
         </div>
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 3">
+             <img class="Product" src="/Images/bed.jpeg" alt="Product 3">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product3-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
@@ -334,21 +352,21 @@ button:hover {
         <!--Row #2-->
       <div class="row">
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 4">
+             <img class="Product" src="/Images/car.jpeg" alt="Product 4">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product4-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$24.99</label>
         </div>
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 5">
+             <img class="Product" src="/Images/Controller.jpeg" alt="Product 5">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product5-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$10.99</label>
         </div>
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 6">
+             <img class="Product" src="/Images/labtop.jpeg" alt="Product 6">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product6-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
@@ -359,21 +377,21 @@ button:hover {
         <!--Row #3-->
       <div class="row">
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 7">
+             <img class="Product" src="/Images/stuffedcat.jpeg" alt="Product 7">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product7-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$6.99</label>
         </div>
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 8">
+             <img class="Product" src="/Images/Teashirt.jpeg" alt="Product 8">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product8-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$44.44</label>
         </div>
         <div class="column">
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 9">
+             <img class="Product" src="/Images/textbook.jpeg" alt="Product 9">
              <button class="more-info">More Info</button>
             <br />
              <label class="Product9-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
