@@ -115,7 +115,7 @@ button[type="submit"] {
     margin-top: 20px;
     padding: 10px;
     background-color: #fdb924;
-    color: #ffffff;
+    color: black;
     border:solid;
     border-radius: 10px;
     cursor: pointer;
@@ -124,8 +124,10 @@ button[type="submit"] {
 
     button[type="submit"]:hover {
         background-color: #9e2339;
+        color: white;
         
     }
+
 
    
     /*IMAGE CSS*/
@@ -180,11 +182,11 @@ aside {
 
             <!--submit sends you to home screen-->
             
-            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/Home.aspx" style="text-decoration: none; color: white">Login</a></button>
+            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/Home.aspx" style="text-decoration: none; color: black;">Login</a></button>
             
             <!--create account sends you to the create account page screen-->
             
-            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/CreateAccount.aspx" style="text-decoration: none; color: white">Create Account</button>
+            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/CreateAccount.aspx" style="text-decoration: none; color: black;">Create Account</button>
             
     </div>
 
