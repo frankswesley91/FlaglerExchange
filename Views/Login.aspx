@@ -98,7 +98,6 @@ h1 {
 }
 
 
-
 label {
     margin-top: 10px;
     font-weight: bold;
@@ -180,13 +179,13 @@ aside {
             
 
             <!--submit sends you to home screen-->
-            <a href="Home.aspx">
-            <button type="submit" style="display: inline-block; margin: 0 auto;">Login</button>
-            </a> 
+            
+            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/Home.aspx" style="text-decoration: none; color: white">Login</a></button>
+            
             <!--create account sends you to the create account page screen-->
-            <a href="CreateAccount.aspx">
-            <button type="submit" style="display: inline-block; margin: 0 auto;">Create Account</button>
-            </a>
+            
+            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/CreateAccount.aspx" style="text-decoration: none; color: white">Create Account</button>
+            
     </div>
 
     </body>
