@@ -168,10 +168,6 @@ button.create-account-button[type="submit"]:hover {
 }
 
 
-
-
-
-
 </style>
 
     <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
