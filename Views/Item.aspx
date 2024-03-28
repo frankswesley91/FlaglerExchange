@@ -67,7 +67,10 @@ nav li a.indexNava:hover{
     color: white;
 }
 
-    </style>
+
+
+
+  </style>
 
 
     <div class="text-center">

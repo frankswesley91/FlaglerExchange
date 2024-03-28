@@ -206,10 +206,6 @@ button.create-account-button[type="submit"]:hover {
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label class="create-account" for="id">School ID Number</label>
-                <input type="text" id="id" name="id" required>
-            </div>
-            <div class="form-group">
                 <label>Affiliation</label>
                 <div class="radio-group">
                     <div>
