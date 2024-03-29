@@ -195,7 +195,8 @@ button.create-account-button[type="submit"]:hover {
 
     <!------------------------------------------------------Create account form--------------------------------------------->
 <body>
-    <div class="create-account-container">
+    
+    <div class="create-account-container" style="margin: 0 auto">
         <h2>Create Account</h2>
 
             <div class="form-group">
@@ -245,10 +246,6 @@ button.create-account-button[type="submit"]:hover {
             </table>
                 <button type="submit" class="create-account-button"><a href="/Views/Home.aspx" style="text-decoration: none; color: black">Create account</button>
             
-            
-
-
-
     </div>
 </body>
 
