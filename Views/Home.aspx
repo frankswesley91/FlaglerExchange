@@ -206,8 +206,14 @@ button:hover {
             Welcome back, "StudentName"
         </p>
         <div class="search-elements">
+            <table style="width: 1000px">
+                <tr>
+                    <td>
             <input type="text" placeholder="Search for anything" name="search" class="search-bar" style="width: 1000px">
             <button class="Search"type="submit">Search</button>
+                        </td>
+                    </tr>
+              </table>
         </div>
         <br />
         <br />
@@ -219,7 +225,7 @@ button:hover {
      
 
     <div class="sidebar">
-        <h2>Filter Products</h2>
+        <h2 style="text-decoration: underline;">Filter Products</h2>
         <form id="filterForm">
             <!----Filter#1------>
             <div class="checkbox">
@@ -354,7 +360,7 @@ button:hover {
          <!-------------Product#2---------->
          
         <div class="column">
-            <table style="margin: 0 auto;"
+            <table style="margin: 0 auto;">
                 <tr>
                     <td>
              <img class="Product" src="/Images/backpack.jpeg" alt="Product 2">
@@ -372,7 +378,7 @@ button:hover {
 
         <!-------------Product#3---------->
         <div class="column">
-            <table style="margin: 0 auto;"
+            <table style="margin: 0 auto;">
                 <tr>
                     <td>
              <img class="Product" src="/Images/bed.jpeg" alt="Product 3">
