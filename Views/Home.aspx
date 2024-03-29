@@ -334,21 +334,23 @@ button:hover {
      <div class="row">
         <div class="column">
              <img class="Product" src="/Images/Cat.jpeg" alt="Product 1">
-             <button class="more-info">More Info</button>
+            
+             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
+            
              <br />
              <label class="Product1-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$78.99</label>
         </div>
         <div class="column">
              <img class="Product" src="/Images/backpack.jpeg" alt="Product 2">
-             <button class="more-info">More Info</button>
+             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product2-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$99.99</label>
         </div>
         <div class="column">
              <img class="Product" src="/Images/bed.jpeg" alt="Product 3">
-             <button class="more-info">More Info</button>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product3-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$120.99</label>
@@ -359,21 +361,21 @@ button:hover {
       <div class="row">
         <div class="column">
              <img class="Product" src="/Images/car.jpeg" alt="Product 4">
-             <button class="more-info">More Info</button>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product4-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$24.99</label>
         </div>
         <div class="column">
              <img class="Product" src="/Images/Controller.jpeg" alt="Product 5">
-             <button class="more-info">More Info</button>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product5-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$10.99</label>
         </div>
         <div class="column">
              <img class="Product" src="/Images/labtop.jpeg" alt="Product 6">
-             <button class="more-info">More Info</button>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product6-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$2.99</label>
@@ -384,21 +386,21 @@ button:hover {
       <div class="row">
         <div class="column">
              <img class="Product" src="/Images/stuffedcat.jpeg" alt="Product 7">
-             <button class="more-info">More Info</button>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product7-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$6.99</label>
         </div>
         <div class="column">
              <img class="Product" src="/Images/Teashirt.jpeg" alt="Product 8">
-             <button class="more-info">More Info</button>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product8-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$44.44</label>
         </div>
         <div class="column">
              <img class="Product" src="/Images/textbook.jpeg" alt="Product 9">
-             <button class="more-info">More Info</button>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
             <br />
              <label class="Product9-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$1.00</label>
