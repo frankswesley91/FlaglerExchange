@@ -181,15 +181,15 @@ aside {
             
 
             <!--submit sends you to home screen-->
-            
-            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/Home.aspx" style="text-decoration: none; color: black;">Login</a></button>
-            
+            <table class="Login-Create-Account-Buttons" style="margin: 0 auto;">
+                <tr>
+            <td><button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/Home.aspx" style="text-decoration: none; color: black;">Login</a></button></td>
             <!--create account sends you to the create account page screen-->
-            
-            <button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/CreateAccount.aspx" style="text-decoration: none; color: black;">Create Account</button>
-            
+            <td><button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/CreateAccount.aspx" style="text-decoration: none; color: black;">Create Account</button></td>
+                </tr>
+            </table>
     </div>
-
+            
     </body>
 
 </asp:Content>

@@ -106,8 +106,8 @@ button.Search{
 }
 
 img.Product {
-  max-width: 180px;
-  height: 180px;
+  max-width: 200px;
+  height: 200px;
 
 }
 
@@ -206,8 +206,14 @@ button:hover {
             Welcome back, "StudentName"
         </p>
         <div class="search-elements">
+            <table style="width: 1000px">
+                <tr>
+                    <td>
             <input type="text" placeholder="Search for anything" name="search" class="search-bar" style="width: 1000px">
             <button class="Search"type="submit">Search</button>
+                        </td>
+                    </tr>
+              </table>
         </div>
         <br />
         <br />
@@ -219,7 +225,7 @@ button:hover {
      
 
     <div class="sidebar">
-        <h2>Filter Products</h2>
+        <h2 style="text-decoration: underline;">Filter Products</h2>
         <form id="filterForm">
             <!----Filter#1------>
             <div class="checkbox">
@@ -331,77 +337,180 @@ button:hover {
 
 
         <!--Row #1-->
+        <!-------------Product#1---------->
      <div class="row">
         <div class="column">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/Cat.jpeg" alt="Product 1">
-             <button class="more-info">More Info</button>
-             <br />
+                    </td>
+                </tr>
+             
+                 <tr>
+                     <td>
+             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product1-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$78.99</label>
+                    </td>
+                </tr>
+             </table>
         </div>
+
+         <!-------------Product#2---------->
+         
         <div class="column">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/backpack.jpeg" alt="Product 2">
-             <button class="more-info">More Info</button>
-            <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product2-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$99.99</label>
+                    </td>
+                 </tr>
+            </table>
         </div>
+
+        <!-------------Product#3---------->
         <div class="column">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/bed.jpeg" alt="Product 3">
-             <button class="more-info">More Info</button>
-            <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product3-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$120.99</label>
+                    </td>
+                </tr>
+             </table>
        </div>
     </div>
 
         <!--Row #2-->
+        <!-------------Product#4---------->
       <div class="row">
         <div class="column">
-             <img class="Product" src="/Images/car.jpeg" alt="Product 4">
-             <button class="more-info">More Info</button>
-            <br />
+            <table style ="margin: 0 auto;">
+                <tr>
+                    <td>
+                <img class="Product" src="/Images/car.jpeg" alt="Product 4">
+                   </td>
+                </tr>
+                <tr>
+                    <td>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product4-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$24.99</label>
+                    </td>
+                    </tr>
+             </table>
         </div>
+       
+
+        <!-------------Product#5---------->
         <div class="column">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/Controller.jpeg" alt="Product 5">
-             <button class="more-info">More Info</button>
-            <br />
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product5-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$10.99</label>
+                   </td>
+                </tr>
+             </table>
         </div>
+
+
+        <!-------------Product#6---------->
         <div class="column">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/labtop.jpeg" alt="Product 6">
-             <button class="more-info">More Info</button>
-            <br />
+                    </td>
+                </tr>
+                     <tr>
+                        <td>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product6-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$2.99</label>
+                        </td>
+                    </tr>
+                </table>
         </div>
      </div>
 
-        <!--Row #3-->
+        <!---Row #3--->
+        <!-------------Product#7---------->
       <div class="row">
         <div class="column">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/stuffedcat.jpeg" alt="Product 7">
-             <button class="more-info">More Info</button>
-            <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product7-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$6.99</label>
+                    </td>
+               </tr>
+            </table>
         </div>
+
+        <!-------------Product#8---------->
         <div class="column">
+            <table style="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/Teashirt.jpeg" alt="Product 8">
-             <button class="more-info">More Info</button>
-            <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product8-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$44.44</label>
+                   </td>
+               </tr>
+            </table>
         </div>
+
+
+
+        <!-------------Product#9---------->
         <div class="column">
+            <table style ="margin: 0 auto;">
+                <tr>
+                    <td>
              <img class="Product" src="/Images/textbook.jpeg" alt="Product 9">
-             <button class="more-info">More Info</button>
-            <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
              <label class="Product9-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$1.00</label>
+                   </td>
+                </tr>
+            </table>
         </div>
       </div>
 
