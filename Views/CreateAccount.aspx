@@ -164,6 +164,7 @@ button[type="submit"] {
 }
 button.create-account-button[type="submit"]:hover {
         background-color: #9e2339;
+        color: white;
         
 }
 
@@ -196,7 +197,7 @@ button.create-account-button[type="submit"]:hover {
 <body>
     <div class="create-account-container">
         <h2>Create Account</h2>
-        <form>
+
             <div class="form-group">
                 <label class="create-account" for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -206,32 +207,48 @@ button.create-account-button[type="submit"]:hover {
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label>Affiliation</label>
+                <label style="font-weight: bold;">Affililiation</label>
                 <div class="radio-group">
-                    <div>
-                        <input type="radio" id="student" name="affiliation" value="student" required>
-                        <label class="create-account" for="student">Student</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="faculty" name="affiliation" value="faculty">
-                        <label class="create-account" for="faculty">Faculty</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="staff" name="affiliation" value="staff">
-                        <label class="create-account" for="staff">Staff</label>
-                    </div>
-                    <div>
-                        
-                        <input type="radio" id="alumni" name="affiliation" value="alumni"> 
-                        <label class="create-account" for="staff">Alumni</label>
-                        
-                    </div>
+
+       <!------------------------------------------------Flagler Affiliation table-------------------------------------------------------------------->
+            <table class="flagler-affiliation-buttons">
+                    <tr>
+                        <td style="margin: 0 auto;">
+                        <label>
+                        <input type="radio" id="student" name="affiliation" value="student" required> Student
+                        </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="margin: 0 auto;">
+                        <label>
+                        <input type="radio" id="faculty" name="affiliation" value="student" required> Faculty
+                        </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="margin: 0 auto;">
+                        <label>
+                        <input type="radio" id="staff" name="affiliation" value="student" required> Staff
+                        </label>
+                        </td>
+                    </tr>
+                   <tr>
+                        <td style="margin: 0 auto;">
+                        <label>
+                        <input type="radio" id="Alumni" name="affiliation" value="student" required> Alumni
+                        </label>
+                        </td>
+                    </tr>
                 </div>
             </div>
+            </table>
+                <button type="submit" class="create-account-button"><a href="/Views/Home.aspx" style="text-decoration: none; color: black">Create account</button>
             
-                <button type="submit" class="create-account-button"><a href="/Views/Home.aspx" style="text-decoration: none; color: white">Create account</button>
             
-        </form>
+
+
+
     </div>
 </body>
 
