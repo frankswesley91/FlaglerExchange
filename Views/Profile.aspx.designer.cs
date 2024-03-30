@@ -24,6 +24,24 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.RadioButtonList onCampusRBList;
 
         /// <summary>
+        /// changeProfileImageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button changeProfileImageButton;
+
+        /// <summary>
+        /// editProfileButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button editProfileButton;
+
+        /// <summary>
         /// affiliationDDList control.
         /// </summary>
         /// <remarks>

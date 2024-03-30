@@ -127,7 +127,7 @@ h5{
                    </div>
                </div>
            </div> -->
-           <div class="col-lg-8", style="padding-top: 10px; border: solid">
+           <div class="col-lg-8", style="padding-top: 10px;">
                <h5 class="justify-content-center", style="border: solid">Contact Information</h5>
                <div class="card">
                    <div class="card-body"> 
@@ -169,9 +169,12 @@ h5{
                    </div>
                </div>
            </div>
-           <div id="profile-container "class ="container; col-sm-2", style=" border: solid; ">
+           <div id="profile-container "class ="col-sm-2 offset-md-0">
                <div class="offset-md-2">
+                   <!-- change this to an asp:Image tag at some point -->
                    <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" />
+                   <asp:Button ID="changeProfileImageButton" runat="server" Text="Change picture..." />
+                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" />
                </div>
            </div>
            <div class ="row">
@@ -179,7 +182,7 @@ h5{
                    <h5 style="border: solid;">About me: </h5>
                    <label><em>This is where the</em> <strong>about me</strong> <em>section will go.</em></label>
                </div>
-               <div class ="col-sm-2">
+               <div class ="col-sm-2 offset-md-0" style="padding-left: 10px">
                        <h5 style="border: solid">Affiliation</h5>
                         <asp:DropDownList ID="affiliationDDList" runat="server" >
                            <asp:ListItem>--Please Select--</asp:ListItem>
@@ -190,7 +193,6 @@ h5{
                         </asp:DropDownList>
                    </div>
             </div>
-           <div class="row" style="padding-top: 10px; border: solid;">
                <div class="col-md-4 offset-md-8">
                   <h5 style="border: solid;"> Major(s)/Minor(s)</h5>
                        <table class="container-lg" style="border: dashed;">
@@ -217,8 +219,6 @@ h5{
                        </tr>
                    </table>
                </div>
-
-           </div>
    </div>
 </div>
        
