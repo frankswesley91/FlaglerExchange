@@ -66,7 +66,24 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
+div#profile-container.container{
+    display: flex; 
+    justify-items: flex-end;
+    padding-left: 90px; 
+}
 
+div#profile-image.item{
+    display: inline-block; 
+}
+
+div#profileMainContent.container-fluid
+{
+    background-color: #9e2339;
+}
+
+h5{
+    background-color: #fdb924;
+}
     </style>
 
 
@@ -99,8 +116,9 @@ nav li a.indexNava:hover{
         </p>
     </div>
 
-   <div class ="container-fluid", style="background-color: white; justify-items: center"> 
-       <div class ="row">
+   <div id="profileMainContent" class ="container-fluid", style="background-color: white; align-content: normal; padding-left: 150px"> 
+           <div class ="row" style="border: solid">
+               <!--
            <div class="col-sm-2", style="padding-top: 10px">
                <h5 style="border-color: black; border: solid;">Name</h5>
                <div class="card">
@@ -108,12 +126,16 @@ nav li a.indexNava:hover{
                        Here is some sample text
                    </div>
                </div>
-           </div>
-           <div class="col-lg-6", style="padding-top: 10px; border: solid">
+           </div> -->
+           <div class="col-lg-8", style="padding-top: 10px; border: solid">
                <h5 class="justify-content-center", style="border: solid">Contact Information</h5>
                <div class="card">
                    <div class="card-body"> 
-                       <table class="container-fluid" id="contact-table"; style="border: solid;" cell-styles>
+                       <table class="container-fluid" id="contact-table"; style="border: solid;">
+                           <tr>
+                               <td><strong>Name: </strong></td>
+                               <td>BAWK</td>
+                           </tr>
                            <tr>
                                <td><strong>Email: </strong></td>
                                <td>lastname123@flagler.edu</td>
@@ -124,7 +146,13 @@ nav li a.indexNava:hover{
                            </tr>
                            <tr>
                                <td><strong>On/Off campus?: </strong></td>
-                               <td><em>Here's where a radio button list will go</em></td>
+                               <td>
+                                   <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal">
+                                       <asp:ListItem>Yes</asp:ListItem>
+                                       <asp:ListItem>No</asp:ListItem>
+                                   </asp:RadioButtonList>
+
+                               </td>
                            </tr>
                            <tr>
                                <td><strong>Address: </strong></td>
@@ -141,19 +169,56 @@ nav li a.indexNava:hover{
                    </div>
                </div>
            </div>
-           <div class ="col-md-4", style="padding-top: 10px; align-content: flex-end; border: solid; display: flex; ">
-               <img style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" />
+           <div id="profile-container "class ="container; col-sm-2", style=" border: solid; ">
+               <div class="offset-md-2">
+                   <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" />
+               </div>
            </div>
-       </div>
-       <div class ="row">
-           <div class ="col-sm-2">
-               <h5 style="border: solid">Affiliation</h5>
+           <div class ="row">
+               <div class="col-lg-8", style ="border: solid; padding-top: 25px">
+                   <h5 style="border: solid;">About me: </h5>
+                   <label><em>This is where the</em> <strong>about me</strong> <em>section will go.</em></label>
+               </div>
+               <div class ="col-sm-2">
+                       <h5 style="border: solid">Affiliation</h5>
+                        <asp:DropDownList ID="affiliationDDList" runat="server" >
+                           <asp:ListItem>--Please Select--</asp:ListItem>
+                           <asp:ListItem>Student</asp:ListItem>
+                           <asp:ListItem>Alumni</asp:ListItem>
+                           <asp:ListItem>Faculty Member</asp:ListItem>
+                           <asp:ListItem>Employee</asp:ListItem>
+                        </asp:DropDownList>
+                   </div>
+            </div>
+           <div class="row" style="padding-top: 10px; border: solid;">
+               <div class="col-md-4 offset-md-8">
+                  <h5 style="border: solid;"> Major(s)/Minor(s)</h5>
+                       <table class="container-lg" style="border: dashed;">
+                       <tr>
+                           <td><strong>Major(s): </strong></td>
+                           <td>
+                               <table>
+                                   <tr>
+                                       <td>Coastal Environmental Science</td>
+                                       <td style="padding-left: 20px;">CIS</td>
+                                   </tr>
+                               </table>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td><strong>Minor(s): </strong></td>
+                           <td>
+                                <table>
+                                   <tr>
+                                       <td>Biology</td>
+                                   </tr>
+                               </table>
+                           </td>
+                       </tr>
+                   </table>
+               </div>
+
            </div>
-           <div class="col-lg-6", style ="border: solid; padding-top: 25px">
-               <h5 style="border: solid;">About me: </h5>
-               <label><em>This is where the</em> <strong>about me</strong> <em>section will go.</em></label>
-           </div>
-       </div>
    </div>
 </asp:Content>
 
