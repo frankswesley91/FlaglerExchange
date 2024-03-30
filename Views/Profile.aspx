@@ -113,12 +113,31 @@ nav li a.indexNava:hover{
                <h5 class="justify-content-center", style="border: solid">Contact Information</h5>
                <div class="card">
                    <div class="card-body"> 
+                       <table class="container-fluid" id="contact-table"; style="border: solid;" cell-styles>
+                           <tr>
+                               <td><strong>Email: </strong></td>
+                               <td>lastname123@flagler.edu</td>
+                           </tr>
+                           <tr>
+                               <td><strong>Phone: </strong></td>
+                               <td>(123)-456-7890</td>
+                           </tr>
+                           <tr>
+                               <td><strong>On/Off campus?: </strong></td>
+                               <td><em>Here's where a radio button list will go</em></td>
+                           </tr>
+                           <tr>
+                               <td><strong>Address: </strong></td>
+                               <td>74 King Street, St. Augustine FL 32080</td>
+                           </tr>
+                       </table>
+                       <!--
                        <ul style="list-style: none">
                            <li style="padding-bottom: 15px"><strong>Email: </strong></li>
                            <li style="padding-bottom: 15px"><strong>Phone: </strong></li>
-                           <!-- <p><em>On/Off campus?: </em></p> -->
+                           <!-- <p><em>On/Off campus?: this is where an asp:RadioButtonList element will go </em></p> 
                            <li><strong>Address: </strong></li>
-                       </ul>
+                       </ul> -->
                    </div>
                </div>
            </div>
