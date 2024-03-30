@@ -93,10 +93,48 @@ nav li a.indexNava:hover{
 
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
-    <body>
+    <div>
         <p style="font-size:xx-large">
             ALEX
         </p>
-    </body>
+    </div>
+
+   <div class ="container-fluid", style="background-color: white; justify-items: center"> 
+       <div class ="row">
+           <div class="col-sm-2", style="padding-top: 10px">
+               <h5 style="border-color: black; border: solid;">Name</h5>
+               <div class="card">
+                   <div class ="card-body", style="padding-top: 0px">
+                       Here is some sample text
+                   </div>
+               </div>
+           </div>
+           <div class="col-lg-6", style="padding-top: 10px; border: solid">
+               <h5 class="justify-content-center", style="border: solid">Contact Information</h5>
+               <div class="card">
+                   <div class="card-body"> 
+                       <ul style="list-style: none">
+                           <li style="padding-bottom: 15px"><strong>Email: </strong></li>
+                           <li style="padding-bottom: 15px"><strong>Phone: </strong></li>
+                           <!-- <p><em>On/Off campus?: </em></p> -->
+                           <li><strong>Address: </strong></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+           <div class ="col-md-4", style="padding-top: 10px; align-content: flex-end; border: solid; display: flex; ">
+               <img style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" />
+           </div>
+       </div>
+       <div class ="row">
+           <div class ="col-sm-2">
+               <h5 style="border: solid">Affiliation</h5>
+           </div>
+           <div class="col-lg-6", style ="border: solid; padding-top: 25px">
+               <h5 style="border: solid;">About me: </h5>
+               <label><em>This is where the</em> <strong>about me</strong> <em>section will go.</em></label>
+           </div>
+       </div>
+   </div>
 </asp:Content>
 
