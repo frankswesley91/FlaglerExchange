@@ -116,25 +116,16 @@ h5{
         </p>
     </div>
 
-   <div id="profileMainContent" class ="container-fluid", style="background-color: white; align-content: normal; padding-left: 150px"> 
-           <div class ="row" style="border: solid">
-               <!--
-           <div class="col-sm-2", style="padding-top: 10px">
-               <h5 style="border-color: black; border: solid;">Name</h5>
-               <div class="card">
-                   <div class ="card-body", style="padding-top: 0px">
-                       Here is some sample text
-                   </div>
-               </div>
-           </div> -->
-           <div class="col-lg-8", style="padding-top: 10px;">
+   <div id="profileMainContent" class ="container-fluid", style="background-color: white; align-content: normal; padding-left: 150px; "> 
+       <div class ="row" >
+           <div class="col-lg-9", style="padding-top: 10px;">
                <h5 class="justify-content-center", style="border: solid">Contact Information</h5>
                <div class="card">
                    <div class="card-body"> 
                        <table class="container-fluid" id="contact-table"; style="border: solid;">
                            <tr>
                                <td><strong>Name: </strong></td>
-                               <td>BAWK</td>
+                               <td style="offset-position: center">BAWK</td>
                            </tr>
                            <tr>
                                <td><strong>Email: </strong></td>
@@ -148,8 +139,8 @@ h5{
                                <td><strong>On/Off campus?: </strong></td>
                                <td>
                                    <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal">
-                                       <asp:ListItem>Yes</asp:ListItem>
-                                       <asp:ListItem>No</asp:ListItem>
+                                       <asp:ListItem Value="1">Yes</asp:ListItem>
+                                       <asp:ListItem Value="0">No</asp:ListItem>
                                    </asp:RadioButtonList>
 
                                </td>
@@ -159,18 +150,11 @@ h5{
                                <td>74 King Street, St. Augustine FL 32080</td>
                            </tr>
                        </table>
-                       <!--
-                       <ul style="list-style: none">
-                           <li style="padding-bottom: 15px"><strong>Email: </strong></li>
-                           <li style="padding-bottom: 15px"><strong>Phone: </strong></li>
-                           <!-- <p><em>On/Off campus?: this is where an asp:RadioButtonList element will go </em></p> 
-                           <li><strong>Address: </strong></li>
-                       </ul> -->
                    </div>
                </div>
            </div>
-           <div id="profile-container "class ="col-sm-2 offset-md-0">
-               <div class="offset-md-2">
+           <div id="profile-container", class ="col-sm-2" >
+               <div class="offset-md-2" style="margin-left: 50px; padding-top: 10px;">
                    <!-- change this to an asp:Image tag at some point -->
                    <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" />
                    <asp:Button ID="changeProfileImageButton" runat="server" Text="Change picture..." />
@@ -178,27 +162,16 @@ h5{
                </div>
            </div>
            <div class ="row">
-               <div class="col-lg-8", style ="border: solid; padding-top: 25px">
+               <div class="col-lg-5", style ="padding-top: 10px">
                    <h5 style="border: solid;">About me: </h5>
                    <label><em>This is where the</em> <strong>about me</strong> <em>section will go.</em></label>
                </div>
-               <div class ="col-sm-2 offset-md-0" style="padding-left: 10px">
-                       <h5 style="border: solid">Affiliation</h5>
-                        <asp:DropDownList ID="affiliationDDList" runat="server" >
-                           <asp:ListItem>--Please Select--</asp:ListItem>
-                           <asp:ListItem>Student</asp:ListItem>
-                           <asp:ListItem>Alumni</asp:ListItem>
-                           <asp:ListItem>Faculty Member</asp:ListItem>
-                           <asp:ListItem>Employee</asp:ListItem>
-                        </asp:DropDownList>
-                   </div>
-            </div>
-               <div class="col-md-4 offset-md-8">
+               <div class="col-md-4" style="padding-top: 10px">
                   <h5 style="border: solid;"> Major(s)/Minor(s)</h5>
-                       <table class="container-lg" style="border: dashed;">
+                       <table class="container-lg">
                        <tr>
                            <td><strong>Major(s): </strong></td>
-                           <td>
+                           <td style="border:groove">
                                <table>
                                    <tr>
                                        <td>Coastal Environmental Science</td>
@@ -209,7 +182,7 @@ h5{
                        </tr>
                        <tr>
                            <td><strong>Minor(s): </strong></td>
-                           <td>
+                           <td style="border: groove">
                                 <table>
                                    <tr>
                                        <td>Biology</td>
@@ -219,6 +192,18 @@ h5{
                        </tr>
                    </table>
                </div>
+               <div class ="col-sm-2 offset-md-0" style="padding-top: 10px; margin-left: 25px">
+                       <h5 style="border: solid">Affiliation</h5>
+                        <asp:DropDownList ID="affiliationDDList" runat="server" >
+                           <asp:ListItem Value="default">--Please Select--</asp:ListItem>
+                           <asp:ListItem Value="student">Student</asp:ListItem>
+                           <asp:ListItem Value ="alumni">Alumni</asp:ListItem>
+                           <asp:ListItem Value="faculty">Faculty Member</asp:ListItem>
+                           <asp:ListItem Value="employee">Employee</asp:ListItem>
+                        </asp:DropDownList>
+                   </div>
+            </div>
+               
    </div>
 </div>
        
