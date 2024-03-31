@@ -136,11 +136,11 @@ h5{
                                <td>(123)-456-7890</td>
                            </tr>
                            <tr>
-                               <td><strong>On/Off campus?: </strong></td>
+                               <td><strong>Off campus?: </strong></td>
                                <td>
                                    <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal">
                                        <asp:ListItem Value="1">Yes</asp:ListItem>
-                                       <asp:ListItem Value="0">No</asp:ListItem>
+                                       <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                    </asp:RadioButtonList>
 
                                </td>
@@ -158,7 +158,7 @@ h5{
                    <!-- change this to an asp:Image tag at some point -->
                    <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" />
                    <asp:Button ID="changeProfileImageButton" runat="server" Text="Change picture..." />
-                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" />
+                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" />
                </div>
            </div>
            <div class ="row">
@@ -202,8 +202,10 @@ h5{
                            <asp:ListItem Value="employee">Employee</asp:ListItem>
                         </asp:DropDownList>
                    </div>
-            </div>
-               
+               <div class="btn, btn-link offset-md-5" style="padding-top: 30px">
+                   <asp:Button ID="saveProfileButton" runat="server" BackColor="DarkRed" ForeColor="White" Text="Save Changes..." Visible="false" OnClick="saveProfileButton_Click" />
+               </div>
+            </div>    
    </div>
 </div>
        

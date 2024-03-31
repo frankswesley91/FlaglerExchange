@@ -11,12 +11,22 @@ namespace FlaglerExchange.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            onCampusRBList.SelectedValue = "0";
             onCampusRBList.Enabled = false;
-
             affiliationDDList.Enabled = false;
-            affiliationDDList.SelectedValue = "default";
         }
 
+        protected void editProfileButton_Click(object sender, EventArgs e)
+        {
+            onCampusRBList.Enabled = true;
+            affiliationDDList.Enabled = true;
+            saveProfileButton.Visible = true; 
+        }
+
+        protected void saveProfileButton_Click(object sender, EventArgs e)
+        {
+            onCampusRBList.Enabled = false;
+            affiliationDDList.Enabled = false;
+            saveProfileButton.Visible = false;
+        }
     }
 }
