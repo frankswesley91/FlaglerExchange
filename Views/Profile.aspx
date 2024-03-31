@@ -168,14 +168,16 @@ h5{
                </div>
                <div class="col-md-4" style="padding-top: 10px">
                   <h5 style="border: solid;"> Major(s)/Minor(s)</h5>
-                       <table class="container-lg">
+                       <table class="col-sm-2">
                        <tr>
                            <td><strong>Major(s): </strong></td>
                            <td style="border:groove">
                                <table>
                                    <tr>
-                                       <td>Coastal Environmental Science</td>
-                                       <td style="padding-left: 20px;">CIS</td>
+                                       <td>
+                                           <asp:TextBox ID="majorTB1" runat="server" Enabled="false" Text="CES" BorderStyle="None" Width="100px"></asp:TextBox>
+                                       </td>
+                                       <td><asp:TextBox ID="majorTB2" runat="server" Enabled="false" Text="CIS" BorderStyle="None" Width="175px"></asp:TextBox></td>
                                    </tr>
                                </table>
                            </td>
@@ -185,7 +187,13 @@ h5{
                            <td style="border: groove">
                                 <table>
                                    <tr>
-                                       <td>Biology</td>
+                                       <td>
+                                           <asp:TextBox ID="minorTB1" runat="server" Enabled="false" Text="Biology" BorderStyle="None" Width="175px"></asp:TextBox>
+
+                                       </td>
+                                       <td>
+                                           <asp:TextBox ID="minorTB2" runat="server" Enabled="false" BorderStyle="None" Width="100px"></asp:TextBox>
+                                       </td>
                                    </tr>
                                </table>
                            </td>

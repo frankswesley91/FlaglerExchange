@@ -42,6 +42,42 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Button editProfileButton;
 
         /// <summary>
+        /// majorTB1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox majorTB1;
+
+        /// <summary>
+        /// majorTB2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox majorTB2;
+
+        /// <summary>
+        /// minorTB1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox minorTB1;
+
+        /// <summary>
+        /// minorTB2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox minorTB2;
+
+        /// <summary>
         /// affiliationDDList control.
         /// </summary>
         /// <remarks>
