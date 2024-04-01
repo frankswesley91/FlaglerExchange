@@ -37,7 +37,7 @@ namespace FlaglerExchange.Views
 
         protected void saveProfileButton_Click(object sender, EventArgs e)
         {
-            //redisable elements that have been changed
+            //re-disable elements that have been changed
             onCampusRBList.Enabled = false;
             affiliationDDList.Enabled = false;
 

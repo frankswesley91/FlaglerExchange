@@ -84,6 +84,11 @@ div#profileMainContent.container-fluid
 h5{
     background-color: #fdb924;
 }
+
+#aboutMeTB {
+    width: 100%; 
+}
+
     </style>
 
 
@@ -156,15 +161,16 @@ h5{
            <div id="profile-container", class ="col-sm-2" >
                <div class="offset-md-2" style="margin-left: 50px; padding-top: 10px;">
                    <!-- change this to an asp:Image tag at some point -->
-                   <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" />
+                   <!-- <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" /> -->
+                   <asp:Image ID="profileImage" runat="server" src="../Images/FlaglerExchangeLogo.png" Width="150px" Height="150px" />
                    <asp:Button ID="changeProfileImageButton" runat="server" Text="Change picture..." />
                    <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" />
                </div>
            </div>
            <div class ="row">
-               <div class="col-lg-5", style ="padding-top: 10px">
+               <div class="col-lg-5", style ="padding-top: 10px;">
                    <h5 style="border: solid;">About me: </h5>
-                   <label><em>This is where the</em> <strong>about me</strong> <em>section will go.</em></label>
+                   <asp:TextBox ID="aboutMeTB" runat="server" TextMode="MultiLine" Width="1000px" Font-Size="Small">This is where the &quot;about me&quot; section will go, where users can type a quick bio about themselves that is visible to others. </asp:TextBox>
                </div>
                <div class="col-md-4" style="padding-top: 10px">
                   <h5 style="border: solid;"> Major(s)/Minor(s)</h5>

@@ -24,6 +24,15 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.RadioButtonList onCampusRBList;
 
         /// <summary>
+        /// profileImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image profileImage;
+
+        /// <summary>
         /// changeProfileImageButton control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button editProfileButton;
+
+        /// <summary>
+        /// aboutMeTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox aboutMeTB;
 
         /// <summary>
         /// majorTB1 control.
