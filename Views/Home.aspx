@@ -271,7 +271,7 @@ button:hover {
              <div class="checkbox">
                 <input type="checkbox" id="category9" name="category" value="category3">
                 <label for="category3">Tools</label>
-            </div>
+            </div> 
             <!----Filter#10------>
              <div class="checkbox">
                 <input type="checkbox" id="category10" name="category" value="category3">
