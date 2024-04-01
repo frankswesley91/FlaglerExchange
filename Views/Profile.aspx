@@ -216,7 +216,7 @@ h5{
                            <asp:ListItem Value="employee">Employee</asp:ListItem>
                         </asp:DropDownList>
                    </div>
-               <div class="btn, btn-link offset-md-5" style="padding-top: 30px">
+               <div class="btn, btn-link offset-md-5" style="padding-top: 30px; margin-bottom: 25px; ">
                    <asp:Button ID="saveProfileButton" runat="server" BackColor="DarkRed" ForeColor="White" Text="Save Changes..." Visible="false" OnClick="saveProfileButton_Click" />
                </div>
             </div>    

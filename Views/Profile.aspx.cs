@@ -20,19 +20,26 @@ namespace FlaglerExchange.Views
             //disable minor writing
             minorTB1.Enabled = false;
             minorTB2.Enabled = false;
+            //disable about me section 
+            aboutMeTB.Enabled = false; 
         }
 
         protected void editProfileButton_Click(object sender, EventArgs e)
         {
+            //enable major lists and save changes button
             onCampusRBList.Enabled = true;
             affiliationDDList.Enabled = true;
             saveProfileButton.Visible = true;
-
+            //enable major hat
             majorTB1.Enabled = true;
             majorTB2.Enabled = true;
-            //disable minor writing
+            //enable minor writing
             minorTB1.Enabled = true;
             minorTB2.Enabled = true;
+
+            //enable the about me section to edit
+            aboutMeTB.Enabled = true;
+
         }
 
         protected void saveProfileButton_Click(object sender, EventArgs e)
@@ -46,6 +53,8 @@ namespace FlaglerExchange.Views
 
             minorTB1.Enabled = false;
             minorTB2.Enabled = false;
+
+            aboutMeTB.Enabled = false;
 
             //remove the save changes button from the view
             saveProfileButton.Visible = false;
