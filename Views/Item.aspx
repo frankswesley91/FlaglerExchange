@@ -96,11 +96,29 @@ nav li a.indexNava:hover{
 
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
-    <body>
-        <p style="font-size:xx-large">
-            BRYAN
-        </p>
-    </body>
+   
+    <!------ contains textbox for product name/date, textbox for product description, and buttons to move through images and start email --->
+<html>
+<body>
+    <h1>Product Name</h1>
+
+    <div>
+        <button onclick="moveImage(-100)">&#8592;</button>
+        <img id="product-image" src="product-image.jpg" alt="Product Image" width="300">
+        <button onclick="moveImage(100)">&#8594;</button>
+    </div>
+
+    <p>Product Description: This is a description of the product. It provides details about the product's features, specifications, and benefits.</p>
+
+    <script>
+        function moveImage(offset) {
+            var img = document.getElementById("product-image");
+            var currentLeft = img.offsetLeft;
+            img.style.left = (currentLeft + offset) + "px";
+        }
+    </script>
+</body>
+</html>
 
 </asp:Content>
 
