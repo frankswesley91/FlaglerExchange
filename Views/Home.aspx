@@ -225,7 +225,7 @@ button:hover {
      
 
     <div class="sidebar">
-        <h2 style="text-decoration: underline;">Filter Products</h2>
+        <h2 style="text-decoration: underline;">Filter Listings</h2>
         <form id="filterForm">
             <!----Filter#1------>
             <div class="checkbox">
