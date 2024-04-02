@@ -148,6 +148,7 @@ input[type="email"] {
     <body>
         <div class="create-listing-container" style="margin: 0 auto">
 <table class="w-100" style="margin: 0 auto;">
+    <h2 style="font-family: 'Times New Roman'">Create Listing</h2>
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">&nbsp;</td>
@@ -158,7 +159,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label4" runat="server" Font-Names="Times New Roman" Text="Item Title"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Font-Names="Times New Roman" Text="Item Title" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -183,7 +184,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label1" runat="server" Text="Add Images:" Font-Names="Times New Roman" Font-Strikeout="False"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Add Images:" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -224,7 +225,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label2" runat="server" Text="Item Description:" Font-Names="Times New Roman"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="Item Description:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -248,18 +249,42 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label3" runat="server" Text="Add Tags:" Font-Names="Times New Roman"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Add Tags:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         </td>
+        <td style="height: 30px"> </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
+        <!---CATEGORY SECTION!-->
     </tr>
     <tr>
-        <td style="width: 50px">&nbsp;</td>
-        <td style="width: 1038px">&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td>
+            <div style="margin:0 auto; font-family: 'Times New Roman';">
+            <asp:Label ID="categories" runat="server" Text="Category Labels:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+            <asp:CheckBoxList ID="CategoryCheckBoxList" runat="server">
+                <asp:ListItem ID="Category1">Electronics</asp:ListItem>
+                <asp:ListItem ID="Category2">Pets</asp:ListItem>
+                <asp:ListItem ID="Category3">Books</asp:ListItem>
+                <asp:ListItem ID="Category4">Furniture</asp:ListItem>
+                <asp:ListItem ID="Category5">Tools</asp:ListItem>
+                <asp:ListItem ID="Category6">Games</asp:ListItem>
+                <asp:ListItem ID="Category7">Clothing</asp:ListItem>
+                <asp:ListItem ID="Category8">Phones</asp:ListItem>
+                <asp:ListItem ID="Category9">Bags</asp:ListItem>
+                <asp:ListItem ID="Category10">Jewelry</asp:ListItem>
+                <asp:ListItem ID="Category11">Accessories</asp:ListItem>
+                <asp:ListItem ID="Category12">Photos</asp:ListItem>
+                <asp:ListItem ID="Category13">School</asp:ListItem>
+                <asp:ListItem ID="Category14">Plants</asp:ListItem>
+                <asp:ListItem ID="Category15">Shoes</asp:ListItem>
+                <asp:ListItem ID="Category16">Food</asp:ListItem>
+                <asp:ListItem ID="Category17">Sports</asp:ListItem>
+                <asp:ListItem ID="Category18">Home</asp:ListItem>
+                <asp:ListItem ID="Category19">Cleaning</asp:ListItem>
+            </asp:CheckBoxList>
+
+            </div>
+
+        </td>
     </tr>
     <tr>
         <td style="width: 50px">&nbsp;</td>
