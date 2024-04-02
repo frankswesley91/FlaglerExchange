@@ -189,6 +189,7 @@
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\CreateAccount.aspx" />
+    <Content Include="Views\CreateListing.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\Item.aspx" />
     <Content Include="Views\Listing.aspx" />
@@ -253,6 +254,13 @@
     </Compile>
     <Compile Include="Views\CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateListing.aspx.cs">
+      <DependentUpon>CreateListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CreateListing.aspx.designer.cs">
+      <DependentUpon>CreateListing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
