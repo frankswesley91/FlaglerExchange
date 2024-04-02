@@ -213,7 +213,7 @@ button:hover {
             <button class="Search"type="submit">Search</button>
                         </td>
                     </tr>
-              </table>
+             </table>
         </div>
         <br />
         <br />
@@ -225,7 +225,7 @@ button:hover {
      
 
     <div class="sidebar">
-        <h2 style="text-decoration: underline;">Filter Products</h2>
+        <h2 style="text-decoration: underline;">Filter Listings</h2>
         <form id="filterForm">
             <!----Filter#1------>
             <div class="checkbox">
@@ -271,7 +271,7 @@ button:hover {
              <div class="checkbox">
                 <input type="checkbox" id="category9" name="category" value="category3">
                 <label for="category3">Tools</label>
-            </div>
+            </div> 
             <!----Filter#10------>
              <div class="checkbox">
                 <input type="checkbox" id="category10" name="category" value="category3">

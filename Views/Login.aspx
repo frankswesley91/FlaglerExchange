@@ -177,7 +177,7 @@ aside {
             <input type="password" id="password" name="password" placeholder="Please enter your Flagler Password:" required>
             <br />
             <br />
-            <!--SOMEONE PLEASE HELP ME WITH THIS BUTTON SOS, IT WONT CENTER :( -->
+
             
 
             <!--submit sends you to home screen-->
