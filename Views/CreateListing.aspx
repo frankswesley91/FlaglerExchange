@@ -71,7 +71,61 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
+/*--------------------------------Form stuff--------------------------------*/
 
+.create-listing-container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+
+    justify-content:center;
+    align-items: center;
+
+    background-color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label.create-account {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: #ffffff;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+}
+button.create-account-button[type="submit"]:hover {
+        background-color: #9e2339;
+        color: white;
+        
+}
     </style>
 
 
@@ -97,6 +151,7 @@ nav li a.indexNava:hover{
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
+        <div class="create-listing-container" style="margin: 0 auto">
 <table class="w-100">
     <tr>
         <td style="width: 50px">&nbsp;</td>
@@ -117,7 +172,7 @@ nav li a.indexNava:hover{
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:TextBox ID="TextBox1" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="TextBox1" runat="server" Width="258px"></asp:TextBox>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -183,7 +238,7 @@ nav li a.indexNava:hover{
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">
-            <textarea id="TextArea1" name="S1" style="width: 413px; height: 105px"></textarea></td>
+            <textarea class="input" ID="TextArea1" name="S1" style="width: 413px; height: 105px"></textarea></td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -219,6 +274,8 @@ nav li a.indexNava:hover{
         <td>&nbsp;</td>
     </tr>
 </table>
+
+            </div>
     </body>
 
 </asp:Content>
