@@ -96,11 +96,79 @@ nav li a.indexNava:hover{
 
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
-    <body>
-        <p style="font-size:xx-large">
-            BRYAN
-        </p>
-    </body>
+   
+    <!------ contains textbox for product name/date, textbox for product description, and buttons to move through images and start email --->
+<html>
+<body>
+    <h1>Product Name</h1>
+
+    <div>
+        <button onclick="moveImage(-100)">&#8592;</button>
+        <img id="product-image" src="product-image.jpg" alt="Product Image" width="300">
+        <button onclick="moveImage(100)">&#8594;</button>
+    </div>
+
+    <p>Product Description: This is a description of the product. It provides details about the product's features, specifications, and benefits.</p>
+
+    <script>
+        function moveImage(offset) {
+            var img = document.getElementById("product-image");
+            var currentLeft = img.offsetLeft;
+            img.style.left = (currentLeft + offset) + "px";
+        }
+    </script>
+</body>
+</html>
 
 </asp:Content>
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+}
+
+.text-box {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
