@@ -87,9 +87,6 @@ nav li a.indexNava:hover{
     background-color: white;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
 
 label.create-account {
     display: block;
@@ -106,22 +103,20 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
-.radio-group {
-    display: flex;
-    flex-direction: column;
-}
 
-button[type="submit"] {
+
+.create-listing-button {
     margin-top: 20px;
     padding: 10px;
     background-color: #fdb924;
-    color: #ffffff;
+    color: black;
     border:solid;
     border-radius: 10px;
     cursor: pointer;
     font-family: 'Times New Roman';
+    
 }
-button.create-account-button[type="submit"]:hover {
+.create-listing-button:hover {
         background-color: #9e2339;
         color: white;
         
@@ -152,7 +147,7 @@ button.create-account-button[type="submit"]:hover {
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
         <div class="create-listing-container" style="margin: 0 auto">
-<table class="w-100">
+<table class="w-100" style="margin: 0 auto;">
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">&nbsp;</td>
@@ -197,7 +192,7 @@ button.create-account-button[type="submit"]:hover {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:FileUpload ID="FileUpload1" runat="server" class="more-info" AllowMultiple="True"/>
+            <asp:FileUpload class="create-listing-button" ID="FileUpload1" runat="server" AllowMultiple="True"/>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -213,7 +208,7 @@ button.create-account-button[type="submit"]:hover {
     <tr>
         <td style="width: 50px; height: 45px"></td>
         <td style="width: 1038px; height: 45px">
-            <asp:Button ID="Button1" runat="server" Height="59px" Text="Add Another Image" Class="more-info"/>
+            <asp:Button class="create-listing-button" ID="Button1" runat="server" Height="39px" Text="Add Another Image"/>
         </td>
         <td style="height: 45px"></td>
         <td style="height: 45px"></td>

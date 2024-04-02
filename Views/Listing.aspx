@@ -67,6 +67,23 @@ nav li a.indexNava:hover{
     color: white;
 }
 
+.create-listing-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: black;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    
+}
+.create-listing-button:hover {
+        background-color: #9e2339;
+        color: white;
+        
+}
+
     </style>
 
 
@@ -95,6 +112,13 @@ nav li a.indexNava:hover{
         <p style="font-size:xx-large">
             KILLIAN
         </p>
+
+
+         <table class="test" style="margin: 0 auto;">
+                <tr>
+            <td><button type="submit" class="create-listing-button"style="display: inline-block; margin: 0 auto;"><a href="/Views/CreateListing.aspx" style="text-decoration: none; color: black;">Create Listing</a></button></td>
+                 </tr>
+            </table>
 
 
 
