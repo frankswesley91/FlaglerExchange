@@ -121,7 +121,7 @@ h5{
         </p>
     </div>
 
-   <div id="profileMainContent" class ="container-fluid", style="background-color: white; align-content: normal; padding-left: 150px; "> 
+   <div id="profileMainContent" class ="container-fluid", style="background-color: white; align-content: normal; padding-left: 150px; font-family: 'Times New Roman'; "> 
        <div class ="row" >
            <div class="col-lg-9", style="padding-top: 10px;">
                <h5 class="justify-content-center", style="border: solid">Contact Information</h5>
