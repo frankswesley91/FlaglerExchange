@@ -159,7 +159,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label4" runat="server" Font-Names="Times New Roman" Text="Item Title" Font-Bold="true"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Font-Names="Times New Roman" Text="Item Title:" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -253,16 +253,24 @@ input[type="email"] {
         <td style="height: 30px"></td>
         <!---CATEGORY SECTION!-->
     </tr>
-    <tr>
-        <td>
-            
-        </td>
-    </tr>
-    
+    <table>
+        <tr>
+            <td>
+                <asp:Label ID="ItemPriceLabel" runat="server" Text="Item Price:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:TextBox class="input" ID="ItemPrice" runat="server" Width="258px"></asp:TextBox>
+            </td>
+        </tr>
+        
+    </table>
+    <br />
     <table>
         <asp:Label ID="Label5" runat="server" Text="Add Tags:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         <tr>
-            <td>
+            <td style="font-family: 'Times New Roman'">
                 <asp:CheckBoxList ID="CategoryCheckBoxList" runat="server">
                 <asp:ListItem ID="Category1" Value="Electronics">Electronics</asp:ListItem>
                 <asp:ListItem ID="Category2" Value="Pets">Pets</asp:ListItem>
