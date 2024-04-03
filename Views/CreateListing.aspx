@@ -286,6 +286,12 @@ input[type="email"] {
             </asp:CheckBoxList>
             </td>
         </tr>
+
+        <tr>
+            <td style="margin: 0 auto">
+                 <asp:Button class="create-listing-button" ID="createListing" runat="server" Height="39px" Text="Create Listing"/>
+            </td>
+        </tr>
     </table>
 </table>
 
