@@ -158,7 +158,7 @@ h2 {
     margin-right: 10px;
 }
 
-button.ApplyFilter {
+.ApplyFilter {
    margin-top: 20px;
     padding: 10px;
     background-color: #9e2339;
@@ -170,10 +170,12 @@ button.ApplyFilter {
     font-family: 'Times New Roman';
 }
 
-button:hover {
+.ApplyFilter:hover {
      background-color: #fdb924;
      color: black;
 }
+
+
 
 
 </style>
@@ -258,7 +260,7 @@ button:hover {
 
         <tr>
             <td style="margin: 0 auto">
-                 <asp:Button class="create-listing-button" ID="createListing" runat="server" Height="39px" Text="Create Listing"/>
+                 <asp:Button class="ApplyFilter" ID="createListing" runat="server" Height="39px" Text="Apply Filters"/>
             </td>
         </tr>
     </table>
