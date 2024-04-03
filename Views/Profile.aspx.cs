@@ -53,18 +53,33 @@ namespace FlaglerExchange.Views
         }
         private void EnableElements()
         {
-            //enable major lists and save changes button
-            onCampusRBList.Enabled = true;
+            //enable affiliation list            
             affiliationDDList.Enabled = true;
-            //enable major hat
+
+            //enable major table
             majorTB1.Enabled = true;
             majorTB2.Enabled = true;
-            //enable minor writing
+            
+            //enable minor table
             minorTB1.Enabled = true;
             minorTB2.Enabled = true;
 
+            //enable the contact information section to edit
+            nameTB.Enabled = true;
+            emailTB.Enabled = true;
+            phoneTB.Enabled = true;
+            addressTB.Enabled = true;
+            onCampusRBList.Enabled = true;
+
+            //change the border styles of the contact info section
+            nameTB.BorderStyle = BorderStyle.Solid;
+            emailTB.BorderStyle = BorderStyle.Solid;
+            phoneTB.BorderStyle = BorderStyle.Solid;
+            addressTB.BorderStyle = BorderStyle.Solid;
+
             //enable the about me section to edit
             aboutMeTB.Enabled = true;
+
         }
         private void DisableElements()
         {
@@ -79,6 +94,18 @@ namespace FlaglerExchange.Views
             minorTB2.Enabled = false;
 
             aboutMeTB.Enabled = false;
+
+            nameTB.Enabled = false;
+            emailTB.Enabled = false;
+            phoneTB.Enabled = false;
+            addressTB.Enabled = false;
+            onCampusRBList.Enabled = false;
+
+            //change style elements of the contact info section back to their defaults
+            nameTB.BorderStyle = BorderStyle.None;
+            emailTB.BorderStyle = BorderStyle.None;
+            phoneTB.BorderStyle = BorderStyle.None;
+            addressTB.BorderStyle = BorderStyle.None;
 
         }
     }
