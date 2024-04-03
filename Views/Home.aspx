@@ -293,7 +293,8 @@ h2 {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 1">
+             <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
+
                     </td>
                 </tr>
              
@@ -313,7 +314,7 @@ h2 {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/backpack.jpeg" alt="Product 2">
+             <asp:Image class="Product" ID="ProductImage2" runat="server" ImageUrl="~/Images/backpack.jpeg" AlternateText="Backpack" />
                     </td>
                 </tr>
                 <tr>
@@ -331,7 +332,7 @@ h2 {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/bed.jpeg" alt="Product 3">
+             <asp:Image class="Product" ID="ProductImage3" runat="server" ImageUrl="~/Images/bed.jpeg" AlternateText="Bed" />
                     </td>
                 </tr>
                 <tr>
@@ -352,7 +353,7 @@ h2 {
             <table style ="margin: 0 auto;">
                 <tr>
                     <td>
-                <img class="Product" src="/Images/car.jpeg" alt="Product 4">
+                <asp:Image class="Product" ID="ProductImage4" runat="server" ImageUrl="~/Images/car.jpeg" AlternateText="Car" />
                    </td>
                 </tr>
                 <tr>
@@ -371,7 +372,7 @@ h2 {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/Controller.jpeg" alt="Product 5">
+             <asp:Image class="Product" ID="ProductImage5" runat="server" ImageUrl="~/Images/Controller.jpeg" AlternateText="Controller" />
                     </td>
                 </tr>
 
@@ -391,7 +392,7 @@ h2 {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/labtop.jpeg" alt="Product 6">
+             <asp:Image class="Product" ID="ProductImage6" runat="server" ImageUrl="~/Images/labtop.jpeg" AlternateText="labtop" />
                     </td>
                 </tr>
                      <tr>
@@ -412,7 +413,7 @@ h2 {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/stuffedcat.jpeg" alt="Product 7">
+             <asp:Image class="Product" ID="ProductImage7" runat="server" ImageUrl="~/Images/stuffedcat.jpeg" AlternateText="StuffedCat" />
                     </td>
                 </tr>
                 <tr>
@@ -430,7 +431,7 @@ h2 {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/Teashirt.jpeg" alt="Product 8">
+             <asp:Image class="Product" ID="ProductImage8" runat="server" ImageUrl="~/Images/Teashirt.jpeg" AlternateText="Teashirt" />
                     </td>
                 </tr>
                 <tr>
@@ -450,7 +451,7 @@ h2 {
             <table style ="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/textbook.jpeg" alt="Product 9">
+             <asp:Image class="Product" ID="ProductImage9" runat="server" ImageUrl="~/Images/textbook.jpeg" AlternateText="Textbook" />
                     </td>
                 </tr>
                 <tr>

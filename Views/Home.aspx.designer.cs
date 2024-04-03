@@ -213,6 +213,15 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Button createListing;
 
         /// <summary>
+        /// ProductImage1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage1;
+
+        /// <summary>
         /// ButtonToItemPage control.
         /// </summary>
         /// <remarks>
@@ -229,6 +238,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label PriceLabel;
+
+        /// <summary>
+        /// ProductImage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage2;
 
         /// <summary>
         /// ButtonToItemPage2 control.
@@ -249,6 +267,15 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label PriceLabel2;
 
         /// <summary>
+        /// ProductImage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage3;
+
+        /// <summary>
         /// ButtonToItemPage3 control.
         /// </summary>
         /// <remarks>
@@ -265,6 +292,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label PriceLabel3;
+
+        /// <summary>
+        /// ProductImage4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage4;
 
         /// <summary>
         /// ButtonToItemPage4 control.
@@ -285,6 +321,15 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label PriceLabel4;
 
         /// <summary>
+        /// ProductImage5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage5;
+
+        /// <summary>
         /// ButtonToItemPage5 control.
         /// </summary>
         /// <remarks>
@@ -301,6 +346,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label PriceLabel5;
+
+        /// <summary>
+        /// ProductImage6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage6;
 
         /// <summary>
         /// ButtonToItemPage6 control.
@@ -321,6 +375,15 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label PriceLabel6;
 
         /// <summary>
+        /// ProductImage7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage7;
+
+        /// <summary>
         /// ButtonToItemPage7 control.
         /// </summary>
         /// <remarks>
@@ -339,6 +402,15 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label PriceLabel7;
 
         /// <summary>
+        /// ProductImage8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage8;
+
+        /// <summary>
         /// ButtonToItemPage8 control.
         /// </summary>
         /// <remarks>
@@ -355,6 +427,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label PriceLabel8;
+
+        /// <summary>
+        /// ProductImage9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage9;
 
         /// <summary>
         /// ButtonToItemPage9 control.
