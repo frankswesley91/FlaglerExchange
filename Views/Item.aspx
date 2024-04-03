@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Item.aspx.cs" Inherits="FlaglerExchange.Views.Item" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">\
     <style>
-        html {
+         html {
   font-size: 14px;
 }
 
@@ -67,13 +67,117 @@ nav li a.indexNava:hover{
     color: white;
 }
 
+/* CSS For Bryan's page specifically*/
+div#item-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+}
+
+.text-box {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+
+
+div#item-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+}
+
+.text-box {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
 
 
 
   </style>
 
-
-    <div class="text-center">
+<div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
     <img src="/Images/Flagler.jpeg" alt="Flagler Logo"/>
     <p class="slogan"style="color:white">An easy platform to trade your items!</p>
@@ -96,11 +200,49 @@ nav li a.indexNava:hover{
 
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
-    <body>
-        <p style="font-size:xx-large">
-            BRYAN
-        </p>
-    </body>
+   
+    <!------ contains textbox for product name/date, textbox for product description, and buttons to move through images and start email --->
+
+
+<!-- Because each of these pages is housed in an asp:Content element, that acts as the body. Don't need the <html> or <body> tags -->
+<!-- Instead, we just use <div> elements to act as containers, and specify the type of container using the `class` attribute. --> 
+    <!-- This contains the whole element -->
+<div class="container-fluid">
+    <!-- Each class="row" container allows you to better separate elements of the form sequentially -->
+    <div id="item-container" class="row">
+                <!-- Each class="col-x" element organizes your element into a square cell  -->
+            <div class="col-sm title">
+                <!-- This needs to be "Item Name" rather than product name -->
+                <h1>Product Name</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    <!-- This container thing allows the item image be contained better -->
+                    <div class ="container">
+                        <div class="body-content">
+                            <button onclick="moveImage(-100)">&#8592;</button>
+                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" width="300">
+                            <button onclick="moveImage(100)">&#8594;</button>
+                                <script>
+                                    function moveImage(offset) {
+                                        var img = document.getElementById("product-image");
+                                        var currentLeft = img.offsetLeft;
+                                        img.style.left = (currentLeft + offset) + "px";
+                                    }
+                                </script>
+                        </div>
+            </div>
+        </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="text-body">
+                        <p>Product Description: This is a description of the product. It provides details about the product's features, specifications, and benefits.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
 
 </asp:Content>
 
