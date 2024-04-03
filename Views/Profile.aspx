@@ -131,25 +131,25 @@ h5{
                            <tr>
                                <td><strong>Name: </strong></td>
                                <td style="offset-position: center">
-                                   <asp:Label ID="nameLabel" runat="server" Text="BAWK"></asp:Label>
+                                   <asp:TextBox ID="nameTB" runat="server" Text="BAWK" BorderStyle="None"></asp:TextBox>
                                </td>
                            </tr>
                            <tr>
                                <td><strong>Email: </strong></td>
                                <td>
-                                   <asp:Label ID="emailLabel" runat="server" Text="lastname123@flagler.edu"></asp:Label>
+                                   <asp:TextBox ID="emailTB" runat="server" Text="lastname123@flagler.edu" BorderStyle="None"></asp:TextBox>
                                </td>
                            </tr>
                            <tr>
                                <td><strong>Phone: </strong></td>
                                <td>
-                                   <asp:Label ID="phoneLabel" runat="server" Text="(123)-456-7890"></asp:Label>
+                                   <asp:TextBox ID="phoneTB" runat="server" Text="(123)-456-7890" BorderStyle="None"></asp:TextBox>
                                </td>
                            </tr>
                            <tr>
                                <td><strong>Off campus?: </strong></td>
                                <td>
-                                   <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal">
+                                   <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal" >
                                        <asp:ListItem Value="1">Yes</asp:ListItem>
                                        <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                    </asp:RadioButtonList>
@@ -159,7 +159,7 @@ h5{
                            <tr>
                                <td><strong>Address: </strong></td>
                                <td>
-                                   <asp:Label ID="addressLabel" runat="server" Text="74 King Street, St. Augustine FL 32080"></asp:Label>
+                                   <asp:TextBox ID="addressTB" runat="server" Text="74 King Street, St. Augustine FL 32080" BorderStyle="None"></asp:TextBox>
                                </td>
                            </tr>
                        </table>

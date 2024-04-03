@@ -15,31 +15,31 @@ namespace FlaglerExchange.Views
     {
 
         /// <summary>
-        /// nameLabel control.
+        /// nameTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nameLabel;
+        protected global::System.Web.UI.WebControls.TextBox nameTB;
 
         /// <summary>
-        /// emailLabel control.
+        /// emailTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emailLabel;
+        protected global::System.Web.UI.WebControls.TextBox emailTB;
 
         /// <summary>
-        /// phoneLabel control.
+        /// phoneTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label phoneLabel;
+        protected global::System.Web.UI.WebControls.TextBox phoneTB;
 
         /// <summary>
         /// onCampusRBList control.
@@ -51,13 +51,13 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.RadioButtonList onCampusRBList;
 
         /// <summary>
-        /// addressLabel control.
+        /// addressTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label addressLabel;
+        protected global::System.Web.UI.WebControls.TextBox addressTB;
 
         /// <summary>
         /// profileImage control.
