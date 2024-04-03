@@ -132,6 +132,7 @@ img.Product {
 /*-------------------------Category css TENTATIVE-----------------------*/
 
 
+
 .sidebar {
     font-family: 'Times New Roman';
     width: 250px;
