@@ -14,5 +14,17 @@ namespace FlaglerExchange.Views
             
 
         }
+
+        protected void ButtonToHomePage_Click(object sender, EventArgs e)
+        {
+            // Navigate to the More Info page
+            Response.Redirect("/Views/Home.aspx");
+        }
+
+        protected void ButtonToCreateAccountPage_Click(object sender, EventArgs e)
+        {
+            // Navigate to the More Info page
+            Response.Redirect("/Views/CreateAccount.aspx");
+        }
     }
 }

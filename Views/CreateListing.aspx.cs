@@ -7,17 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace FlaglerExchange.Views
 {
-    public partial class CreateAccount : System.Web.UI.Page
+    public partial class CreateListing : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void ButtonToHomePage_Click(object sender, EventArgs e)
-        {
-            // Navigate to the More Info page
-            Response.Redirect("/Views/Home.aspx");
         }
     }
 }

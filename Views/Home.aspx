@@ -122,7 +122,7 @@ img.Product {
     font-family: 'Times New Roman';
 }
 
-button.more-info:hover{
+.more-info:hover{
     background-color: #9e2339;
     color: white;
 }
@@ -130,6 +130,7 @@ button.more-info:hover{
 
 
 /*-------------------------Category css TENTATIVE-----------------------*/
+
 
 
 .sidebar {
@@ -158,7 +159,7 @@ h2 {
     margin-right: 10px;
 }
 
-button.ApplyFilter {
+.ApplyFilter {
    margin-top: 20px;
     padding: 10px;
     background-color: #9e2339;
@@ -170,9 +171,26 @@ button.ApplyFilter {
     font-family: 'Times New Roman';
 }
 
-button:hover {
+.ApplyFilter:hover {
      background-color: #fdb924;
      color: black;
+}
+
+.priceLabel{
+    font-family: 'Times New Roman'; 
+    font-weight: bold;
+    border: 1px solid #ccc;
+    color: white;
+    border-style:groove;
+    border-color: #fdb924;
+    margin-top: 10px;
+   padding: 10px;
+}
+
+.StudentName {
+    font-size:xx-large; 
+    font-family:'Times New Roman'; 
+    color: white;
 }
 
 
@@ -202,16 +220,15 @@ button:hover {
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
-        <p style="font-size:xx-large; font-family:'Times New Roman'; color: white">
-            Welcome back, "StudentName"
-        </p>
+         <p style="font-size:xx-large; font-family:'Times New Roman'; color: white; ">Welcome back,</p> <asp:Label class="StudentName" ID="Label1" runat="server" Text="Insert Student Name" Font-Names="Times New Roman" Font-Strikeout="False"></asp:Label>
+              
         <div class="search-elements">
             <table style="width: 1000px">
                 <tr>
                     <td>
-            <input type="text" placeholder="Search for anything" name="search" class="search-bar" style="width: 1000px">
-            <button class="Search"type="submit">Search</button>
-                        </td>
+            <asp:TextBox class="search-bar" ID="SearchTextBox" runat="server"></asp:TextBox>
+            <asp:Button class="more-info" ID="SearchButton" runat="server" Height="39px" Text="Search"/>
+                     </td>
                     </tr>
              </table>
         </div>
@@ -228,103 +245,40 @@ button:hover {
         <h2 style="text-decoration: underline;">Filter Listings</h2>
         <form id="filterForm">
             <!----Filter#1------>
-            <div class="checkbox">
-                <input type="checkbox" id="category1" name="category" value="category1">
-                <label for="category1">Electronics</label>
-            </div>
-            <!----Filter#2------>
-            <div class="checkbox">
-                <input type="checkbox" id="category2" name="category" value="category2">
-                <label for="category2">Pets</label>
-            </div>
-            <!----Filter#3------>
-            <div class="checkbox">
-                <input type="checkbox" id="category3" name="category" value="category3">
-                <label for="category3">Books</label>
-            </div>
-            <!----Filter#4------>
-             <div class="checkbox">
-                <input type="checkbox" id="category4" name="category" value="category3">
-                <label for="category3">Furniture</label>
-            </div>
-            <!----Filter#5------>
-             <div class="checkbox">
-                <input type="checkbox" id="category5" name="category" value="category3">
-                <label for="category3">Tools</label>
-            </div>
-            <!----Filter#6------>
-             <div class="checkbox">
-                <input type="checkbox" id="category6" name="category" value="category3">
-                <label for="category3">Games</label>
-            </div>
-            <!----Filter#7------>
-             <div class="checkbox">
-                <input type="checkbox" id="category7" name="category" value="category3">
-                <label for="category3">Clothing</label>
-            </div>
-            <!----Filter#8------>
-             <div class="checkbox">
-                <input type="checkbox" id="category8" name="category" value="category3">
-                <label for="category3">Vehicles</label>
-            </div>
-            <!----Filter#9------>
-             <div class="checkbox">
-                <input type="checkbox" id="category9" name="category" value="category3">
-                <label for="category3">Tools</label>
-            </div> 
-            <!----Filter#10------>
-             <div class="checkbox">
-                <input type="checkbox" id="category10" name="category" value="category3">
-                <label for="category3">Games</label>
-            </div>
-            <!----Filter#11------>
-             <div class="checkbox">
-                <input type="checkbox" id="category11" name="category" value="category3">
-                <label for="category3">Clothing</label>
-            </div>
-            <!----Filter#12------>
-             <div class="checkbox">
-                <input type="checkbox" id="category12" name="category" value="category3">
-                <label for="category3">Vehicles</label>
-            </div>
-            <!----Filter#13------>
-             <div class="checkbox">
-                <input type="checkbox" id="category13" name="category" value="category3">
-                <label for="category3">Tools</label>
-            </div>
-            <!----Filter#14------>
-             <div class="checkbox">
-                <input type="checkbox" id="category14" name="category" value="category3">
-                <label for="category3">Games</label>
-            </div>
-            <!----Filter#15------>
-             <div class="checkbox">
-                <input type="checkbox" id="category15" name="category" value="category3">
-                <label for="category3">Clothing</label>
-            </div>
-            <!----Filter#16------>
-             <div class="checkbox">
-                <input type="checkbox" id="category16" name="category" value="category3">
-                <label for="category3">Vehicles</label>
-            </div>
-             <!----Filter#17------>
-             <div class="checkbox">
-                <input type="checkbox" id="category17" name="category" value="category3">
-                <label for="category3">Food</label>
-            </div>
-            <!----Filter#18------>
-             <div class="checkbox">
-                <input type="checkbox" id="category18" name="category" value="category3">
-                <label for="category3">Sports</label>
-            </div>
-            <!----Filter#19------>
-             <div class="checkbox">
-                <input type="checkbox" id="category19" name="category" value="category3">
-                <label for="category3">Home Improvement</label>
-            </div>
-            
-            <!-- Add more checkboxes as needed -->
-            <button class="ApplyFilter" type="submit">Apply Filter</button>
+       <table>
+        <asp:Label ID="Label5" runat="server" Text="Add Tags:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+        <tr>
+            <td style="font-family: 'Times New Roman'">
+                <asp:CheckBoxList ID="CategoryCheckBoxList" runat="server">
+                <asp:ListItem ID="Category1" Value="Electronics">Electronics</asp:ListItem>
+                <asp:ListItem ID="Category2" Value="Pets">Pets</asp:ListItem>
+                <asp:ListItem ID="Category3" Value="Books">Books</asp:ListItem>
+                <asp:ListItem ID="Category4" Value="Furniture">Furniture</asp:ListItem>
+                <asp:ListItem ID="Category5" Value="Tools">Tools</asp:ListItem>
+                <asp:ListItem ID="Category6" Value="Games">Games</asp:ListItem>
+                <asp:ListItem ID="Category7" Value="Clothing">Clothing</asp:ListItem>
+                <asp:ListItem ID="Category8" Value="Phones">Phones</asp:ListItem>
+                <asp:ListItem ID="Category9" Value="Bags">Bags</asp:ListItem>
+                <asp:ListItem ID="Category10" Value="Jewelry">Jewelry</asp:ListItem>
+                <asp:ListItem ID="Category11" Value="Accessories">Accessories</asp:ListItem>
+                <asp:ListItem ID="Category12" Value="Photos">Photos</asp:ListItem>
+                <asp:ListItem ID="Category13" Value="School">School</asp:ListItem>
+                <asp:ListItem ID="Category14" Value="Plants">Plants</asp:ListItem>
+                <asp:ListItem ID="Category15" Value="Shoes">Shoes</asp:ListItem>
+                <asp:ListItem ID="Category16" Value="Food">Food</asp:ListItem>
+                <asp:ListItem ID="Category17" Value="Sports">Sports</asp:ListItem>
+                <asp:ListItem ID="Category18" Value="Home">Home</asp:ListItem>
+                <asp:ListItem ID="Category19" Value="Cleaning">Cleaning</asp:ListItem>
+            </asp:CheckBoxList>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="margin: 0 auto">
+                 <asp:Button class="ApplyFilter" ID="createListing" runat="server" Height="39px" Text="Apply Filters"/>
+            </td>
+        </tr>
+    </table>
         </form>
     </div>
     <div class="main-content">
@@ -343,15 +297,16 @@ button:hover {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/Cat.jpeg" alt="Product 1">
+             <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
+
                     </td>
                 </tr>
              
                  <tr>
                      <td>
-             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product1-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$78.99</label>
+            <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                 </tr>
              </table>
@@ -363,14 +318,14 @@ button:hover {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/backpack.jpeg" alt="Product 2">
+             <asp:Image class="Product" ID="ProductImage2" runat="server" ImageUrl="~/Images/backpack.jpeg" AlternateText="Backpack" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product2-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$99.99</label>
+             <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage2" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel2" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                  </tr>
             </table>
@@ -381,14 +336,14 @@ button:hover {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/bed.jpeg" alt="Product 3">
+             <asp:Image class="Product" ID="ProductImage3" runat="server" ImageUrl="~/Images/bed.jpeg" AlternateText="Bed" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product3-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$120.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage3" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel3" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                 </tr>
              </table>
@@ -402,14 +357,14 @@ button:hover {
             <table style ="margin: 0 auto;">
                 <tr>
                     <td>
-                <img class="Product" src="/Images/car.jpeg" alt="Product 4">
+                <asp:Image class="Product" ID="ProductImage4" runat="server" ImageUrl="~/Images/car.jpeg" AlternateText="Car" />
                    </td>
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product4-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$24.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage4" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel4" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                     </tr>
              </table>
@@ -421,15 +376,15 @@ button:hover {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/Controller.jpeg" alt="Product 5">
+             <asp:Image class="Product" ID="ProductImage5" runat="server" ImageUrl="~/Images/Controller.jpeg" AlternateText="Controller" />
                     </td>
                 </tr>
 
                 <tr>
                    <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product5-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$10.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage5" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel5" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                    </td>
                 </tr>
              </table>
@@ -441,14 +396,14 @@ button:hover {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/labtop.jpeg" alt="Product 6">
+             <asp:Image class="Product" ID="ProductImage6" runat="server" ImageUrl="~/Images/labtop.jpeg" AlternateText="labtop" />
                     </td>
                 </tr>
                      <tr>
                         <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product6-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$2.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage6" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel6" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -462,14 +417,14 @@ button:hover {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/stuffedcat.jpeg" alt="Product 7">
+             <asp:Image class="Product" ID="ProductImage7" runat="server" ImageUrl="~/Images/stuffedcat.jpeg" AlternateText="StuffedCat" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product7-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$6.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage7" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel7" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                </tr>
             </table>
@@ -480,14 +435,14 @@ button:hover {
             <table style="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/Teashirt.jpeg" alt="Product 8">
+             <asp:Image class="Product" ID="ProductImage8" runat="server" ImageUrl="~/Images/Teashirt.jpeg" AlternateText="Teashirt" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product8-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$44.44</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage8" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel8" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                    </td>
                </tr>
             </table>
@@ -500,14 +455,14 @@ button:hover {
             <table style ="margin: 0 auto;">
                 <tr>
                     <td>
-             <img class="Product" src="/Images/textbook.jpeg" alt="Product 9">
+             <asp:Image class="Product" ID="ProductImage9" runat="server" ImageUrl="~/Images/textbook.jpeg" AlternateText="Textbook" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product9-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$1.00</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage9" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel9" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                    </td>
                 </tr>
             </table>

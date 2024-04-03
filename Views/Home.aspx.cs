@@ -15,5 +15,13 @@ namespace FlaglerExchange.Views
            
 
         }
+
+        protected void ButtonToItemPage_Click(object sender, EventArgs e)
+        {
+            // Navigate to the More Info page
+            Response.Redirect("/Views/Item.aspx");
+        }
+
+       
     }
 }
