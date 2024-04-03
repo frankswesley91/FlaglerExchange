@@ -122,7 +122,7 @@ img.Product {
     font-family: 'Times New Roman';
 }
 
-button.more-info:hover{
+.more-info:hover{
     background-color: #9e2339;
     color: white;
 }
@@ -288,7 +288,7 @@ h2 {
              
                  <tr>
                      <td>
-             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
+             <asp:Button class="more-info" ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
              <label class="Product1-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
              padding: 10px;">$78.99</label>
                     </td>
