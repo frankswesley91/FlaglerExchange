@@ -208,9 +208,6 @@ input[type="email"] {
     </tr>
     <tr>
         <td style="width: 50px; height: 45px"></td>
-        <td style="width: 1038px; height: 45px">
-            <asp:Button class="create-listing-button" ID="Button1" runat="server" Height="39px" Text="Add Another Image"/>
-        </td>
         <td style="height: 45px"></td>
         <td style="height: 45px"></td>
         <td style="height: 45px"></td>
