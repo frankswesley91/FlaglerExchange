@@ -169,6 +169,17 @@ button.create-account-button[type="submit"]:hover {
 }
 
 
+.more-info {
+   margin: 0 auto;
+    padding: 10px;
+    background-color: #fdb924;
+    color: black;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+}
+
 </style>
 
     <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
@@ -227,7 +238,7 @@ button.create-account-button[type="submit"]:hover {
                 </div>
             </div>
             
-                <button type="submit" class="create-account-button"><a href="/Views/Home.aspx" style="text-decoration: none; color: black">Create account</button>
+                <asp:Button class="more-info" ID="SubmitCreateAccountButton" runat="server" Height="39px" Text="Create Account" OnClick="ButtonToHomePage_Click"/>
             
     </div>
 </body>
