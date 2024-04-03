@@ -186,7 +186,11 @@ h2 {
    padding: 10px;
 }
 
-
+.StudentName {
+    font-size:xx-large; 
+    font-family:'Times New Roman'; 
+    color: white;
+}
 
 
 </style>
@@ -215,9 +219,8 @@ h2 {
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
-        <p style="font-size:xx-large; font-family:'Times New Roman'; color: white">
-            Welcome back, "StudentName"
-        </p>
+         <p style="font-size:xx-large; font-family:'Times New Roman'; color: white; ">Welcome back,</p> <asp:Label class="StudentName" ID="Label1" runat="server" Text="Insert Student Name" Font-Names="Times New Roman" Font-Strikeout="False"></asp:Label>
+              
         <div class="search-elements">
             <table style="width: 1000px">
                 <tr>
