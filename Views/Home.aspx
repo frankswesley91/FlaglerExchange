@@ -225,9 +225,9 @@ h2 {
             <table style="width: 1000px">
                 <tr>
                     <td>
-            <input type="text" placeholder="Search for anything" name="search" class="search-bar" style="width: 1000px">
-            <button class="Search"type="submit">Search</button>
-                        </td>
+            <asp:TextBox class="search-bar" ID="SearchTextBox" runat="server"></asp:TextBox>
+            <asp:Button class="more-info" ID="SearchButton" runat="server" Height="39px" Text="Search"/>
+                     </td>
                     </tr>
              </table>
         </div>
