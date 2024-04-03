@@ -228,103 +228,40 @@ button:hover {
         <h2 style="text-decoration: underline;">Filter Listings</h2>
         <form id="filterForm">
             <!----Filter#1------>
-            <div class="checkbox">
-                <input type="checkbox" id="category1" name="category" value="category1">
-                <label for="category1">Electronics</label>
-            </div>
-            <!----Filter#2------>
-            <div class="checkbox">
-                <input type="checkbox" id="category2" name="category" value="category2">
-                <label for="category2">Pets</label>
-            </div>
-            <!----Filter#3------>
-            <div class="checkbox">
-                <input type="checkbox" id="category3" name="category" value="category3">
-                <label for="category3">Books</label>
-            </div>
-            <!----Filter#4------>
-             <div class="checkbox">
-                <input type="checkbox" id="category4" name="category" value="category3">
-                <label for="category3">Furniture</label>
-            </div>
-            <!----Filter#5------>
-             <div class="checkbox">
-                <input type="checkbox" id="category5" name="category" value="category3">
-                <label for="category3">Tools</label>
-            </div>
-            <!----Filter#6------>
-             <div class="checkbox">
-                <input type="checkbox" id="category6" name="category" value="category3">
-                <label for="category3">Games</label>
-            </div>
-            <!----Filter#7------>
-             <div class="checkbox">
-                <input type="checkbox" id="category7" name="category" value="category3">
-                <label for="category3">Clothing</label>
-            </div>
-            <!----Filter#8------>
-             <div class="checkbox">
-                <input type="checkbox" id="category8" name="category" value="category3">
-                <label for="category3">Phones</label>
-            </div>
-            <!----Filter#9------>
-             <div class="checkbox">
-                <input type="checkbox" id="category9" name="category" value="category3">
-                <label for="category3">Bags</label>
-            </div> 
-            <!----Filter#10------>
-             <div class="checkbox">
-                <input type="checkbox" id="category10" name="category" value="category3">
-                <label for="category3">Jewelry</label>
-            </div>
-            <!----Filter#11------>
-             <div class="checkbox">
-                <input type="checkbox" id="category11" name="category" value="category3">
-                <label for="category3">Accessories</label>
-            </div>
-            <!----Filter#12------>
-             <div class="checkbox">
-                <input type="checkbox" id="category12" name="category" value="category3">
-                <label for="category3">Photos</label>
-            </div>
-            <!----Filter#13------>
-             <div class="checkbox">
-                <input type="checkbox" id="category13" name="category" value="category3">
-                <label for="category3">School Supplies</label>
-            </div>
-            <!----Filter#14------>
-             <div class="checkbox">
-                <input type="checkbox" id="category14" name="category" value="category3">
-                <label for="category3">Plants</label>
-            </div>
-            <!----Filter#15------>
-             <div class="checkbox">
-                <input type="checkbox" id="category15" name="category" value="category3">
-                <label for="category3">Shoes</label>
-            </div>
-            <!----Filter#16------>
-             <div class="checkbox">
-                <input type="checkbox" id="category16" name="category" value="category3">
-                <label for="category3">Food</label>
-            </div>
-             <!----Filter#17------>
-             <div class="checkbox">
-                <input type="checkbox" id="category17" name="category" value="category3">
-                <label for="category3">Sports</label>
-            </div>
-            <!----Filter#18------>
-             <div class="checkbox">
-                <input type="checkbox" id="category18" name="category" value="category3">
-                <label for="category3">Home Improvement</label>
-            </div>
-            <!----Filter#19------>
-             <div class="checkbox">
-                <input type="checkbox" id="category19" name="category" value="category3">
-                <label for="category3">Cleaning</label>
-            </div>
-            
-            <!-- Add more checkboxes as needed -->
-            <button class="ApplyFilter" type="submit">Apply Filter</button>
+       <table>
+        <asp:Label ID="Label5" runat="server" Text="Add Tags:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+        <tr>
+            <td style="font-family: 'Times New Roman'">
+                <asp:CheckBoxList ID="CategoryCheckBoxList" runat="server">
+                <asp:ListItem ID="Category1" Value="Electronics">Electronics</asp:ListItem>
+                <asp:ListItem ID="Category2" Value="Pets">Pets</asp:ListItem>
+                <asp:ListItem ID="Category3" Value="Books">Books</asp:ListItem>
+                <asp:ListItem ID="Category4" Value="Furniture">Furniture</asp:ListItem>
+                <asp:ListItem ID="Category5" Value="Tools">Tools</asp:ListItem>
+                <asp:ListItem ID="Category6" Value="Games">Games</asp:ListItem>
+                <asp:ListItem ID="Category7" Value="Clothing">Clothing</asp:ListItem>
+                <asp:ListItem ID="Category8" Value="Phones">Phones</asp:ListItem>
+                <asp:ListItem ID="Category9" Value="Bags">Bags</asp:ListItem>
+                <asp:ListItem ID="Category10" Value="Jewelry">Jewelry</asp:ListItem>
+                <asp:ListItem ID="Category11" Value="Accessories">Accessories</asp:ListItem>
+                <asp:ListItem ID="Category12" Value="Photos">Photos</asp:ListItem>
+                <asp:ListItem ID="Category13" Value="School">School</asp:ListItem>
+                <asp:ListItem ID="Category14" Value="Plants">Plants</asp:ListItem>
+                <asp:ListItem ID="Category15" Value="Shoes">Shoes</asp:ListItem>
+                <asp:ListItem ID="Category16" Value="Food">Food</asp:ListItem>
+                <asp:ListItem ID="Category17" Value="Sports">Sports</asp:ListItem>
+                <asp:ListItem ID="Category18" Value="Home">Home</asp:ListItem>
+                <asp:ListItem ID="Category19" Value="Cleaning">Cleaning</asp:ListItem>
+            </asp:CheckBoxList>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="margin: 0 auto">
+                 <asp:Button class="create-listing-button" ID="createListing" runat="server" Height="39px" Text="Create Listing"/>
+            </td>
+        </tr>
+    </table>
         </form>
     </div>
     <div class="main-content">
