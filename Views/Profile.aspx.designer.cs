@@ -15,6 +15,33 @@ namespace FlaglerExchange.Views
     {
 
         /// <summary>
+        /// nameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nameLabel;
+
+        /// <summary>
+        /// emailLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label emailLabel;
+
+        /// <summary>
+        /// phoneLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label phoneLabel;
+
+        /// <summary>
         /// onCampusRBList control.
         /// </summary>
         /// <remarks>
@@ -22,6 +49,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList onCampusRBList;
+
+        /// <summary>
+        /// addressLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label addressLabel;
 
         /// <summary>
         /// profileImage control.
@@ -103,14 +139,5 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList affiliationDDList;
-
-        /// <summary>
-        /// saveProfileButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button saveProfileButton;
     }
 }

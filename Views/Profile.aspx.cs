@@ -26,10 +26,36 @@ namespace FlaglerExchange.Views
 
         protected void editProfileButton_Click(object sender, EventArgs e)
         {
+            if (editProfileButton.Text == "Edit Profile")
+            {
+                //enable form elements
+                EnableElements();
+
+                //change the button text
+                editProfileButton.Text = "Save Changes";
+
+                //change the color of the button
+                editProfileButton.ForeColor = System.Drawing.Color.White;
+                editProfileButton.BackColor = System.Drawing.Color.DarkRed;
+            }
+           else 
+           {
+                //re-disable elements
+                DisableElements();
+
+                //change the text back to "Edit Profile: 
+                editProfileButton.Text = "Edit Profile";
+
+                //Change the color of the button back to the default colors
+                editProfileButton.ForeColor = System.Drawing.Color.Black;
+                editProfileButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#EFEFEF"); 
+           }
+        }
+        private void EnableElements()
+        {
             //enable major lists and save changes button
             onCampusRBList.Enabled = true;
             affiliationDDList.Enabled = true;
-            saveProfileButton.Visible = true;
             //enable major hat
             majorTB1.Enabled = true;
             majorTB2.Enabled = true;
@@ -39,10 +65,8 @@ namespace FlaglerExchange.Views
 
             //enable the about me section to edit
             aboutMeTB.Enabled = true;
-
         }
-
-        protected void saveProfileButton_Click(object sender, EventArgs e)
+        private void DisableElements()
         {
             //re-disable elements that have been changed
             onCampusRBList.Enabled = false;
@@ -56,8 +80,6 @@ namespace FlaglerExchange.Views
 
             aboutMeTB.Enabled = false;
 
-            //remove the save changes button from the view
-            saveProfileButton.Visible = false;
         }
     }
 }

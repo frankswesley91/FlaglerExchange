@@ -130,15 +130,21 @@ h5{
                        <table class="container-fluid" id="contact-table"; style="border: solid;">
                            <tr>
                                <td><strong>Name: </strong></td>
-                               <td style="offset-position: center">BAWK</td>
+                               <td style="offset-position: center">
+                                   <asp:Label ID="nameLabel" runat="server" Text="BAWK"></asp:Label>
+                               </td>
                            </tr>
                            <tr>
                                <td><strong>Email: </strong></td>
-                               <td>lastname123@flagler.edu</td>
+                               <td>
+                                   <asp:Label ID="emailLabel" runat="server" Text="lastname123@flagler.edu"></asp:Label>
+                               </td>
                            </tr>
                            <tr>
                                <td><strong>Phone: </strong></td>
-                               <td>(123)-456-7890</td>
+                               <td>
+                                   <asp:Label ID="phoneLabel" runat="server" Text="(123)-456-7890"></asp:Label>
+                               </td>
                            </tr>
                            <tr>
                                <td><strong>Off campus?: </strong></td>
@@ -152,7 +158,9 @@ h5{
                            </tr>
                            <tr>
                                <td><strong>Address: </strong></td>
-                               <td>74 King Street, St. Augustine FL 32080</td>
+                               <td>
+                                   <asp:Label ID="addressLabel" runat="server" Text="74 King Street, St. Augustine FL 32080"></asp:Label>
+                               </td>
                            </tr>
                        </table>
                    </div>
@@ -164,7 +172,7 @@ h5{
                    <!-- <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" /> -->
                    <asp:Image ID="profileImage" runat="server" src="../Images/FlaglerExchangeLogo.png" Width="150px" Height="150px" />
                    <asp:Button ID="changeProfileImageButton" runat="server" Text="Change picture..." />
-                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" />
+                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" BackColor="#EFEFEF" />
                </div>
            </div>
            <div class ="row">
@@ -216,9 +224,6 @@ h5{
                            <asp:ListItem Value="employee">Employee</asp:ListItem>
                         </asp:DropDownList>
                    </div>
-               <div class="btn, btn-link offset-md-5" style="padding-top: 30px; margin-bottom: 25px; ">
-                   <asp:Button ID="saveProfileButton" runat="server" BackColor="DarkRed" ForeColor="White" Text="Save Changes..." Visible="false" OnClick="saveProfileButton_Click" />
-               </div>
             </div>    
    </div>
 </div>
