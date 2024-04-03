@@ -138,6 +138,23 @@ aside {
   justify-content: center;
 }
 
+.more-info {
+   margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: black;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+}
+
+.more-info:hover{
+    background-color: #9e2339;
+    color: white;
+}
+
+
 </style>
 
     <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
@@ -169,11 +186,11 @@ aside {
     <div class="login-container">
         <h1>Login</h1>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Please enter your Flagler Email:" required>
+            <asp:TextBox ID="UserEmail" runat="server" Width="258px"></asp:TextBox>
             <br />
             <br />
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Please enter your Flagler Password:" required>
+            <asp:TextBox class="input" ID="UserPassword" runat="server" Width="258px"></asp:TextBox>
             <br />
             <br />
 
@@ -183,9 +200,9 @@ aside {
             <!--submit sends you to home screen-->
             <table class="Login-Create-Account-Buttons" style="margin: 0 auto;">
                 <tr>
-            <td><button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/Home.aspx" style="text-decoration: none; color: black;">Login</a></button></td>
+            <td><asp:Button class="more-info" ID="LoginButton" runat="server" Height="39px" Text="Login" OnClick="ButtonToHomePage_Click"/></td>
             <!--create account sends you to the create account page screen-->
-            <td><button type="submit" style="display: inline-block; margin: 0 auto;"><a href="/Views/CreateAccount.aspx" style="text-decoration: none; color: black;">Create Account</button></td>
+            <td><asp:Button class="more-info" ID="CreateAccountButton" runat="server" Height="39px" Text="Create Account" OnClick="ButtonToCreateAccountPage_Click"/></td>
                 </tr>
             </table>
     </div>
