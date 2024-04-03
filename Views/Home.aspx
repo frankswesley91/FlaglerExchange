@@ -175,6 +175,17 @@ h2 {
      color: black;
 }
 
+.priceLabel{
+    font-family: 'Times New Roman'; 
+    font-weight: bold;
+    border: 1px solid #ccc;
+    color: white;
+    border-style:groove;
+    border-color: #fdb924;
+    margin-top: 10px;
+   padding: 10px;
+}
+
 
 
 
@@ -288,9 +299,9 @@ h2 {
              
                  <tr>
                      <td>
+            <!---ASP More Info Button and Price Label--->
              <asp:Button class="more-info" ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <label class="Product1-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$78.99</label>
+             <asp:Label class="priceLabel" ID="PriceLabel" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                 </tr>
              </table>
@@ -307,9 +318,9 @@ h2 {
                 </tr>
                 <tr>
                     <td>
-             <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product2-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$99.99</label>
+             <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage2" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel2" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                  </tr>
             </table>
@@ -325,9 +336,9 @@ h2 {
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product3-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$120.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage3" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel3" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                 </tr>
              </table>
@@ -346,9 +357,9 @@ h2 {
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product4-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$24.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage4" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel4" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                     </tr>
              </table>
@@ -366,9 +377,9 @@ h2 {
 
                 <tr>
                    <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product5-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$10.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage5" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel5" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                    </td>
                 </tr>
              </table>
@@ -385,9 +396,9 @@ h2 {
                 </tr>
                      <tr>
                         <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product6-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$2.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage6" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel6" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -406,9 +417,9 @@ h2 {
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product7-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$6.99</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage7" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel7" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                </tr>
             </table>
@@ -424,9 +435,9 @@ h2 {
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product8-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$44.44</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage8" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel8" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                    </td>
                </tr>
             </table>
@@ -444,9 +455,9 @@ h2 {
                 </tr>
                 <tr>
                     <td>
-              <button class="more-info"><a href="/Views/Item.aspx" style="text-decoration: none; color: black;">More Info</a></button>
-             <label class="Product9-label" style="font-family: 'Times New Roman'; font-weight: bold; border: 1px solid #ccc;  color: white; border-style:groove; border-color: #fdb924; margin-top: 10px;
-             padding: 10px;">$1.00</label>
+                <!---ASP More Info Button and Price Label--->
+             <asp:Button class="more-info" ID="ButtonToItemPage9" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
+             <asp:Label class="priceLabel" ID="PriceLabel9" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                    </td>
                 </tr>
             </table>
