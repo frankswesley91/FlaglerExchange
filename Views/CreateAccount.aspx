@@ -201,11 +201,11 @@ button.create-account-button[type="submit"]:hover {
 
             <div class="form-group">
                 <label class="create-account" for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <asp:TextBox ID="CreateUserName" runat="server" Width="258px"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label class="create-account" for="email">School Email</label>
-                <input type="email" id="email" name="email" required>
+                <asp:TextBox ID="CreateUserEmail" runat="server" Width="258px"></asp:TextBox>
             </div>
             <div class="form-group">
                 <label style="font-weight: bold;">Affililiation</label>
@@ -213,37 +213,20 @@ button.create-account-button[type="submit"]:hover {
 
        <!------------------------------------------------Flagler Affiliation table-------------------------------------------------------------------->
             <table class="flagler-affiliation-buttons">
-                    <tr>
-                        <td style="margin: 0 auto;">
-                        <label>
-                        <input type="radio" id="student" name="affiliation" value="student" required> Student
-                        </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="margin: 0 auto;">
-                        <label>
-                        <input type="radio" id="faculty" name="affiliation" value="student" required> Faculty
-                        </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="margin: 0 auto;">
-                        <label>
-                        <input type="radio" id="staff" name="affiliation" value="student" required> Staff
-                        </label>
-                        </td>
-                    </tr>
-                   <tr>
-                        <td style="margin: 0 auto;">
-                        <label>
-                        <input type="radio" id="Alumni" name="affiliation" value="student" required> Alumni
-                        </label>
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                <asp:RadioButtonList ID="rblAffiliation" runat="server">
+                <asp:ListItem Text="Student" Value="AffiliationStudent" Selected="True"></asp:ListItem>
+                <asp:ListItem Text="Faculty" Value="AffiliationFaculty"></asp:ListItem>
+                <asp:ListItem Text="Staff" Value="AffiliationStaff"></asp:ListItem>
+                <asp:ListItem Text="Alumni" Value="AffiliationAlumni"></asp:ListItem>
+                  </asp:RadioButtonList>
+                     </td>
+                </tr>
+            </table>
                 </div>
             </div>
-            </table>
+            
                 <button type="submit" class="create-account-button"><a href="/Views/Home.aspx" style="text-decoration: none; color: black">Create account</button>
             
     </div>
