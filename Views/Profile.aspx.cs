@@ -11,17 +11,26 @@ namespace FlaglerExchange.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //disable lists
-            onCampusRBList.Enabled = false;
+            //disable affiliation
             affiliationDDList.Enabled = false;
-            //disable major writing
+
+            //disable major table
             majorTB1.Enabled = false;
             majorTB2.Enabled = false;
-            //disable minor writing
+
+            //disable minor table
             minorTB1.Enabled = false;
             minorTB2.Enabled = false;
+             
             //disable about me section 
-            aboutMeTB.Enabled = false; 
+            aboutMeTB.Enabled = false;
+
+            //disable contact info section
+            nameTB.Enabled = false;
+            emailTB.Enabled = false;
+            phoneTB.Enabled = false;
+            addressTB.Enabled = false;
+            onCampusRBList.Enabled = false;
         }
 
         protected void editProfileButton_Click(object sender, EventArgs e)
@@ -77,6 +86,13 @@ namespace FlaglerExchange.Views
             phoneTB.BorderStyle = BorderStyle.Solid;
             addressTB.BorderStyle = BorderStyle.Solid;
 
+            //change the border styles of the majors/minors section
+            majorTB1.BorderStyle = BorderStyle.Solid;
+            majorTB2.BorderStyle = BorderStyle.Solid;
+
+            minorTB1.BorderStyle = BorderStyle.Solid;
+            minorTB2.BorderStyle = BorderStyle.Solid;
+
             //enable the about me section to edit
             aboutMeTB.Enabled = true;
 
@@ -106,6 +122,14 @@ namespace FlaglerExchange.Views
             emailTB.BorderStyle = BorderStyle.None;
             phoneTB.BorderStyle = BorderStyle.None;
             addressTB.BorderStyle = BorderStyle.None;
+
+            //change style elements of the majors/minors section back to their defaults
+            //change the border styles of the majors/minors section
+            majorTB1.BorderStyle = BorderStyle.None;
+            majorTB2.BorderStyle = BorderStyle.None;
+
+            minorTB1.BorderStyle = BorderStyle.None;
+            minorTB2.BorderStyle = BorderStyle.None;
 
         }
     }

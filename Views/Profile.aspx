@@ -135,20 +135,20 @@ h5{
                        <table class="container-fluid" id="contact-table"; style="border: solid;">
                            <tr>
                                <td><strong>Name: </strong></td>
-                               <td style="offset-position: center">
+                               <td>
                                    <asp:TextBox ID="nameTB" runat="server" Text="BAWK" BorderStyle="None"></asp:TextBox>
                                </td>
                            </tr>
                            <tr>
                                <td><strong>Email: </strong></td>
                                <td>
-                                   <asp:TextBox ID="emailTB" runat="server" Text="lastname123@flagler.edu" BorderStyle="None"></asp:TextBox>
+                                   <asp:TextBox ID="emailTB" runat="server" Text="lastname123@flagler.edu" BorderStyle="None" TextMode="Email"></asp:TextBox>
                                </td>
                            </tr>
                            <tr>
                                <td><strong>Phone: </strong></td>
                                <td>
-                                   <asp:TextBox ID="phoneTB" runat="server" Text="(123)-456-7890" BorderStyle="None"></asp:TextBox>
+                                   <asp:TextBox ID="phoneTB" runat="server" Text="(123)-456-7890" BorderStyle="None" TextMode="Phone"></asp:TextBox>
                                </td>
                            </tr>
                            <tr>
