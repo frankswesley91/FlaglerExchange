@@ -201,7 +201,7 @@ div#item-container{
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
    
-    <!------ contains textbox for product name/date, textbox for product description, and buttons to move through images and start email --->
+
 
 
 <!-- Because each of these pages is housed in an asp:Content element, that acts as the body. Don't need the <html> or <body> tags -->
@@ -243,6 +243,10 @@ div#item-container{
             </div>
         </div>
 </div>
-
-</asp:Content>
-
+</asp:Content>  
+  
+  
+  
+  
+  
+  
