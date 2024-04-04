@@ -1,6 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="FlaglerExchange.Views.Profile" %>
+﻿<%@ Page Title="Your Profile" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="FlaglerExchange.Views.Profile" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <style>
+
+
+
+  <style>
         html {
   font-size: 14px;
 }
@@ -130,20 +135,26 @@ h5{
                        <table class="container-fluid" id="contact-table"; style="border: solid;">
                            <tr>
                                <td><strong>Name: </strong></td>
-                               <td style="offset-position: center">BAWK</td>
+                               <td>
+                                   <asp:TextBox ID="nameTB" runat="server" Text="BAWK" BorderStyle="None"></asp:TextBox>
+                               </td>
                            </tr>
                            <tr>
                                <td><strong>Email: </strong></td>
-                               <td>lastname123@flagler.edu</td>
+                               <td>
+                                   <asp:TextBox ID="emailTB" runat="server" Text="lastname123@flagler.edu" BorderStyle="None" TextMode="Email"></asp:TextBox>
+                               </td>
                            </tr>
                            <tr>
                                <td><strong>Phone: </strong></td>
-                               <td>(123)-456-7890</td>
+                               <td>
+                                   <asp:TextBox ID="phoneTB" runat="server" Text="(123)-456-7890" BorderStyle="None" TextMode="Phone"></asp:TextBox>
+                               </td>
                            </tr>
                            <tr>
                                <td><strong>Off campus?: </strong></td>
                                <td>
-                                   <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal">
+                                   <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal" >
                                        <asp:ListItem Value="1">Yes</asp:ListItem>
                                        <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
                                    </asp:RadioButtonList>
@@ -152,7 +163,9 @@ h5{
                            </tr>
                            <tr>
                                <td><strong>Address: </strong></td>
-                               <td>74 King Street, St. Augustine FL 32080</td>
+                               <td>
+                                   <asp:TextBox ID="addressTB" runat="server" Text="74 King Street, St. Augustine FL 32080" BorderStyle="None"></asp:TextBox>
+                               </td>
                            </tr>
                        </table>
                    </div>
@@ -164,7 +177,7 @@ h5{
                    <!-- <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" /> -->
                    <asp:Image ID="profileImage" runat="server" src="../Images/FlaglerExchangeLogo.png" Width="150px" Height="150px" />
                    <asp:Button ID="changeProfileImageButton" runat="server" Text="Change picture..." />
-                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" />
+                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" BackColor="#EFEFEF" />
                </div>
            </div>
            <div class ="row">
@@ -216,9 +229,6 @@ h5{
                            <asp:ListItem Value="employee">Employee</asp:ListItem>
                         </asp:DropDownList>
                    </div>
-               <div class="btn, btn-link offset-md-5" style="padding-top: 30px; margin-bottom: 25px; ">
-                   <asp:Button ID="saveProfileButton" runat="server" BackColor="DarkRed" ForeColor="White" Text="Save Changes..." Visible="false" OnClick="saveProfileButton_Click" />
-               </div>
             </div>    
    </div>
 </div>
