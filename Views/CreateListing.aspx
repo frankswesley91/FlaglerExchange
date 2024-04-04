@@ -286,7 +286,7 @@ input[type="email"] {
                 <asp:ListItem ID="Category15" Value="Shoes">Shoes</asp:ListItem>
                 <asp:ListItem ID="Category16" Value="Food">Food</asp:ListItem>
                 <asp:ListItem ID="Category17" Value="Sports">Sports</asp:ListItem>
-                <asp:ListItem ID="Category18" Value="Home">Home</asp:ListItem>
+                <asp:ListItem ID="Category18" Value="Home"> Home</asp:ListItem>
                 <asp:ListItem ID="Category19" Value="Cleaning">Cleaning</asp:ListItem>
             </asp:CheckBoxList>
             </td>

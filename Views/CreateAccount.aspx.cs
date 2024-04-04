@@ -19,5 +19,7 @@ namespace FlaglerExchange.Views
             // Navigate to the More Info page
             Response.Redirect("/Views/Home.aspx");
         }
+
+
     }
 }
