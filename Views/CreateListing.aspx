@@ -275,7 +275,8 @@ input[type="email"] {
     <table style="margin: 0 auto">
         <tr>
             <td style="margin: 0 auto">
-                 <asp:Button class="create-listing-button" ID="SaveListing" runat="server" Height="39px" Text="Save"/>
+                 <asp:Button class="create-listing-button" ID="SaveListing" runat="server" Height="39px" Text="Save" OnClick="ButtonToMyListingPage_Click"/>
+     
             </td>
         </tr>
     </table>
