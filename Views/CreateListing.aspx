@@ -121,6 +121,10 @@ input[type="email"] {
         color: white;
         
 }
+
+.Check-box-list-space input {
+    margin-right: 10px;
+}
     </style>
 
 
@@ -147,8 +151,12 @@ input[type="email"] {
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
     <body>
         <div class="create-listing-container" style="margin: 0 auto">
-<table class="w-100" style="margin: 0 auto;">
-    <h2 style="font-family: 'Times New Roman'">Create Listing</h2>
+<table class="w-100">
+    <tr >
+    <h2 style="font-family: 'Times New Roman';">Create Listing</h2>
+    </tr>
+    
+    
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">&nbsp;</td>
@@ -168,27 +176,14 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:TextBox class="input" ID="TextBox1" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="ItemTitle" runat="server" Width="258px"></asp:TextBox>
         </td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-    </tr>
-    <tr>
-        <td style="width: 50px; height: 30px"></td>
-        <td style="width: 1038px; height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
     </tr>
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label1" runat="server" Text="Add Images:" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
+            <asp:Label ID="AddImageButton" runat="server" Text="Add Images:" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
         </td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
     </tr>
     <tr>
         <td style="width: 50px; height: 30px"></td>
@@ -200,28 +195,8 @@ input[type="email"] {
         <td style="height: 30px"></td>
     </tr>
     <tr>
-        <td style="width: 50px; height: 11px"></td>
-        <td style="width: 1038px; height: 11px"></td>
-        <td style="height: 11px"></td>
-        <td style="height: 11px"></td>
-        <td style="height: 11px"></td>
-    </tr>
-    <tr>
-        <td style="width: 50px; height: 45px"></td>
-        <td style="height: 45px"></td>
-        <td style="height: 45px"></td>
-        <td style="height: 45px"></td>
-    </tr>
-    <tr>
         <td style="width: 50px; height: 30px"></td>
-        <td style="width: 1038px; height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-    </tr>
-    <tr>
-        <td style="width: 50px; height: 30px"></td>
-        <td style="width: 1038px; height: 30px">
+        <td style="width: 50px; height: 45px">
             <asp:Label ID="Label2" runat="server" Text="Item Description:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
@@ -231,24 +206,10 @@ input[type="email"] {
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">
-            <textarea class="input" ID="TextArea1" name="S1" style="width: 413px; height: 105px"></textarea></td>
+            <textarea class="input" ID="TextArea1" name="S1" style="width: 413px; height: 105px; font-family: 'Times New Roman'" ></textarea></td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-    </tr>
-    <tr>
-        <td style="width: 50px; height: 30px"></td>
-        <td style="width: 1038px; height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-    </tr>
-    <tr>
-        <td style="width: 50px; height: 30px"></td>
-        <td style="height: 30px"> </td>
-        <td style="height: 30px"></td>
-        <td style="height: 30px"></td>
-        <!---CATEGORY SECTION!-->
     </tr>
     <table>
         <tr>
@@ -268,7 +229,7 @@ input[type="email"] {
         <asp:Label ID="Label5" runat="server" Text="Add Tags:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         <tr>
             <td style="font-family: 'Times New Roman'">
-                <asp:CheckBoxList ID="CategoryCheckBoxList" runat="server">
+                <asp:CheckBoxList CssClass="Check-box-list-space" ID="CategoryCheckBoxList" runat="server">
                 <asp:ListItem ID="Category1" Value="Electronics">Electronics</asp:ListItem>
                 <asp:ListItem ID="Category2" Value="Pets">Pets</asp:ListItem>
                 <asp:ListItem ID="Category3" Value="Books">Books</asp:ListItem>
@@ -291,13 +252,34 @@ input[type="email"] {
             </asp:CheckBoxList>
             </td>
         </tr>
-
+      </table>
+    <br />
+        <table>
+             <tr>
+                 <td>
+                     <asp:Label ID="Label3" runat="server" Text="Item Availability:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+                 </td>
+             </tr>
+            
+            
+            <tr>
+                <td>
+                    <asp:RadioButtonList ID="rblAvailability" runat="server">
+                    <asp:ListItem Text="Yes" Value="Available" Selected="True"></asp:ListItem>
+                    <asp:ListItem Text="No" Value="NotAvailable"></asp:ListItem>
+                    </asp:RadioButtonList>
+                </td>
+            </tr>
+            
+        </table>
+    <table style="margin: 0 auto">
         <tr>
             <td style="margin: 0 auto">
-                 <asp:Button class="create-listing-button" ID="createListing" runat="server" Height="39px" Text="Create Listing"/>
+                 <asp:Button class="create-listing-button" ID="SaveListing" runat="server" Height="39px" Text="Save"/>
             </td>
         </tr>
     </table>
+    
 </table>
 
             </div>
