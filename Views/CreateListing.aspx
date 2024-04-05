@@ -125,6 +125,10 @@ input[type="email"] {
 .Check-box-list-space input {
     margin-right: 10px;
 }
+
+.createListingLabel {
+    font-size: xx-large;
+}
     </style>
 
 
@@ -152,11 +156,9 @@ input[type="email"] {
     <body>
         <div class="create-listing-container" style="margin: 0 auto">
 <table class="w-100">
-    <tr >
-    <h2 style="font-family: 'Times New Roman';">Create Listing</h2>
-    </tr>
-    
-    
+      
+     <asp:Label CssClass="createListingLabel" ID="createEditListingLabel" runat="server" Font-Names="Times New Roman" Text="Create Listing" Font-Bold="true"></asp:Label>
+      
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">&nbsp;</td>

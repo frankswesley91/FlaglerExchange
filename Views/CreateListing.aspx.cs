@@ -11,13 +11,19 @@ namespace FlaglerExchange.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
 
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
             // Navigate to the More Info page
             Response.Redirect("/Views/Listing.aspx");
+            string CreateLabel = Session["CreateEditListingLabel"] as string;
+
+
         }
+
+
     }
 }
