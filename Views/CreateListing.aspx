@@ -156,9 +156,9 @@ input[type="email"] {
     <body>
         <div class="create-listing-container" style="margin: 0 auto">
 <table class="w-100">
-      
+      <div style="text-align: center;">
      <asp:Label CssClass="createListingLabel" ID="createEditListingLabel" runat="server" Font-Names="Times New Roman" Text="Create Listing" Font-Bold="true"></asp:Label>
-      
+      </div>
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">&nbsp;</td>
