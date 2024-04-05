@@ -7,11 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace FlaglerExchange.Views
 {
+    
     public partial class Login : System.Web.UI.Page
     {
+        //---------Instantiate Variables--------
+
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            string UserEmail = userEmail.Text;
+            string UserPassword = userPassword.Text;
 
         }
 
