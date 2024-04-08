@@ -185,9 +185,9 @@ div#item-container{
                     <!-- This container thing allows the item image be contained better -->
                     <div class ="container">
                         <div class="body-content">
-                            <asp:Button ID="previousImage" runat="server" Text="<" />
-                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" style="width: 450px; height: 450px">
-                            <asp:Button ID="nextImage" runat="server" Text=">" />
+                            <asp:Button ID="previousImage" runat="server" Text="<" Height="100px" ForeColor="Black" BackColor="#ffba3b"/>
+                            <asp:Image ID="productImage" runat="server" src="/Images/Cat.jpeg" Width="450px" Height="450px"/>
+                            <asp:Button ID="nextImage" runat="server" Text=">" Height="100px" ForeColor="Black" BackColor="#ffba3b" />
                               
                         </div>
             </div>
@@ -198,9 +198,7 @@ div#item-container{
                     <div class="text-body">
                         <asp:Label ID="itemDescription" runat="server" Text="Description of the item goes here"></asp:Label>
                     </div>
-                    
-                        <asp:TextBox ID="itemDescriptionTB" runat="server" TextMode="MultiLine" CssClass="textbox" Width="100%" ></asp:TextBox>
-
+                        <asp:TextBox ID="itemDescriptionTB" runat="server" TextMode="MultiLine" CssClass="textbox" Width="100%"></asp:TextBox>
                 </div>
        </div>
         <!--Button that redircets to seller's profile -->
