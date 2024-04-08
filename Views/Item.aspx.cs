@@ -13,5 +13,11 @@ namespace FlaglerExchange.Views
         {
 
         }
+
+        // redirects user to the profile page, will need updates to go directly to the seller's profile
+        protected void contactSeller_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/Profile.aspx");
+        }
     }
 }
