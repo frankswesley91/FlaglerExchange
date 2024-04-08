@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Item.aspx.cs" Inherits="FlaglerExchange.Views.Item" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">\
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
          html {
   font-size: 14px;
@@ -122,59 +122,6 @@ div#item-container{
 
 
 
-div#item-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-}
-
-.container {
-  text-align: center;
-}
-
-.text-box {
-  padding: 10px;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.image-container img {
-  max-width: 100%;
-  height: auto;
-}
-
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  cursor: pointer;
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
-
-
   </style>
 
 <div class="text-center">
@@ -213,33 +160,65 @@ div#item-container{
                 <!-- Each class="col-x" element organizes your element into a square cell  -->
             <div class="col-sm title">
                 <!-- This needs to be "Item Name" rather than product name -->
-                <h1>Product Name</h1>
+                <asp:Label ID="itemName" runat="server" Text="Item Name"></asp:Label>
             </div>
+        <div class="row">
+            <!--- This row is to display Price and date posted -->
+            <div class ="container">
+                <div class="body-content">
+                    <strong><asp:Label ID="datePosted" runat="server" Text="Date Posted"></asp:Label></strong> 
+                    <!-- this is for the spacing of the labels -->
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <strong><asp:Label ID="price" runat="server" Text="Price"></asp:Label> </strong>  
+                </div>
+                
+            </div>
+        </div>
             <div class="row">
+                
                 <div class="col-lg">
                     <!-- This container thing allows the item image be contained better -->
                     <div class ="container">
                         <div class="body-content">
-                            <asp:Button ID="previousImage" runat="server" Text="<" Height="50px" />
-                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" style="width: 450px; height: 450px">
+                            <asp:Button ID="previousImage" runat="server" Text="<" />
+                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" width="300">
                             <asp:Button ID="nextImage" runat="server" Text=">" />
                               
                         </div>
+                       
             </div>
         </div>
             </div>
             <div class="row">
                 <div class="col-sm">
                     <div class="text-body">
-                        <p>Product Description: This is a description of the product. It provides details about the product's features, specifications, and benefits.</p>
+                        <asp:Label ID="itemDescription" runat="server" Text="Description of the item goes here"></asp:Label>
                     </div>
                     <div class="container-fluid offset-2" style="border: solid; width: 900px; height: 300px;">
                         <asp:TextBox ID="itemDescriptionTB" runat="server" TextMode="MultiLine" Width="900px" Height="300px"></asp:TextBox>
                     </div>
                 </div>
             </div>
+        <!--Button that redircets to seller's profile -->
+        <asp:Button ID="contactSeller" runat="server" Text="Contact Seller" OnClick="contactSeller_Click" />
         </div>
-</div>
+    </div>
 </asp:Content>  
   
   
