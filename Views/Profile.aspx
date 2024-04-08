@@ -194,9 +194,90 @@ h5{
                                <table>
                                    <tr>
                                        <td>
-                                           <asp:TextBox ID="majorTB1" runat="server" Enabled="false" Text="CES" BorderStyle="None" Width="100px"></asp:TextBox>
+                                           <asp:DropDownList ID="majorDDList1" runat="server" Enabled="false" BorderStyle="None">
+                                               <asp:ListItem Value="default">--Please Select--</asp:ListItem>
+                                               <asp:ListItem Value="ACCmaj1">Accounting</asp:ListItem>
+                                               <asp:ListItem Value="ANTmaj1">Anthropology</asp:ListItem>
+                                               <asp:ListItem Value="ARTmaj1">Art History</asp:ListItem>
+                                               <asp:ListItem Value="BIOmaj1">Biology</asp:ListItem>
+                                               <asp:ListItem Value="BUSmaj1">Business Adminsitration</asp:ListItem>
+                                               <asp:ListItem Value="CINmaj1">Cinematic Arts</asp:ListItem>
+                                               <asp:ListItem Value="NASmaj1">Coastal Environmental Science</asp:ListItem>
+                                               <asp:ListItem Value="CISmaj1">Computer Information Systems</asp:ListItem>
+                                               <asp:ListItem Value="CRImaj1">Criminology</asp:ListItem>
+                                               <asp:ListItem Value="DASmaj1">Data Science</asp:ListItem>
+                                               <asp:ListItem Value="DMJmaj1">Digital Media Production and Journalism</asp:ListItem>
+                                               <asp:ListItem Value="ECOmaj1">Economics</asp:ListItem>
+                                               <asp:ListItem Value="DEDmaj1">Deaf Education</asp:ListItem>
+                                               <asp:ListItem Value="EEDmaj1">Elementary Education</asp:ListItem>
+                                               <asp:ListItem Value="ENGmaj1">English</asp:ListItem>
+                                               <asp:ListItem Value="FINmaj1">Finance</asp:ListItem>
+                                               <asp:ListItem Value="FARmaj1">Fine Arts</asp:ListItem>
+                                               <asp:ListItem Value="GDSmaj1">Graphic Design</asp:ListItem>
+                                               <asp:ListItem Value="HISmaj1">History</asp:ListItem>
+                                               <asp:ListItem Value="HTMmaj1">Hospitality and Tourism Management</asp:ListItem>
+                                               <asp:ListItem Value="IBUmaj1">International Busiess</asp:ListItem>
+                                               <asp:ListItem Value="INTmaj1">International Studiees</asp:ListItem>
+                                               <asp:ListItem Value="LBAmaj1">Liberal Arts</asp:ListItem>
+                                               <asp:ListItem Value="MARmaj1">Marketing</asp:ListItem>
+                                               <asp:ListItem Value="MATmaj1">Mathematics</asp:ListItem>
+                                               <asp:ListItem Value="MSTmaj1">Media Studies</asp:ListItem>
+                                               <asp:ListItem Value="PHImaj1">Philosophy and Religion</asp:ListItem>
+                                               <asp:ListItem Value="POSmaj1">Political Science</asp:ListItem>
+                                               <asp:ListItem Value="PSYmaj1">Psychology</asp:ListItem>
+                                               <asp:ListItem Value="PUBmaj1">Public History</asp:ListItem>
+                                               <asp:ListItem Vaule="PHImaj1">Public Relations</asp:ListItem>
+                                               <asp:ListItem Value="SEDmaj1">Secondary Education</asp:ListItem>
+                                               <asp:ListItem Value="SENmaj1">Social Entrepreneurship</asp:ListItem>
+                                               <asp:ListItem Value="SOCmaj1">Sociology</asp:ListItem>
+                                               <asp:ListItem Value="SPAmaj1">Spanish</asp:ListItem>
+                                               <asp:ListItem Value="SPMmaj1">Sports Management</asp:ListItem>
+                                               <asp:ListItem Value="THEmaj1">Theater Arts</asp:ListItem>
+                                           </asp:DropDownList>
                                        </td>
-                                       <td><asp:TextBox ID="majorTB2" runat="server" Enabled="false" Text="CIS" BorderStyle="None" Width="175px"></asp:TextBox></td>
+                                       <td>
+                                           <asp:DropDownList ID="majorDDList2" runat="server" Enabled="false" BorderStyle="None">
+                                                    <asp:ListItem Value="default">--Please Select--</asp:ListItem>
+                                                    <asp:ListItem Value="ACCmaj2">Accounting</asp:ListItem>
+                                                    <asp:ListItem Value="ANTmaj2">Anthropology</asp:ListItem>
+                                                    <asp:ListItem Value="ARTmaj2">Art History</asp:ListItem>
+                                                    <asp:ListItem Value="BIOmaj2">Biology</asp:ListItem>
+                                                    <asp:ListItem Value="BUSmaj2">Business Adminsitration</asp:ListItem>
+                                                    <asp:ListItem Value="CINmaj2">Cinematic Arts</asp:ListItem>
+                                                    <asp:ListItem Value="NASmaj2">Coastal Environmental Science</asp:ListItem>
+                                                    <asp:ListItem Value="CISmaj2">Computer Information Systems</asp:ListItem>
+                                                    <asp:ListItem Value="CRImaj2">Criminology</asp:ListItem>
+                                                    <asp:ListItem Value="DASmaj2">Data Science</asp:ListItem>
+                                                    <asp:ListItem Value="DMJmaj2">Digital Media Production and Journalism</asp:ListItem>
+                                                    <asp:ListItem Value="ECOmaj2">Economics</asp:ListItem>
+                                                    <asp:ListItem Value="DEDmaj2">Deaf Education</asp:ListItem>
+                                                    <asp:ListItem Value="EEDmaj2">Elementary Education</asp:ListItem>
+                                                    <asp:ListItem Value="ENGmaj2">English</asp:ListItem>
+                                                    <asp:ListItem Value="FINmaj2">Finance</asp:ListItem>
+                                                    <asp:ListItem Value="FARmaj2">Fine Arts</asp:ListItem>
+                                                    <asp:ListItem Value="GDSmaj2">Graphic Design</asp:ListItem>
+                                                    <asp:ListItem Value="HISmaj2">History</asp:ListItem>
+                                                    <asp:ListItem Value="HTMmaj2">Hospitality and Tourism Management</asp:ListItem>
+                                                    <asp:ListItem Value="IBUmaj2">International Busiess</asp:ListItem>
+                                                    <asp:ListItem Value="INTmaj2">International Studiees</asp:ListItem>
+                                                    <asp:ListItem Value="LBAmaj2">Liberal Arts</asp:ListItem>
+                                                    <asp:ListItem Value="MARmaj2">Marketing</asp:ListItem>
+                                                    <asp:ListItem Value="MATmaj2">Mathematics</asp:ListItem>
+                                                    <asp:ListItem Value="MSTmaj2">Media Studies</asp:ListItem>
+                                                    <asp:ListItem Value="PHImaj2">Philosophy and Religion</asp:ListItem>
+                                                    <asp:ListItem Value="POSmaj2">Political Science</asp:ListItem>
+                                                    <asp:ListItem Value="PSYmaj2">Psychology</asp:ListItem>
+                                                    <asp:ListItem Value="PUBmaj2">Public History</asp:ListItem>
+                                                    <asp:ListItem Vaule="PHImaj2">Public Relations</asp:ListItem>
+                                                    <asp:ListItem Value="SEDmaj2">Secondary Education</asp:ListItem>
+                                                    <asp:ListItem Value="SENmaj2">Social Entrepreneurship</asp:ListItem>
+                                                    <asp:ListItem Value="SOCmaj2">Sociology</asp:ListItem>
+                                                    <asp:ListItem Value="SPAmaj2">Spanish</asp:ListItem>
+                                                    <asp:ListItem Value="SPMmaj2">Sports Management</asp:ListItem>
+                                                    <asp:ListItem Value="THEmaj2">Theater Arts</asp:ListItem> 
+                                                    <asp:ListItem Value="NONE">N/A</asp:ListItem>
+                                           </asp:DropDownList>
+                                       </td>
                                    </tr>
                                </table>
                            </td>
@@ -207,11 +288,91 @@ h5{
                                 <table>
                                    <tr>
                                        <td>
-                                           <asp:TextBox ID="minorTB1" runat="server" Enabled="false" Text="Biology" BorderStyle="None" Width="175px"></asp:TextBox>
+                                           <asp:DropDownList ID="minorDDList1" runat="server" Enabled="false" BorderStyle="None">
+                                                <asp:ListItem Value="default">--Please Select--</asp:ListItem>
+                                                <asp:ListItem Value="ACCmin1">Accounting</asp:ListItem>
+                                                <asp:ListItem Value="ANTmin1">Anthropology</asp:ListItem>
+                                                <asp:ListItem Value="ARTmin1">Art History</asp:ListItem>
+                                                <asp:ListItem Value="BIOmin1">Biology</asp:ListItem>
+                                                <asp:ListItem Value="BUSmin1">Business Adminsitration</asp:ListItem>
+                                                <asp:ListItem Value="CINmin1">Cinematic Arts</asp:ListItem>
+                                                <asp:ListItem Value="NASmin1">Coastal Environmental Science</asp:ListItem>
+                                                <asp:ListItem Value="CISmin1">Computer Information Systems</asp:ListItem>
+                                                <asp:ListItem Value="CRImin1">Criminology</asp:ListItem>
+                                                <asp:ListItem Value="DASmin1">Data Science</asp:ListItem>
+                                                <asp:ListItem Value="DMJmin1">Digital Media Production and Journalism</asp:ListItem>
+                                                <asp:ListItem Value="ECOmin1">Economics</asp:ListItem>
+                                                <asp:ListItem Value="DEDmin1">Deaf Education</asp:ListItem>
+                                                <asp:ListItem Value="EEDmin1">Elementary Education</asp:ListItem>
+                                                <asp:ListItem Value="ENGmin1">English</asp:ListItem>
+                                                <asp:ListItem Value="FINmin1">Finance</asp:ListItem>
+                                                <asp:ListItem Value="FARmin1">Fine Arts</asp:ListItem>
+                                                <asp:ListItem Value="GDSmin1">Graphic Design</asp:ListItem>
+                                                <asp:ListItem Value="HISmin1">History</asp:ListItem>
+                                                <asp:ListItem Value="HTMmin1">Hospitality and Tourism Management</asp:ListItem>
+                                                <asp:ListItem Value="IBUmin1">International Busiess</asp:ListItem>
+                                                <asp:ListItem Value="INTmin1">International Studiees</asp:ListItem>
+                                                <asp:ListItem Value="LBAmin1">Liberal Arts</asp:ListItem>
+                                                <asp:ListItem Value="MARmin1">Marketing</asp:ListItem>
+                                                <asp:ListItem Value="MATmin1">Mathematics</asp:ListItem>
+                                                <asp:ListItem Value="MSTmin1">Media Studies</asp:ListItem>
+                                                <asp:ListItem Value="PHImin1">Philosophy and Religion</asp:ListItem>
+                                                <asp:ListItem Value="POSmin1">Political Science</asp:ListItem>
+                                                <asp:ListItem Value="PSYmin1">Psychology</asp:ListItem>
+                                                <asp:ListItem Value="PUBmin1">Public History</asp:ListItem>
+                                                <asp:ListItem Vaule="PHImin1">Public Relations</asp:ListItem>
+                                                <asp:ListItem Value="SEDmin1">Secondary Education</asp:ListItem>
+                                                <asp:ListItem Value="SENmin1">Social Entrepreneurship</asp:ListItem>
+                                                <asp:ListItem Value="SOCmin1">Sociology</asp:ListItem>
+                                                <asp:ListItem Value="SPAmin1">Spanish</asp:ListItem>
+                                                <asp:ListItem Value="SPMmin1">Sports Management</asp:ListItem>
+                                                <asp:ListItem Value="THEmin1">Theater Arts</asp:ListItem>
+                                                <asp:ListItem Value="NONE">N/A</asp:ListItem>
+                                           </asp:DropDownList>
 
                                        </td>
                                        <td>
-                                           <asp:TextBox ID="minorTB2" runat="server" Enabled="false" BorderStyle="None" Width="100px"></asp:TextBox>
+                                           <asp:DropDownList ID="minorDDList2" runat="server" Enabled="false" BorderStyle="None">
+                                                    <asp:ListItem Value="default">--Please Select--</asp:ListItem>
+                                                    <asp:ListItem Value="ACCmin2">Accounting</asp:ListItem>
+                                                    <asp:ListItem Value="ANTmin2">Anthropology</asp:ListItem>
+                                                    <asp:ListItem Value="ARTmin2">Art History</asp:ListItem>
+                                                    <asp:ListItem Value="BIOmin2">Biology</asp:ListItem>
+                                                    <asp:ListItem Value="BUSmin2">Business Adminsitration</asp:ListItem>
+                                                    <asp:ListItem Value="CINmin2">Cinematic Arts</asp:ListItem>
+                                                    <asp:ListItem Value="NASmin2">Coastal Environmental Science</asp:ListItem>
+                                                    <asp:ListItem Value="CISmin2">Computer Information Systems</asp:ListItem>
+                                                    <asp:ListItem Value="CRImin2">Criminology</asp:ListItem>
+                                                    <asp:ListItem Value="DASmin2">Data Science</asp:ListItem>
+                                                    <asp:ListItem Value="DMJmin2">Digital Media Production and Journalism</asp:ListItem>
+                                                    <asp:ListItem Value="ECOmin2">Economics</asp:ListItem>
+                                                    <asp:ListItem Value="DEDmin2">Deaf Education</asp:ListItem>
+                                                    <asp:ListItem Value="EEDmin2">Elementary Education</asp:ListItem>
+                                                    <asp:ListItem Value="ENGmin2">English</asp:ListItem>
+                                                    <asp:ListItem Value="FINmin2">Finance</asp:ListItem>
+                                                    <asp:ListItem Value="FARmin2">Fine Arts</asp:ListItem>
+                                                    <asp:ListItem Value="GDSmin2">Graphic Design</asp:ListItem>
+                                                    <asp:ListItem Value="HISmin2">History</asp:ListItem>
+                                                    <asp:ListItem Value="HTMmin2">Hospitality and Tourism Management</asp:ListItem>
+                                                    <asp:ListItem Value="IBUmin2">International Busiess</asp:ListItem>
+                                                    <asp:ListItem Value="INTmin2">International Studiees</asp:ListItem>
+                                                    <asp:ListItem Value="LBAmin2">Liberal Arts</asp:ListItem>
+                                                    <asp:ListItem Value="MARmin2">Marketing</asp:ListItem>
+                                                    <asp:ListItem Value="MATmin2">Mathematics</asp:ListItem>
+                                                    <asp:ListItem Value="MSTmin2">Media Studies</asp:ListItem>
+                                                    <asp:ListItem Value="PHImin2">Philosophy and Religion</asp:ListItem>
+                                                    <asp:ListItem Value="POSmin2">Political Science</asp:ListItem>
+                                                    <asp:ListItem Value="PSYmin2">Psychology</asp:ListItem>
+                                                    <asp:ListItem Value="PUBmin2">Public History</asp:ListItem>
+                                                    <asp:ListItem Vaule="PHImin2">Public Relations</asp:ListItem>
+                                                    <asp:ListItem Value="SEDmin2">Secondary Education</asp:ListItem>
+                                                    <asp:ListItem Value="SENmin2">Social Entrepreneurship</asp:ListItem>
+                                                    <asp:ListItem Value="SOCmin2">Sociology</asp:ListItem>
+                                                    <asp:ListItem Value="SPAmin2">Spanish</asp:ListItem>
+                                                    <asp:ListItem Value="SPMmin2">Sports Management</asp:ListItem>
+                                                    <asp:ListItem Value="THEmin2">Theater Arts</asp:ListItem>
+                                                    <asp:ListItem Value="NONE">N/A</asp:ListItem>
+                                           </asp:DropDownList>
                                        </td>
                                    </tr>
                                </table>

@@ -96,40 +96,40 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.TextBox aboutMeTB;
 
         /// <summary>
-        /// majorTB1 control.
+        /// majorDDList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox majorTB1;
+        protected global::System.Web.UI.WebControls.DropDownList majorDDList1;
 
         /// <summary>
-        /// majorTB2 control.
+        /// majorDDList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox majorTB2;
+        protected global::System.Web.UI.WebControls.DropDownList majorDDList2;
 
         /// <summary>
-        /// minorTB1 control.
+        /// minorDDList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox minorTB1;
+        protected global::System.Web.UI.WebControls.DropDownList minorDDList1;
 
         /// <summary>
-        /// minorTB2 control.
+        /// minorDDList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox minorTB2;
+        protected global::System.Web.UI.WebControls.DropDownList minorDDList2;
 
         /// <summary>
         /// affiliationDDList control.
