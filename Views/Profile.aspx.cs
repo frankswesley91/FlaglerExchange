@@ -37,6 +37,9 @@ namespace FlaglerExchange.Views
                 phoneTB.Enabled = false;
                 addressTB.Enabled = false;
                 onCampusRBList.Enabled = false;
+
+                //remove the upload file from view
+                changeProfileUploadButton.Visible = false; 
             }
 
            
@@ -55,6 +58,8 @@ namespace FlaglerExchange.Views
                 //change the color of the button
                 editProfileButton.ForeColor = System.Drawing.Color.White;
                 editProfileButton.BackColor = System.Drawing.Color.DarkRed;
+
+                
             }
            else 
            {
@@ -66,8 +71,19 @@ namespace FlaglerExchange.Views
 
                 //Change the color of the button back to the default colors
                 editProfileButton.ForeColor = System.Drawing.Color.Black;
-                editProfileButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#EFEFEF"); 
-           }
+                editProfileButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#EFEFEF");
+
+
+                if (affiliationDDList.SelectedValue == "student")
+                {
+                    majorMinorContainer.Visible = true;
+                }
+                else
+                {
+                    majorMinorContainer.Visible = false;
+                }
+            }
+
         }
         private void EnableElements()
         {
@@ -105,6 +121,10 @@ namespace FlaglerExchange.Views
             //enable the about me section to edit
             aboutMeTB.Enabled = true;
 
+            //enable the upload image control
+            changeProfileUploadButton.Visible = true; 
+            changeProfileUploadButton.Enabled = true; 
+
         }
         private void DisableElements()
         {
@@ -140,6 +160,9 @@ namespace FlaglerExchange.Views
             minorDDList1.BorderStyle = BorderStyle.None;
             minorDDList2.BorderStyle = BorderStyle.None;
 
+            //disable the upload image control 
+            changeProfileUploadButton.Enabled = false;
+            changeProfileUploadButton.Visible = false;
         }
     }
 }
