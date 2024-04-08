@@ -220,16 +220,10 @@ div#item-container{
                     <!-- This container thing allows the item image be contained better -->
                     <div class ="container">
                         <div class="body-content">
-                            <button onclick="moveImage(-100)">&#8592;</button>
-                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" width="300">
-                            <button onclick="moveImage(100)">&#8594;</button>
-                                <script>
-                                    function moveImage(offset) {
-                                        var img = document.getElementById("product-image");
-                                        var currentLeft = img.offsetLeft;
-                                        img.style.left = (currentLeft + offset) + "px";
-                                    }
-                                </script>
+                            <asp:Button ID="previousImage" runat="server" Text="<" Height="50px" />
+                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" style="width: 450px; height: 450px">
+                            <asp:Button ID="nextImage" runat="server" Text=">" />
+                              
                         </div>
             </div>
         </div>
@@ -238,6 +232,9 @@ div#item-container{
                 <div class="col-sm">
                     <div class="text-body">
                         <p>Product Description: This is a description of the product. It provides details about the product's features, specifications, and benefits.</p>
+                    </div>
+                    <div class="container-fluid offset-2" style="border: solid; width: 900px; height: 300px;">
+                        <asp:TextBox ID="itemDescriptionTB" runat="server" TextMode="MultiLine" Width="900px" Height="300px"></asp:TextBox>
                     </div>
                 </div>
             </div>
