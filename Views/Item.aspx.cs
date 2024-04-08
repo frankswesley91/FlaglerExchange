@@ -19,5 +19,10 @@ namespace FlaglerExchange.Views
         {
             Response.Redirect("/Views/Profile.aspx");
         }
+
+        protected void returnToListButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/Home.aspx");
+        }
     }
 }

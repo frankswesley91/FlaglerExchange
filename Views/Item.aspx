@@ -157,35 +157,24 @@ div#item-container{
 <div class="container-fluid">
     <!-- Each class="row" container allows you to better separate elements of the form sequentially -->
     <div id="item-container" class="row">
+        <div style="display: flex; align-content: flex-start">
+            <asp:Button ID="returnToListButton" runat="server" Text="Back" Width="100px" Height="50px" BorderStyle="Ridge"  ForeColor="White" BackColor="#a52839" OnClick="returnToListButton_Click" />
+        </div>
                 <!-- Each class="col-x" element organizes your element into a square cell  -->
-            <div class="col-sm title">
+            <div class="col-sm title" style="margin: 0.125px; padding-bottom: 0px">
                 <!-- This needs to be "Item Name" rather than product name -->
                 <asp:Label ID="itemName" runat="server" Text="Item Name"></asp:Label>
             </div>
-        <div class="row">
+        <div class="row offset-6" >
             <!--- This row is to display Price and date posted -->
             <div class ="container">
-                <div class="body-content">
-                    <strong><asp:Label ID="datePosted" runat="server" Text="Date Posted"></asp:Label></strong> 
-                    <!-- this is for the spacing of the labels -->
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                    <strong><asp:Label ID="price" runat="server" Text="Price"></asp:Label> </strong>  
+                <div class="col-lg-6" style="border: solid">
+                    <table>
+                        <tr>
+                            <td width="320px"><asp:Label ID="datePosted" runat="server" Text="Date Posted"></asp:Label></td>
+                            <td width="400px"><asp:Label ID="price" runat="server" Text="Price"></asp:Label></td>
+                        </tr>
+                    </table>
                 </div>
                 
             </div>
@@ -197,11 +186,10 @@ div#item-container{
                     <div class ="container">
                         <div class="body-content">
                             <asp:Button ID="previousImage" runat="server" Text="<" />
-                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" width="300">
+                            <img id="product-image" src="/Images/Cat.jpeg" alt="Product Image" style="width: 450px; height: 450px">
                             <asp:Button ID="nextImage" runat="server" Text=">" />
                               
                         </div>
-                       
             </div>
         </div>
             </div>
@@ -210,14 +198,16 @@ div#item-container{
                     <div class="text-body">
                         <asp:Label ID="itemDescription" runat="server" Text="Description of the item goes here"></asp:Label>
                     </div>
-                    <div class="container-fluid offset-2" style="border: solid; width: 900px; height: 300px;">
-                        <asp:TextBox ID="itemDescriptionTB" runat="server" TextMode="MultiLine" Width="900px" Height="300px"></asp:TextBox>
-                    </div>
+                    
+                        <asp:TextBox ID="itemDescriptionTB" runat="server" TextMode="MultiLine" CssClass="textbox" Width="100%" ></asp:TextBox>
+
                 </div>
-            </div>
+       </div>
         <!--Button that redircets to seller's profile -->
-        <asp:Button ID="contactSeller" runat="server" Text="Contact Seller" OnClick="contactSeller_Click" />
+        <div>
+            <asp:Button ID="contactSeller" runat="server" Text="Contact Seller" OnClick="contactSeller_Click" />
         </div>
+       </div>
     </div>
 </asp:Content>  
   
