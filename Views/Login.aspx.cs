@@ -10,11 +10,20 @@ namespace FlaglerExchange.Views
     
     public partial class Login : System.Web.UI.Page
     {
-        //---------Instantiate Variables--------
 
+
+        //Create the UserAccount Class?
+        public class UserAccount
+        {
+            public string UserAccountEmail { get; set; }
+            public string UserAccountPassword { get; set; }
+            
+        }
         
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            //---------Instantiate Variables--------
             string UserEmail = userEmail.Text;
             string UserPassword = userPassword.Text;
 

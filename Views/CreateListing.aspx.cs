@@ -9,11 +9,29 @@ namespace FlaglerExchange.Views
 {
     public partial class CreateListing : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+
+        public class Listing
         {
-            
+            //Properties of each Listing???????
+            public int ListingTitle { get; set; }
+            public string ListingName { get; set; }
+            public string ListingDescription { get; set; }
+
+            public double ListingPrice{ get; set; }
+
+            public string ListingCategories { get; set; }
+
+            public bool ListingAvailabillity { get; set; }
             
         }
+
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+           
+            
+        }
+
 
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
