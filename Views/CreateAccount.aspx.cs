@@ -9,6 +9,9 @@ namespace FlaglerExchange.Views
 {
     public partial class CreateAccount : System.Web.UI.Page
     {
+        
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,6 +22,8 @@ namespace FlaglerExchange.Views
             // Navigate to the More Info page
             Response.Redirect("/Views/Home.aspx");
         }
+
+
 
 
     }

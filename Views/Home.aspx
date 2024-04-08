@@ -306,7 +306,7 @@ h2 {
                      <td>
             <!---ASP More Info Button and Price Label--->
              <asp:Button class="more-info" ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
+             <asp:Label class="priceLabel" ID="PriceLabel1" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
                     </td>
                 </tr>
              </table>

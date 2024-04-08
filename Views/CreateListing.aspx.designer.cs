@@ -15,6 +15,15 @@ namespace FlaglerExchange.Views
     {
 
         /// <summary>
+        /// createEditListingLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label createEditListingLabel;
+
+        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -24,22 +33,22 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// TextBox1 control.
+        /// ItemTitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox ItemTitle;
 
         /// <summary>
-        /// Label1 control.
+        /// AddImageButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label AddImageButton;
 
         /// <summary>
         /// FileUpload1 control.
@@ -267,12 +276,30 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.ListItem Category19;
 
         /// <summary>
-        /// createListing control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button createListing;
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// rblAvailability control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblAvailability;
+
+        /// <summary>
+        /// SaveListing control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SaveListing;
     }
 }

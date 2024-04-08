@@ -180,6 +180,10 @@ button.create-account-button[type="submit"]:hover {
     font-family: 'Times New Roman';
 }
 
+.createAccountLabel {
+    font-size: xx-large;
+}
+
 </style>
 
     <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
@@ -206,10 +210,12 @@ button.create-account-button[type="submit"]:hover {
 
     <!------------------------------------------------------Create account form--------------------------------------------->
 <body>
-    
     <div class="create-account-container" style="margin: 0 auto">
-        <h2>Create Account</h2>
 
+          <div style="text-align: center;">
+            <strong><p style="font-size: xx-large; margin: 0 auto;">Create Account</p></strong>
+            </div>
+        <br />
             <div class="form-group">
                 <label class="create-account" for="name">Name</label>
                 <asp:TextBox ID="CreateUserName" runat="server" Width="258px"></asp:TextBox>

@@ -184,15 +184,21 @@ aside {
     
      <body>   
     <div class="login-container">
-        <h1>Login</h1>
+        <div style="text-align: center;">
+            <strong><p style="font-size: xx-large; margin: 0 auto;">Login</p></strong>
+        </div>
+        <br />
+            
             <label for="username">Username:</label>
-            <asp:TextBox ID="UserEmail" runat="server" Width="258px"></asp:TextBox>
+                
+            <asp:TextBox class="input" ID="userEmail" runat="server" Width="258px"></asp:TextBox>
             <br />
             <br />
             <label for="password">Password:</label>
-            <asp:TextBox class="input" ID="UserPassword" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="userPassword" runat="server" Width="258px"></asp:TextBox>
             <br />
             <br />
+       
 
 
             
