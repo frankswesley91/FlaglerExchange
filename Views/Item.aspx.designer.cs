@@ -42,15 +42,6 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label datePosted;
 
         /// <summary>
-        /// price control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label price;
-
-        /// <summary>
         /// previousImage control.
         /// </summary>
         /// <remarks>
@@ -78,22 +69,22 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Button nextImage;
 
         /// <summary>
-        /// itemDescription control.
+        /// price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label itemDescription;
+        protected global::System.Web.UI.WebControls.Label price;
 
         /// <summary>
-        /// itemDescriptionTB control.
+        /// itemDescriptionLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox itemDescriptionTB;
+        protected global::System.Web.UI.WebControls.Label itemDescriptionLabel;
 
         /// <summary>
         /// contactSeller control.

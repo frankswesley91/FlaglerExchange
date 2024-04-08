@@ -120,8 +120,6 @@ div#item-container{
 }
 
 
-
-
   </style>
 
 <div class="text-center">
@@ -154,7 +152,7 @@ div#item-container{
 <!-- Because each of these pages is housed in an asp:Content element, that acts as the body. Don't need the <html> or <body> tags -->
 <!-- Instead, we just use <div> elements to act as containers, and specify the type of container using the `class` attribute. --> 
     <!-- This contains the whole element -->
-<div class="container-fluid">
+<div id="mainContent" class="container-fluid" style="background:#9e2339">
     <!-- Each class="row" container allows you to better separate elements of the form sequentially -->
     <div id="item-container" class="row">
         <div style="display: flex; align-content: flex-start">
@@ -165,18 +163,17 @@ div#item-container{
                 <!-- This needs to be "Item Name" rather than product name -->
                 <asp:Label ID="itemName" runat="server" Text="Item Name"></asp:Label>
             </div>
-        <div class="row offset-6" >
+        <div class="offset-6" >
             <!--- This row is to display Price and date posted -->
             <div class ="container">
                 <div class="col-lg-6" style="border: solid">
                     <table>
                         <tr>
                             <td width="320px"><asp:Label ID="datePosted" runat="server" Text="Date Posted"></asp:Label></td>
-                            <td width="400px"><asp:Label ID="price" runat="server" Text="Price"></asp:Label></td>
+                            
                         </tr>
                     </table>
                 </div>
-                
             </div>
         </div>
             <div class="row">
@@ -185,9 +182,9 @@ div#item-container{
                     <!-- This container thing allows the item image be contained better -->
                     <div class ="container">
                         <div class="body-content">
-                            <asp:Button ID="previousImage" runat="server" Text="<" Height="100px" ForeColor="Black" BackColor="#ffba3b"/>
-                            <asp:Image ID="productImage" runat="server" src="/Images/Cat.jpeg" Width="450px" Height="450px"/>
-                            <asp:Button ID="nextImage" runat="server" Text=">" Height="100px" ForeColor="Black" BackColor="#ffba3b" />
+                            <asp:Button ID="previousImage" runat="server" Text="<" Height="100px" ForeColor="Black" BackColor="#ffba3b" OnClick="previousImage_Click" />
+                            <asp:Image ID="productImage" runat="server" Width="450px" Height="450px"/>
+                            <asp:Button ID="nextImage" runat="server" Text=">" Height="100px" ForeColor="Black" BackColor="#ffba3b" OnClick="nextImage_Click" />
                               
                         </div>
             </div>
@@ -196,9 +193,11 @@ div#item-container{
             <div class="row">
                 <div class="col-sm">
                     <div class="text-body">
-                        <asp:Label ID="itemDescription" runat="server" Text="Description of the item goes here"></asp:Label>
+                        <asp:Label ID="price" runat="server" Text="Price"></asp:Label>
                     </div>
-                        <asp:TextBox ID="itemDescriptionTB" runat="server" TextMode="MultiLine" CssClass="textbox" Width="100%"></asp:TextBox>
+                    <div class="text-body"> 
+                        <asp:Label ID="itemDescriptionLabel" runat="server"  Width="100%" Text="This is where the item description will go after the item is created"></asp:Label>
+                    </div>
                 </div>
        </div>
         <!--Button that redircets to seller's profile -->
