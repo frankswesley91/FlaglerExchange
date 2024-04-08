@@ -69,13 +69,13 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Image profileImage;
 
         /// <summary>
-        /// changeProfileImageButton control.
+        /// changeProfileUploadButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button changeProfileImageButton;
+        protected global::System.Web.UI.WebControls.FileUpload changeProfileUploadButton;
 
         /// <summary>
         /// editProfileButton control.
@@ -94,6 +94,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox aboutMeTB;
+
+        /// <summary>
+        /// majorMinorContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl majorMinorContainer;
 
         /// <summary>
         /// majorDDList1 control.
