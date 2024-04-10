@@ -154,6 +154,13 @@ aside {
     color: white;
 }
 
+.alert-warning{
+    font-size: large;
+    align-content: center;
+    margin: 0 auto;
+    font-family: 'Times New Roman';
+}
+
 
 </style>
 
@@ -207,6 +214,16 @@ aside {
             <table class="Login-Create-Account-Buttons" style="margin: 0 auto;">
                 <tr>
             <td><asp:Button class="more-info" ID="LoginButton" runat="server" Height="39px" Text="Login" OnClick="ButtonToHomePage_Click"/></td>
+                    <asp:RegularExpressionValidator 
+                        ID="regexEmailValidator" 
+                        runat="server" 
+                        ErrorMessage="Email must be a Flagler College email (@flagler.edu)" 
+                        ValidationExpression="^[\w\.-]+@flagler\.edu$" 
+                        ControlToValidate="userEmail"
+                        Display="Dynamic"
+                        ForeColor="Red"
+                        class="alert-warning">
+                    </asp:RegularExpressionValidator>
             <!--create account sends you to the create account page screen-->
             <td><asp:Button class="more-info" ID="CreateAccountButton" runat="server" Height="39px" Text="Create Account" OnClick="ButtonToCreateAccountPage_Click"/></td>
                 </tr>
