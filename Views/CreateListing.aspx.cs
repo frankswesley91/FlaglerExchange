@@ -13,7 +13,7 @@ namespace FlaglerExchange.Views
         public class Listing
         {
             //Properties of each Listing???????
-            public int ListingTitle { get; set; }
+            public string ListingTitle { get; set; }
             public string ListingName { get; set; }
             public string ListingDescription { get; set; }
 
@@ -22,7 +22,22 @@ namespace FlaglerExchange.Views
             public string ListingCategories { get; set; }
 
             public bool ListingAvailabillity { get; set; }
-            
+
+            public Listing()
+            {
+                string listingTitle = ListingTitle;
+
+                string listingName = ListingName;
+
+                string listingDescription = ListingDescription;
+
+                double listingPrice = ListingPrice;
+
+                string listingCategories = ListingCategories;
+
+                bool listingAvailabillity = ListingAvailabillity;
+            }
+
         }
 
 
