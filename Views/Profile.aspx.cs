@@ -55,9 +55,7 @@ namespace FlaglerExchange.Views
                 //change the button text
                 editProfileButton.Text = "Save Changes";
 
-                //change the color of the button
-                editProfileButton.ForeColor = System.Drawing.Color.White;
-                editProfileButton.BackColor = System.Drawing.Color.DarkRed;
+               
 
                 
             }
@@ -69,9 +67,7 @@ namespace FlaglerExchange.Views
                 //change the text back to "Edit Profile: 
                 editProfileButton.Text = "Edit Profile";
 
-                //Change the color of the button back to the default colors
-                editProfileButton.ForeColor = System.Drawing.Color.Black;
-                editProfileButton.BackColor = System.Drawing.ColorTranslator.FromHtml("#EFEFEF");
+               
 
 
                 if (affiliationDDList.SelectedValue == "student")
