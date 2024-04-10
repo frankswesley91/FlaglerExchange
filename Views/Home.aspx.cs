@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -22,6 +24,43 @@ namespace FlaglerExchange.Views
             Response.Redirect("/Views/Item.aspx");
         }
 
-       
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            // This is where you call your method to search the products. 
+            // that returns a DataTable and takes the search query as a parameter.
+            DataTable results = SearchItems(SearchTextBox.Text);
+
+            giveResults.DataSource = results;
+            giveResults.DataBind();
+        }
+
+        //WILL NEED TO UPDATE ONCE WE GET TO LOOK AT THE DATABASE NAD IT GETS CONNECTED!!!!!
+        private DataTable SearchItems(string query)
+        {
+            // Establish your database connection
+            // This connection string should be replaced with your actual database connection string
+            using (SqlConnection conn = new SqlConnection("YourConnectionString"))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    // Example SQL - you should replace this with your actual query
+                    // and make sure to parameterize it to prevent SQL injection
+                    cmd.CommandText = "SELECT * FROM Products WHERE ProductName LIKE @query";
+                    cmd.Parameters.AddWithValue("@query", "%" + query + "%");
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+
+
     }
 }
