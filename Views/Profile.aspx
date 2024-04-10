@@ -176,25 +176,26 @@ h5{
                    <!-- change this to an asp:Image tag at some point -->
                    <!-- <img id="profile-image", style="justify-self: right; width: 150px; height:150px;" src="../Images/FlaglerExchangeLogo.png" /> -->
                    <asp:Image ID="profileImage" runat="server" src="../Images/FlaglerExchangeLogo.png" Width="150px" Height="150px" />
-                   <asp:Button ID="changeProfileImageButton" runat="server" Text="Change picture..." />
+                   <asp:FileUpload ID="changeProfileUploadButton"  runat="server" AllowMultiple ="false" Enabled="false" CssClass="custom-file-upload"/>
+                   
                    <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" BackColor="#EFEFEF" />
                </div>
            </div>
            <div class ="row">
-               <div class="col-lg-5", style ="padding-top: 10px;">
+               <div class="col-lg-4", style ="padding-top: 10px;">
                    <h5 style="border: solid;">About me: </h5>
                    <asp:TextBox ID="aboutMeTB" runat="server" TextMode="MultiLine" Width="1000px" Font-Size="Small">This is where the &quot;about me&quot; section will go, where users can type a quick bio about themselves that is visible to others. </asp:TextBox>
                </div>
-               <div class="col-md-4" style="padding-top: 10px">
+               <div class="col-lg-5" id="majorMinorContainer" runat="server" style="padding-top: 10px;">
                   <h5 style="border: solid;"> Major(s)/Minor(s)</h5>
-                       <table class="col-sm-2">
+                       <table class="col-sm">
                        <tr>
                            <td><strong>Major(s): </strong></td>
                            <td style="border:groove">
                                <table>
                                    <tr>
                                        <td>
-                                           <asp:DropDownList ID="majorDDList1" runat="server" Enabled="false" BorderStyle="None">
+                                           <asp:DropDownList ID="majorDDList1" runat="server" Enabled="false" BorderStyle="None" Width="190px">
                                                <asp:ListItem Value="default">--Please Select--</asp:ListItem>
                                                <asp:ListItem Value="ACCmaj1">Accounting</asp:ListItem>
                                                <asp:ListItem Value="ANTmaj1">Anthropology</asp:ListItem>
@@ -236,7 +237,7 @@ h5{
                                            </asp:DropDownList>
                                        </td>
                                        <td>
-                                           <asp:DropDownList ID="majorDDList2" runat="server" Enabled="false" BorderStyle="None">
+                                           <asp:DropDownList ID="majorDDList2" runat="server" Enabled="false" BorderStyle="None" Width="190px">
                                                     <asp:ListItem Value="default">--Please Select--</asp:ListItem>
                                                     <asp:ListItem Value="ACCmaj2">Accounting</asp:ListItem>
                                                     <asp:ListItem Value="ANTmaj2">Anthropology</asp:ListItem>
@@ -288,7 +289,7 @@ h5{
                                 <table>
                                    <tr>
                                        <td>
-                                           <asp:DropDownList ID="minorDDList1" runat="server" Enabled="false" BorderStyle="None">
+                                           <asp:DropDownList ID="minorDDList1" runat="server" Enabled="false" BorderStyle="None" Width="190px">
                                                 <asp:ListItem Value="default">--Please Select--</asp:ListItem>
                                                 <asp:ListItem Value="ACCmin1">Accounting</asp:ListItem>
                                                 <asp:ListItem Value="ANTmin1">Anthropology</asp:ListItem>
@@ -332,7 +333,7 @@ h5{
 
                                        </td>
                                        <td>
-                                           <asp:DropDownList ID="minorDDList2" runat="server" Enabled="false" BorderStyle="None">
+                                           <asp:DropDownList ID="minorDDList2" runat="server" Enabled="false" BorderStyle="None" Width="190px">
                                                     <asp:ListItem Value="default">--Please Select--</asp:ListItem>
                                                     <asp:ListItem Value="ACCmin2">Accounting</asp:ListItem>
                                                     <asp:ListItem Value="ANTmin2">Anthropology</asp:ListItem>
@@ -380,7 +381,7 @@ h5{
                        </tr>
                    </table>
                </div>
-               <div class ="col-sm-2 offset-md-0" style="padding-top: 10px; margin-left: 25px">
+               <div class ="col-sm-2 offset-md-3" style="padding-top: 10px; margin-left: 25px">
                        <h5 style="border: solid">Affiliation</h5>
                         <asp:DropDownList ID="affiliationDDList" runat="server" >
                            <asp:ListItem Value="default">--Please Select--</asp:ListItem>
