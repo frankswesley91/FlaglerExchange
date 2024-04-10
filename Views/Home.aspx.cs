@@ -76,7 +76,7 @@ namespace FlaglerExchange.Views
                 try
                 {
                     con.Open();
-                    string query = "SELECT UserInfo FROM Name WHERE UsertId = 1";
+                    string query = "SELECT UserInfo FROM Name WHERE UserId = 1";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         object result = cmd.ExecuteScalar();
