@@ -205,10 +205,6 @@ aside {
             <asp:TextBox class="input" ID="userPassword" runat="server" Width="258px"></asp:TextBox>
             <br />
             <br />
-       
-
-
-            
 
             <!--submit sends you to home screen-->
             <table class="Login-Create-Account-Buttons" style="margin: 0 auto;">

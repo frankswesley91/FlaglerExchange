@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -14,7 +15,10 @@ namespace FlaglerExchange.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
+            if (!IsPostBack)
+            {
+                LoadUserName();
+            }
 
         }
 
@@ -60,6 +64,45 @@ namespace FlaglerExchange.Views
                 }
             }
         }
+
+
+        public void LoadUserName()
+        {
+
+            //FIX CONNECTION STRING YOU LOSER
+            string connectionString = "server=misapps.flagler.edu;database=shilliday705;uid=shilliday705pwd=39264546;";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "SELECT UserInfo FROM Name WHERE UsertId = 1";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            userName.Text = result.ToString();
+                        }
+                        else
+                        {
+                            userName.Text = "Name not found";
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors that might have occurred
+                    userName.Text = "Error loading name";
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
+
+
+
+
 
 
     }
