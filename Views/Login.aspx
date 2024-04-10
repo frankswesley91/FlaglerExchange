@@ -214,6 +214,7 @@ aside {
             <table class="Login-Create-Account-Buttons" style="margin: 0 auto;">
                 <tr>
             <td><asp:Button class="more-info" ID="LoginButton" runat="server" Height="39px" Text="Login" OnClick="ButtonToHomePage_Click"/></td>
+                    <!----Flagler Email Validator----->
                     <asp:RegularExpressionValidator 
                         ID="regexEmailValidator" 
                         runat="server" 
