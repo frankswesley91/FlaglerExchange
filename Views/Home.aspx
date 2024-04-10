@@ -196,7 +196,7 @@ h2 {
 
 </style>
 
-
+    
 
     <div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
@@ -219,6 +219,7 @@ h2 {
 </nav>
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
+    
     <body>
          <p style="font-size:xx-large; font-family:'Times New Roman'; color: white; ">Welcome back,</p> <asp:Label class="StudentName" ID="Label1" runat="server" Text="Insert Student Name" Font-Names="Times New Roman" Font-Strikeout="False"></asp:Label>
               
@@ -227,7 +228,7 @@ h2 {
                 <tr>
                     <td>
             <asp:TextBox class="search-bar" ID="SearchTextBox" runat="server"></asp:TextBox>
-            <asp:Button class="more-info" ID="SearchButton" runat="server" Height="39px" Text="Search"/>
+            <asp:Button class="more-info" ID="SearchButton" runat="server" Height="39px" Text="Search" OnClick="btnSearch_Click"/>
                      </td>
                     </tr>
              </table>
@@ -289,9 +290,11 @@ h2 {
 
  <!----------------------------IMAGES OF THE PRODUCTS AND THEIR MORE INFO BUTTONS!--------------------------------->
 
-
+        <!----THIS WILL NEED TO BE ON ANOTHER FILE I THINK, HOW DO WE GET THE PAGE TO REFRESH.----->
+        <asp:GridView ID="giveResults" runat="server"></asp:GridView>
         <!--Row #1-->
         <!-------------Product#1---------->
+    
      <div class="row">
         <div class="column">
             <table style="margin: 0 auto;">
@@ -469,7 +472,9 @@ h2 {
         </div>
       </div>
 
-
+    
 
     </body>
+
+
 </asp:Content>
