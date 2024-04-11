@@ -24,22 +24,22 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label createEditListingLabel;
 
         /// <summary>
-        /// Label4 control.
+        /// label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label label2;
 
         /// <summary>
-        /// ItemTitle control.
+        /// listingName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ItemTitle;
+        protected global::System.Web.UI.WebControls.TextBox listingName;
 
         /// <summary>
         /// AddImageButton control.
@@ -51,22 +51,22 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label AddImageButton;
 
         /// <summary>
-        /// FileUpload1 control.
+        /// listingImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload listingImage;
 
         /// <summary>
-        /// Label2 control.
+        /// ItemDescriptionlabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label ItemDescriptionlabel;
 
         /// <summary>
         /// ItemPriceLabel control.
@@ -78,13 +78,13 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label ItemPriceLabel;
 
         /// <summary>
-        /// ItemPrice control.
+        /// listingPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ItemPrice;
+        protected global::System.Web.UI.WebControls.TextBox listingPrice;
 
         /// <summary>
         /// Label5 control.
@@ -96,13 +96,13 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// CategoryCheckBoxList control.
+        /// listingCategories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList CategoryCheckBoxList;
+        protected global::System.Web.UI.WebControls.CheckBoxList listingCategories;
 
         /// <summary>
         /// Category1 control.
@@ -285,13 +285,13 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// rblAvailability control.
+        /// listingAvailabillity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblAvailability;
+        protected global::System.Web.UI.WebControls.RadioButtonList listingAvailabillity;
 
         /// <summary>
         /// SaveListing control.

@@ -294,12 +294,6 @@ img.Product {
      </div>
 
         
-
-
-
-
-
-
     </body>
 </asp:Content>
 

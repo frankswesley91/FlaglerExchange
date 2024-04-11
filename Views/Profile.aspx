@@ -94,6 +94,24 @@ h5{
     width: 100%; 
 }
 
+
+.profile-buttons {
+   margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: black;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+}
+
+.profile-buttons:hover{
+    background-color: #9e2339;
+    color: white;
+}
+
+
     </style>
 
 
@@ -178,7 +196,7 @@ h5{
                    <asp:Image ID="profileImage" runat="server" src="../Images/FlaglerExchangeLogo.png" Width="150px" Height="150px" />
                    <asp:FileUpload ID="changeProfileUploadButton"  runat="server" AllowMultiple ="false" Enabled="false" CssClass="custom-file-upload"/>
                    
-                   <asp:Button ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" BackColor="#EFEFEF" />
+                   <asp:Button  CssClass="profile-buttons" ID="editProfileButton" runat="server" Text="Edit Profile" OnClick="editProfileButton_Click" />
                </div>
            </div>
            <div class ="row">

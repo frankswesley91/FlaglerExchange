@@ -169,7 +169,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label4" runat="server" Font-Names="Times New Roman" Text="Item Title:" Font-Bold="true"></asp:Label>
+            <asp:Label ID="label2" runat="server" Font-Names="Times New Roman" Text="Item Title:" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -178,7 +178,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:TextBox class="input" ID="ItemTitle" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="listingName" runat="server" Width="258px"></asp:TextBox>
         </td>
     </tr>
     <tr>
@@ -190,7 +190,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:FileUpload class="create-listing-button" ID="FileUpload1" runat="server" AllowMultiple="True"/>
+            <asp:FileUpload class="create-listing-button" ID="listingImage" runat="server" AllowMultiple="True"/>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -199,7 +199,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 50px; height: 45px">
-            <asp:Label ID="Label2" runat="server" Text="Item Description:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+            <asp:Label ID="ItemDescriptionlabel" runat="server" Text="Item Description:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -208,7 +208,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">
-            <textarea class="input" ID="TextArea1" name="S1" style="width: 413px; height: 105px; font-family: 'Times New Roman'" ></textarea></td>
+            <textarea class="input" ID="listingDescription" name="S1" style="width: 413px; height: 105px; font-family: 'Times New Roman'" ></textarea></td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -221,7 +221,7 @@ input[type="email"] {
         </tr>
         <tr>
             <td>
-                <asp:TextBox class="input" ID="ItemPrice" runat="server" Width="258px"></asp:TextBox>
+                <asp:TextBox class="input" ID="listingPrice" runat="server" Width="258px"></asp:TextBox>
             </td>
         </tr>
         
@@ -231,7 +231,7 @@ input[type="email"] {
         <asp:Label ID="Label5" runat="server" Text="Add Tags:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         <tr>
             <td style="font-family: 'Times New Roman'">
-                <asp:CheckBoxList CssClass="Check-box-list-space" ID="CategoryCheckBoxList" runat="server">
+                <asp:CheckBoxList CssClass="Check-box-list-space" ID="listingCategories" runat="server">
                 <asp:ListItem ID="Category1" Value="Electronics">Electronics</asp:ListItem>
                 <asp:ListItem ID="Category2" Value="Pets">Pets</asp:ListItem>
                 <asp:ListItem ID="Category3" Value="Books">Books</asp:ListItem>
@@ -266,7 +266,7 @@ input[type="email"] {
             
             <tr>
                 <td>
-                    <asp:RadioButtonList ID="rblAvailability" runat="server">
+                    <asp:RadioButtonList ID="listingAvailabillity" runat="server">
                     <asp:ListItem Text="Yes" Value="Available" Selected="True"></asp:ListItem>
                     <asp:ListItem Text="No" Value="NotAvailable"></asp:ListItem>
                     </asp:RadioButtonList>

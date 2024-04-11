@@ -16,28 +16,42 @@ namespace FlaglerExchange.Views
         public class Listing
         {
             //Properties of each Listing???????
-            public int ListingTitle { get; set; }
+            public string ListingTitle { get; set; }
             public string ListingName { get; set; }
             public string ListingDescription { get; set; }
 
-            public double ListingPrice{ get; set; }
+            public double ListingPrice { get; set; }
+
+            public string ListingImage { get; set; }
 
             public string ListingCategories { get; set; }
 
             public bool ListingAvailabillity { get; set; }
-            
+
+
         }
+
+
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            
+
+
         }
 
 
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
+
+           // ListingName = listingName.Text;
+
+
+
+
+
+
+
             // Navigate to the More Info page
 
             var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
@@ -50,11 +64,11 @@ namespace FlaglerExchange.Views
                 sqlConnection.Open();
                 using (var sqlCommand = new SqlCommand(insertStatement, sqlConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("ListingName", "OldTextbook");
-                    sqlCommand.Parameters.AddWithValue("ListingStatus", "Available");
-                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Available, need gone ASAP");
+                    sqlCommand.Parameters.AddWithValue("ListingName", "goofyAhCoding");
+                    sqlCommand.Parameters.AddWithValue("ListingStatus", "available");
+                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Csux");
                     sqlCommand.Parameters.AddWithValue("ListingImage", "");
-                    sqlCommand.Parameters.AddWithValue("Price", "19.99");
+                    sqlCommand.Parameters.AddWithValue("Price", "0.99");
                     sqlCommand.Parameters.AddWithValue("UserID", "1");
                     sqlCommand.Parameters.AddWithValue("PostDate", "4/11/2024");
                     sqlCommand.ExecuteNonQuery();
