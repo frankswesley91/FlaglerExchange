@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace FlaglerExchange.Views
@@ -43,7 +44,7 @@ namespace FlaglerExchange.Views
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
 
-
+           // ListingName = listingName.Text;
 
 
 
@@ -52,13 +53,36 @@ namespace FlaglerExchange.Views
 
 
             // Navigate to the More Info page
+
+            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+
+            var insertStatement = "INSERT into Listing (ListingName, ListingStatus, ListingDescription, ListingImage" +
+                    ", Price, UserID, PostDate) values (@ListingName, @ListingStatus," +
+                    " @ListingDescription, @ListingImage, @Price, @UserID, @PostDate)";
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (var sqlCommand = new SqlCommand(insertStatement, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("ListingName", "goofyAhCoding");
+                    sqlCommand.Parameters.AddWithValue("ListingStatus", "available");
+                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Csux");
+                    sqlCommand.Parameters.AddWithValue("ListingImage", "");
+                    sqlCommand.Parameters.AddWithValue("Price", "0.99");
+                    sqlCommand.Parameters.AddWithValue("UserID", "1");
+                    sqlCommand.Parameters.AddWithValue("PostDate", "4/11/2024");
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+
             Response.Redirect("/Views/Listing.aspx");
             string CreateLabel = Session["CreateEditListingLabel"] as string;
 
         }
-            
-       }
-    }
-    
+ 
+       /* protected System.Void ButtonToMyListingPage_Click(System.Object sender, System.EventArgs e)
+        {
 
-        
+        }*/
+    }
+}

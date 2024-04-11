@@ -1,20 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace FlaglerExchange.Views
 {
-    public partial class Profile : System.Web.UI.Page
+    public class User
     {
+        int userId { get; set; }
+        string Name { get; set; }
+        string Phone { get; set; }
+        string Email { get; set; }
+        string Affiliation { get; set; }
+        object Photo { get; set; }
+
+        public User()
+        {
+            string name = Name;
+            string phone = Phone;
+            string email = Email;
+            string affiliation = Affiliation;
+            object photo = Photo;
+
+        }
+
+    }
+        public partial class Profile : System.Web.UI.Page
+        { 
+    
+
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             //instantiate variables: 
-            string phone = phoneTB.Text;
-            string email = emailTB.Text;
-            string name = nameTB.Text;
+            User webuser = new User(); 
+
             if (!IsPostBack)
             {
                 //disable affiliation
@@ -38,8 +62,7 @@ namespace FlaglerExchange.Views
                 addressTB.Enabled = false;
                 onCampusRBList.Enabled = false;
 
-                //remove the upload file from view
-                changeProfileUploadButton.Visible = false; 
+                
             }
 
            
@@ -76,6 +99,7 @@ namespace FlaglerExchange.Views
                 }
                 else
                 {
+                    // if it gives you errors, C# is lying to you
                     majorMinorContainer.Visible = false;
                 }
             }
@@ -117,10 +141,6 @@ namespace FlaglerExchange.Views
             //enable the about me section to edit
             aboutMeTB.Enabled = true;
 
-            //enable the upload image control
-            changeProfileUploadButton.Visible = true; 
-            changeProfileUploadButton.Enabled = true; 
-
         }
         private void DisableElements()
         {
@@ -155,10 +175,6 @@ namespace FlaglerExchange.Views
 
             minorDDList1.BorderStyle = BorderStyle.None;
             minorDDList2.BorderStyle = BorderStyle.None;
-
-            //disable the upload image control 
-            changeProfileUploadButton.Enabled = false;
-            changeProfileUploadButton.Visible = false;
         }
     }
 }

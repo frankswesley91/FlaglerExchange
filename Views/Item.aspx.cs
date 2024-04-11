@@ -21,7 +21,7 @@ namespace FlaglerExchange.Views
             //the file folder can be changed based on the id in the SQL table once that is up and running
             images = Directory.GetFiles(Server.MapPath("~/Images/"));
             string[] showen = images;
-            productImage.ImageUrl = showen[0];
+            //productImage.ImageUrl = showen[0];
 
         }
 
@@ -39,13 +39,13 @@ namespace FlaglerExchange.Views
         protected void nextImage_Click(object sender, EventArgs e)
         {
             currentImageNo = (currentImageNo + 1) % images.Length;
-            productImage.ImageUrl = images[currentImageNo];
+            //productImage.ImageUrl = images[currentImageNo];
         }
 
         protected void previousImage_Click(object sender, EventArgs e)
         {
             currentImageNo = (currentImageNo - 1 + images.Length) % images.Length;
-            productImage.ImageUrl = images[currentImageNo];
+            //productImage.ImageUrl = images[currentImageNo];
         }
 
     }
