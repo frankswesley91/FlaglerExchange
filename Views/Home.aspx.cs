@@ -20,6 +20,7 @@ namespace FlaglerExchange.Views
                 LoadUserName();
             }
 
+
         }
 
         protected void ButtonToItemPage_Click(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace FlaglerExchange.Views
         {
             // Establish your database connection
             // This connection string should be replaced with your actual database connection string
-            using (SqlConnection conn = new SqlConnection("YourConnectionString"))
+            using (SqlConnection conn = new SqlConnection("server=misapps.flagler.edu;database=shilliday705;uid=shilliday705pwd=39264546;"))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand())
@@ -52,7 +53,7 @@ namespace FlaglerExchange.Views
                     cmd.Connection = conn;
                     // Example SQL - you should replace this with your actual query
                     // and make sure to parameterize it to prevent SQL injection
-                    cmd.CommandText = "SELECT * FROM Products WHERE ProductName LIKE @query";
+                    cmd.CommandText = "SELECT * FROM ListingInfo WHERE ListingName LIKE @query";
                     cmd.Parameters.AddWithValue("@query", "%" + query + "%");
 
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
@@ -68,7 +69,7 @@ namespace FlaglerExchange.Views
 
         public void LoadUserName()
         {
-
+            //test string to store the userID
             //FIX CONNECTION STRING YOU LOSER
             string connectionString = "server=misapps.flagler.edu;database=shilliday705;uid=shilliday705pwd=39264546;";
             using (SqlConnection con = new SqlConnection(connectionString))
