@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace FlaglerExchange.Views
@@ -36,12 +39,36 @@ namespace FlaglerExchange.Views
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
             // Navigate to the More Info page
+
+            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+
+            var insertStatement = "INSERT into Listing (ListingName, ListingStatus, ListingDescription, ListingImage" +
+                    ", Price, UserID, PostDate) values (@ListingName, @ListingStatus," +
+                    " @ListingDescription, @ListingImage, @Price, @UserID, @PostDate)";
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                using (var sqlCommand = new SqlCommand(insertStatement, sqlConnection))
+                {
+                    sqlCommand.Parameters.AddWithValue("ListingName", "OldTextbook");
+                    sqlCommand.Parameters.AddWithValue("ListingStatus", "Available");
+                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Available, need gone ASAP");
+                    sqlCommand.Parameters.AddWithValue("ListingImage", "");
+                    sqlCommand.Parameters.AddWithValue("Price", "19.99");
+                    sqlCommand.Parameters.AddWithValue("UserID", "1");
+                    sqlCommand.Parameters.AddWithValue("PostDate", "4/11/2024");
+                    sqlCommand.ExecuteNonQuery();
+                }
+            }
+
             Response.Redirect("/Views/Listing.aspx");
             string CreateLabel = Session["CreateEditListingLabel"] as string;
 
-
         }
+ 
+       /* protected System.Void ButtonToMyListingPage_Click(System.Object sender, System.EventArgs e)
+        {
 
-
+        }*/
     }
 }
