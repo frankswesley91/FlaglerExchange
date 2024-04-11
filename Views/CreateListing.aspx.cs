@@ -43,8 +43,8 @@ namespace FlaglerExchange.Views
 
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
-
-           // ListingName = listingName.Text;
+            //Make variables
+          
 
 
 
@@ -64,13 +64,13 @@ namespace FlaglerExchange.Views
                 sqlConnection.Open();
                 using (var sqlCommand = new SqlCommand(insertStatement, sqlConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("ListingName", "goofyAhCoding");
-                    sqlCommand.Parameters.AddWithValue("ListingStatus", "available");
-                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Csux");
-                    sqlCommand.Parameters.AddWithValue("ListingImage", "");
-                    sqlCommand.Parameters.AddWithValue("Price", "0.99");
+                    sqlCommand.Parameters.AddWithValue("ListingName", listName.Text);
+                    sqlCommand.Parameters.AddWithValue("ListingStatus", listingAvailabillity.SelectedIndex);
+                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Stuff");
+                    sqlCommand.Parameters.AddWithValue("ListingImage", "image");
+                    sqlCommand.Parameters.AddWithValue("Price", listingPrice.Text);
                     sqlCommand.Parameters.AddWithValue("UserID", "1");
-                    sqlCommand.Parameters.AddWithValue("PostDate", "4/11/2024");
+                    sqlCommand.Parameters.AddWithValue("PostDate", DateTime.UtcNow);
                     sqlCommand.ExecuteNonQuery();
                 }
             }

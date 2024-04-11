@@ -178,7 +178,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:TextBox class="input" ID="listingName" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="listName" runat="server" Width="258px"></asp:TextBox>
         </td>
     </tr>
     <tr>
