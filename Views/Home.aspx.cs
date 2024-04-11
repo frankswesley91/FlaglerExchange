@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -15,10 +16,7 @@ namespace FlaglerExchange.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!IsPostBack)
-            {
-                LoadUserName();
-            }
+           
 
 
         }
@@ -45,7 +43,7 @@ namespace FlaglerExchange.Views
         {
             // Establish your database connection
             // This connection string should be replaced with your actual database connection string
-            using (SqlConnection conn = new SqlConnection("server=misapps.flagler.edu;database=shilliday705;uid=shilliday705pwd=39264546;"))
+            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["Data Source=misapps.flagler.edu;Initial Catalog=Shilliday705;Persist Security Info=True;User ID=shilliday705;Password=39264546"].ConnectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand())
@@ -65,20 +63,19 @@ namespace FlaglerExchange.Views
                 }
             }
         }
-
+      
 
         public void LoadUserName()
         {
             //test string to store the userID
             //FIX CONNECTION STRING YOU LOSER
-            string connectionString = "server=misapps.flagler.edu;database=shilliday705;uid=shilliday705pwd=39264546;";
-            using (SqlConnection con = new SqlConnection(connectionString))
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FlaglerExchangeDB"].ConnectionString);
             {
                 try
                 {
-                    con.Open();
+                    conn.Open();
                     string query = "SELECT UserInfo FROM Name WHERE UserId = 1";
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         object result = cmd.ExecuteScalar();
                         if (result != null)
@@ -99,7 +96,7 @@ namespace FlaglerExchange.Views
                 }
             }
         }
-
+        
 
 
 
