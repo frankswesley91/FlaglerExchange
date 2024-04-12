@@ -16,28 +16,42 @@ namespace FlaglerExchange.Views
         public class Listing
         {
             //Properties of each Listing???????
-            public int ListingTitle { get; set; }
+            public string ListingTitle { get; set; }
             public string ListingName { get; set; }
             public string ListingDescription { get; set; }
 
-            public double ListingPrice{ get; set; }
+            public double ListingPrice { get; set; }
+
+            public string ListingImage { get; set; }
 
             public string ListingCategories { get; set; }
 
             public bool ListingAvailabillity { get; set; }
-            
+
+
         }
+
+
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            
+
+
         }
 
 
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
+            //Make variables
+          
+
+
+
+
+
+
+
             // Navigate to the More Info page
 
             var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
@@ -50,13 +64,13 @@ namespace FlaglerExchange.Views
                 sqlConnection.Open();
                 using (var sqlCommand = new SqlCommand(insertStatement, sqlConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("ListingName", "NewTextbook");
-                    sqlCommand.Parameters.AddWithValue("ListingStatus", "Available");
-                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Available, still want it");
-                    sqlCommand.Parameters.AddWithValue("ListingImage", "");
-                    sqlCommand.Parameters.AddWithValue("Price", "19.99");
-                    sqlCommand.Parameters.AddWithValue("UserID", "2");
-                    sqlCommand.Parameters.AddWithValue("PostDate", "4/11/2024");
+                    sqlCommand.Parameters.AddWithValue("ListingName", listName.Text);
+                    sqlCommand.Parameters.AddWithValue("ListingStatus", listingAvailabillity.SelectedIndex);
+                    sqlCommand.Parameters.AddWithValue("ListingDescription", listingDescription.Value);
+                    sqlCommand.Parameters.AddWithValue("ListingImage", "Image");
+                    sqlCommand.Parameters.AddWithValue("Price", listingPrice.Text);
+                    sqlCommand.Parameters.AddWithValue("UserID", "1");
+                    sqlCommand.Parameters.AddWithValue("PostDate", DateTime.UtcNow);
                     sqlCommand.ExecuteNonQuery();
                 }
             }

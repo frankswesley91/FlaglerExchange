@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace FlaglerExchange.Views
 {
-    
+
     public partial class Login : System.Web.UI.Page
     {
 
@@ -17,8 +18,17 @@ namespace FlaglerExchange.Views
         {
             public string UserAccountEmail { get; set; }
             public string UserAccountPassword { get; set; }
-            
+
+            public UserAccount()
+            {
+                string userAccountEmail = UserAccountEmail;
+                string userAccountPassword = UserAccountPassword;
+            }
         }
+
+        
+
+           
         
 
         protected void Page_Load(object sender, EventArgs e)

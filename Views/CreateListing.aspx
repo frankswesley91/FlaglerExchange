@@ -129,6 +129,18 @@ input[type="email"] {
 .createListingLabel {
     font-size: xx-large;
 }
+
+.input{
+    font-family: 'Times New Roman';
+}
+
+
+.alert-warning{
+    font-size: large;
+    align-content: center;
+    margin: 0 auto;
+    font-family: 'Times New Roman';
+}
     </style>
 
 
@@ -169,7 +181,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:Label ID="Label4" runat="server" Font-Names="Times New Roman" Text="Item Title:" Font-Bold="true"></asp:Label>
+            <asp:Label ID="label2" runat="server" Font-Names="Times New Roman" Text="Item Title:" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -178,7 +190,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:TextBox class="input" ID="ItemTitle" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="listName" runat="server" Width="258px"></asp:TextBox>
         </td>
     </tr>
     <tr>
@@ -190,7 +202,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 1038px; height: 30px">
-            <asp:FileUpload class="create-listing-button" ID="FileUpload1" runat="server" AllowMultiple="True"/>
+            <asp:FileUpload class="create-listing-button" ID="listingImage" runat="server" AllowMultiple="True"/>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -199,7 +211,7 @@ input[type="email"] {
     <tr>
         <td style="width: 50px; height: 30px"></td>
         <td style="width: 50px; height: 45px">
-            <asp:Label ID="Label2" runat="server" Text="Item Description:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
+            <asp:Label ID="ItemDescriptionlabel" runat="server" Text="Item Description:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         </td>
         <td style="height: 30px"></td>
         <td style="height: 30px"></td>
@@ -208,7 +220,9 @@ input[type="email"] {
     <tr>
         <td style="width: 50px">&nbsp;</td>
         <td style="width: 1038px">
-            <textarea class="input" ID="TextArea1" name="S1" style="width: 413px; height: 105px; font-family: 'Times New Roman'" ></textarea></td>
+            <textarea class="input" id="listingDescription" runat="server" name="S1" style="width: 413px; height: 105px; font-family: 'Times New Roman'" ></textarea>
+
+        </td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
@@ -221,7 +235,21 @@ input[type="email"] {
         </tr>
         <tr>
             <td>
-                <asp:TextBox class="input" ID="ItemPrice" runat="server" Width="258px"></asp:TextBox>
+                <asp:TextBox class="input" ID="listingPrice" runat="server" Width="258px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:RegularExpressionValidator
+                        ID="revPrice" 
+                        runat="server" 
+                        ControlToValidate="listingprice" 
+                        ErrorMessage="Please enter a valid number (whole or decimal)" 
+                        ValidationExpression="^\d+(\.\d{1,2})?$" 
+                        ForeColor="Red"
+                        Display="Dynamic"
+                        class="alert-warning">
+                    </asp:RegularExpressionValidator>
             </td>
         </tr>
         
@@ -231,26 +259,26 @@ input[type="email"] {
         <asp:Label ID="Label5" runat="server" Text="Add Tags:" Font-Names="Times New Roman" Font-Bold="true"></asp:Label>
         <tr>
             <td style="font-family: 'Times New Roman'">
-                <asp:CheckBoxList CssClass="Check-box-list-space" ID="CategoryCheckBoxList" runat="server">
-                <asp:ListItem ID="Category1" Value="Electronics">Electronics</asp:ListItem>
-                <asp:ListItem ID="Category2" Value="Pets">Pets</asp:ListItem>
-                <asp:ListItem ID="Category3" Value="Books">Books</asp:ListItem>
-                <asp:ListItem ID="Category4" Value="Furniture">Furniture</asp:ListItem>
-                <asp:ListItem ID="Category5" Value="Tools">Tools</asp:ListItem>
-                <asp:ListItem ID="Category6" Value="Games">Games</asp:ListItem>
-                <asp:ListItem ID="Category7" Value="Clothing">Clothing</asp:ListItem>
-                <asp:ListItem ID="Category8" Value="Phones">Phones</asp:ListItem>
-                <asp:ListItem ID="Category9" Value="Bags">Bags</asp:ListItem>
-                <asp:ListItem ID="Category10" Value="Jewelry">Jewelry</asp:ListItem>
-                <asp:ListItem ID="Category11" Value="Accessories">Accessories</asp:ListItem>
-                <asp:ListItem ID="Category12" Value="Photos">Photos</asp:ListItem>
-                <asp:ListItem ID="Category13" Value="School">School</asp:ListItem>
-                <asp:ListItem ID="Category14" Value="Plants">Plants</asp:ListItem>
-                <asp:ListItem ID="Category15" Value="Shoes">Shoes</asp:ListItem>
-                <asp:ListItem ID="Category16" Value="Food">Food</asp:ListItem>
-                <asp:ListItem ID="Category17" Value="Sports">Sports</asp:ListItem>
-                <asp:ListItem ID="Category18" Value="Home"> Home</asp:ListItem>
-                <asp:ListItem ID="Category19" Value="Cleaning">Cleaning</asp:ListItem>
+                <asp:CheckBoxList CssClass="Check-box-list-space" ID="listingCategories" runat="server">
+                <asp:ListItem ID="CategoryElectronics" Value="Electronics">Electronics</asp:ListItem>
+                <asp:ListItem ID="CategoryPets" Value="Pets">Pets</asp:ListItem>
+                <asp:ListItem ID="CategoryBooks" Value="Books">Books</asp:ListItem>
+                <asp:ListItem ID="CategoryFurtniture" Value="Furniture">Furniture</asp:ListItem>
+                <asp:ListItem ID="CategoryTools" Value="Tools">Tools</asp:ListItem>
+                <asp:ListItem ID="CategoryGames" Value="Games">Games</asp:ListItem>
+                <asp:ListItem ID="CategoryClothing" Value="Clothing">Clothing</asp:ListItem>
+                <asp:ListItem ID="CategoryPhones" Value="Phones">Phones</asp:ListItem>
+                <asp:ListItem ID="CategoryBags" Value="Bags">Bags</asp:ListItem>
+                <asp:ListItem ID="CategoryJewelry" Value="Jewelry">Jewelry</asp:ListItem>
+                <asp:ListItem ID="CategoryAccessories" Value="Accessories">Accessories</asp:ListItem>
+                <asp:ListItem ID="CategoryPhotos" Value="Photos">Photos</asp:ListItem>
+                <asp:ListItem ID="CategorySchool" Value="School">School</asp:ListItem>
+                <asp:ListItem ID="CategoryPlants" Value="Plants">Plants</asp:ListItem>
+                <asp:ListItem ID="CategoryShoes" Value="Shoes">Shoes</asp:ListItem>
+                <asp:ListItem ID="CategoryFood" Value="Food">Food</asp:ListItem>
+                <asp:ListItem ID="CategorySports" Value="Sports">Sports</asp:ListItem>
+                <asp:ListItem ID="CategoryHome" Value="Home"> Home</asp:ListItem>
+                <asp:ListItem ID="CategoryCleaning" Value="Cleaning">Cleaning</asp:ListItem>
             </asp:CheckBoxList>
             </td>
         </tr>
@@ -266,7 +294,7 @@ input[type="email"] {
             
             <tr>
                 <td>
-                    <asp:RadioButtonList ID="rblAvailability" runat="server">
+                    <asp:RadioButtonList ID="listingAvailabillity" runat="server">
                     <asp:ListItem Text="Yes" Value="Available" Selected="True"></asp:ListItem>
                     <asp:ListItem Text="No" Value="NotAvailable"></asp:ListItem>
                     </asp:RadioButtonList>
