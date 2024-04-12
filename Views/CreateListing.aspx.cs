@@ -54,7 +54,7 @@ namespace FlaglerExchange.Views
 
             // Navigate to the More Info page
 
-            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+            var connectionString = ConfigurationManager.ConnectionStrings["LocalHost"].ConnectionString;
 
             var insertStatement = "INSERT into Listing (ListingName, ListingStatus, ListingDescription, ListingImage" +
                     ", Price, UserID, PostDate) values (@ListingName, @ListingStatus," +
@@ -64,7 +64,7 @@ namespace FlaglerExchange.Views
                 sqlConnection.Open();
                 using (var sqlCommand = new SqlCommand(insertStatement, sqlConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("ListingName", "goofyAhCoding");
+                    sqlCommand.Parameters.AddWithValue("ListingName", "HelloWorld");
                     sqlCommand.Parameters.AddWithValue("ListingStatus", "available");
                     sqlCommand.Parameters.AddWithValue("ListingDescription", "Csux");
                     sqlCommand.Parameters.AddWithValue("ListingImage", "");
