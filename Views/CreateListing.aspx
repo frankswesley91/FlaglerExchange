@@ -150,8 +150,84 @@ input[type="email"] {
     margin: 0 auto;
     font-family: 'Times New Roman';
 }
-    </style>
+:root {
+    background-color: #9e2339;
+    --text-color: #333;
+    --form-background: #f0f0f0;
+    --form-text: #333;
+}
 
+/* Dark theme */
+[data-theme="dark"] {
+    background-color: #9e2339;
+    --text-color: #ccc;
+    --form-background: #444;
+    --form-text: #ccc;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.create-listing-container {
+    background-color: var(--form-background);
+    color: var(--form-text);
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.more-info {
+   margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: black;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+}
+
+.more-info:hover{
+    background-color: #9e2339;
+    color: white;
+}
+
+
+</style>
+
+    <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
+<div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+    <button class="more-info" id="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+</div>
+
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateButtonText();
+        }
+
+        function updateButtonText() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const button = document.getElementById('theme-toggle');
+            button.textContent = currentTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        }
+
+        // Load theme from localStorage on initial load
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.setAttribute('data-theme', savedTheme);
+            updateButtonText();
+        }
+    </script>
 
     <div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>

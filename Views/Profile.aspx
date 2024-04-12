@@ -120,9 +120,29 @@ h5{
     color: white;
 }
 
+:root {
+    background-color: #9e2339;
+    --text-color: #333;
+    --form-background: #f0f0f0;
+    --form-text: #333;
+}
 
-    </style>
+/* Dark theme */
+[data-theme="dark"] {
+    background-color: #9e2339;
+    --text-color: #ccc;
+    --form-background: #444;
+    --form-text: #ccc;
+}
 
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+</style>
 
     <div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
