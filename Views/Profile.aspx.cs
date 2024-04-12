@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
@@ -11,22 +13,7 @@ namespace FlaglerExchange.Views
 {
     public class User
     {
-        int userId { get; set; }
-        string Name { get; set; }
-        string Phone { get; set; }
-        string Email { get; set; }
-        string Affiliation { get; set; }
-        object Photo { get; set; }
-
-        public User()
-        {
-            string name = Name;
-            string phone = Phone;
-            string email = Email;
-            string affiliation = Affiliation;
-            object photo = Photo;
-
-        }
+        
 
     }
         public partial class Profile : System.Web.UI.Page
@@ -36,36 +23,52 @@ namespace FlaglerExchange.Views
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            //instantiate variables: 
-            User webuser = new User(); 
+
+            majorMinorContainer.Visible = false;
 
             if (!IsPostBack)
             {
-                //disable affiliation
-                affiliationDDList.Enabled = false;
 
-                //disable major table
-                majorDDList1.Enabled = false;
-                majorDDList2.Enabled = false;
+                string selectQuery = "SELECT * FROM Profile @Name, @Address, @Phone, @CampusStatus, @Affiliation, @Photo WHERE UserID = @ProfileID";
 
-                //disable minor table
-                minorDDList1.Enabled = false;
-                minorDDList2.Enabled = false;
+                try
+                {
+                    var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+                    SqlConnection conn = new SqlConnection(connectionString);
 
-                //disable about me section 
-                aboutMeTB.Enabled = false;
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
 
-                //disable contact info section
-                nameTB.Enabled = false;
-                emailTB.Enabled = false;
-                phoneTB.Enabled = false;
-                addressTB.Enabled = false;
-                onCampusRBList.Enabled = false;
+                    cmd.CommandText = selectQuery;
+                    cmd.Parameters.AddWithValue("Name", nameTB.Text);
+                    cmd.Parameters.AddWithValue("Phone", phoneTB.Text);
+                    cmd.Parameters.AddWithValue("Address", addressTB.Text);
+                    cmd.Parameters.AddWithValue("CampusStatus", onCampusRBList.SelectedValue);
+                    cmd.Parameters.AddWithValue("Affiliation", affiliationDDList.SelectedValue);
+                    cmd.Parameters.AddWithValue("Photo", profileImage);
 
-                
+                }
+                catch
+                {
+                    
+                }
+
+                DisableElements(); 
             }
 
            
+        }
+        protected void affiliationDDList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (affiliationDDList.SelectedValue == "student")
+            {
+                majorMinorContainer.Visible = true;
+            }
+            else
+            {
+                // if it gives you errors, C# is lying to you
+                majorMinorContainer.Visible = false;
+            }
         }
 
         protected void editProfileButton_Click(object sender, EventArgs e)
@@ -77,9 +80,6 @@ namespace FlaglerExchange.Views
 
                 //change the button text
                 editProfileButton.Text = "Save Changes";
-
-               
-
                 
             }
            else 
@@ -90,18 +90,7 @@ namespace FlaglerExchange.Views
                 //change the text back to "Edit Profile: 
                 editProfileButton.Text = "Edit Profile";
 
-               
 
-
-                if (affiliationDDList.SelectedValue == "student")
-                {
-                    majorMinorContainer.Visible = true;
-                }
-                else
-                {
-                    // if it gives you errors, C# is lying to you
-                    majorMinorContainer.Visible = false;
-                }
             }
 
         }
@@ -141,6 +130,12 @@ namespace FlaglerExchange.Views
             //enable the about me section to edit
             aboutMeTB.Enabled = true;
 
+            //enable the photo uploader
+            changeProfileUploadButton.Enabled = true;
+
+            //show the upload file button
+            changeProfileUploadButton.Visible = true;
+
         }
         private void DisableElements()
         {
@@ -175,6 +170,14 @@ namespace FlaglerExchange.Views
 
             minorDDList1.BorderStyle = BorderStyle.None;
             minorDDList2.BorderStyle = BorderStyle.None;
+
+            //disable the upload file button
+            changeProfileUploadButton.Enabled = false;
+
+            //hide the upload file button
+            changeProfileUploadButton.Visible = false; 
         }
+
+
     }
 }

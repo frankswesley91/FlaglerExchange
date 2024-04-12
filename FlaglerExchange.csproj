@@ -196,7 +196,6 @@
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\Item.aspx" />
     <Content Include="Views\Listing.aspx" />
-    <Content Include="Views\ListingGrid.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Profile.aspx" />
     <Content Include="Web.config" />
@@ -286,13 +285,6 @@
     </Compile>
     <Compile Include="Views\Listing.aspx.designer.cs">
       <DependentUpon>Listing.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ListingGrid.aspx.cs">
-      <DependentUpon>ListingGrid.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\ListingGrid.aspx.designer.cs">
-      <DependentUpon>ListingGrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

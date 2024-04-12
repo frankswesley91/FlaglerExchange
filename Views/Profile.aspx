@@ -173,8 +173,8 @@ h5{
                                <td><strong>Off campus?: </strong></td>
                                <td>
                                    <asp:RadioButtonList ID="onCampusRBList" runat="server" RepeatDirection="Horizontal" >
-                                       <asp:ListItem Value="1">Yes</asp:ListItem>
-                                       <asp:ListItem Value="0" Selected="True">No</asp:ListItem>
+                                       <asp:ListItem Value="Yes">Yes</asp:ListItem>
+                                       <asp:ListItem Value="No" Selected="True">No</asp:ListItem>
                                    </asp:RadioButtonList>
 
                                </td>
@@ -401,7 +401,7 @@ h5{
                </div>
                <div class ="col-sm-2 offset-md-3" style="padding-top: 10px; margin-left: 25px">
                        <h5 style="border: solid">Affiliation</h5>
-                        <asp:DropDownList ID="affiliationDDList" runat="server" >
+                   <asp:DropDownList ID="affiliationDDList" runat="server" OnSelectedIndexChanged="affiliationDDList_SelectedIndexChanged">
                            <asp:ListItem Value="default">--Please Select--</asp:ListItem>
                            <asp:ListItem Value="student">Student</asp:ListItem>
                            <asp:ListItem Value ="alumni">Alumni</asp:ListItem>
