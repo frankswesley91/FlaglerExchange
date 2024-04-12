@@ -23,19 +23,20 @@ namespace FlaglerExchange.Views
         
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //auto disable the major/minor connection
             majorMinorContainer.Visible = false;
 
             if (!IsPostBack)
             {
-
+                //create db queries
                 string selectQuery = "SELECT * FROM Profile @Name, @Address, @Phone, @CampusStatus, @Affiliation, @Photo WHERE UserID = @ProfileID";
 
+                //create connection string
+                var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+                SqlConnection conn = new SqlConnection(connectionString);
+                //connect to the db
                 try
                 {
-                    var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
-                    SqlConnection conn = new SqlConnection(connectionString);
-
                     conn.Open();
                     SqlCommand cmd = new SqlCommand();
 
@@ -46,12 +47,15 @@ namespace FlaglerExchange.Views
                     cmd.Parameters.AddWithValue("CampusStatus", onCampusRBList.SelectedValue);
                     cmd.Parameters.AddWithValue("Affiliation", affiliationDDList.SelectedValue);
                     cmd.Parameters.AddWithValue("Photo", profileImage);
+                    cmd.ExecuteNonQuery(); 
 
                 }
                 catch
                 {
                     
                 }
+                conn.Close(); 
+
 
                 DisableElements(); 
             }
@@ -91,6 +95,31 @@ namespace FlaglerExchange.Views
                 editProfileButton.Text = "Edit Profile";
 
 
+                string insertQuery = "INSERT INTO Profile (Name, Address, Phone, CampusStatus, Affiliation, Photo) VALUES (@Name, @Address, @Phone, @CampusStatus, @Affiliation, @Photo) WHERE UserID = @ProfileID";
+
+
+                var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+                SqlConnection conn = new SqlConnection(connectionString);
+                //connect to the db
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand();
+
+                    cmd.CommandText = insertQuery;
+                    cmd.Parameters.AddWithValue("Name", nameTB.Text);
+                    cmd.Parameters.AddWithValue("Phone", phoneTB.Text);
+                    cmd.Parameters.AddWithValue("Address", addressTB.Text);
+                    cmd.Parameters.AddWithValue("CampusStatus", onCampusRBList.SelectedValue);
+                    cmd.Parameters.AddWithValue("Affiliation", affiliationDDList.SelectedValue);
+                    cmd.Parameters.AddWithValue("Photo", profileImage);
+                    cmd.ExecuteNonQuery();
+                }
+                catch
+                {
+
+                }
+                conn.Close();
             }
 
         }
