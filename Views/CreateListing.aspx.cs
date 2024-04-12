@@ -66,8 +66,8 @@ namespace FlaglerExchange.Views
                 {
                     sqlCommand.Parameters.AddWithValue("ListingName", listName.Text);
                     sqlCommand.Parameters.AddWithValue("ListingStatus", listingAvailabillity.SelectedIndex);
-                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Stuff");
-                    sqlCommand.Parameters.AddWithValue("ListingImage", "image");
+                    sqlCommand.Parameters.AddWithValue("ListingDescription", listingDescription.Value);
+                    sqlCommand.Parameters.AddWithValue("ListingImage", "Image");
                     sqlCommand.Parameters.AddWithValue("Price", listingPrice.Text);
                     sqlCommand.Parameters.AddWithValue("UserID", "1");
                     sqlCommand.Parameters.AddWithValue("PostDate", DateTime.UtcNow);
