@@ -71,6 +71,15 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
+
+.indexNav a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indexNav a:hover, .indexNav a:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 div#profile-container.container{
     display: flex; 
     justify-items: flex-end;
@@ -138,11 +147,7 @@ h5{
 
 
 <!---------------------------------------------- Main Body Content for this page--------------------------------------->
-    <div>
-        <p style="font-size:xx-large">
-            ALEX
-        </p>
-    </div>
+   <br />
 
    <div id="profileMainContent" class ="container-fluid", style="background-color: white; align-content: normal; padding-left: 150px; font-family: 'Times New Roman'; "> 
        <div class ="row" >

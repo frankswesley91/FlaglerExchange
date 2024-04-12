@@ -71,6 +71,15 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
+/*Java Script cool animation stuff*/
+.indexNav a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indexNav a:hover, .indexNav a:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
 
 /*CSS FOR LOGIN/PASSWORD FEATURE*/
@@ -184,6 +193,7 @@ aside {
         <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
         <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Login.aspx">Logout</a></li>
     </ul>
+        
 </nav>
 
 <!---------------------------------------Login and Password Portion--------------------------------------------->
@@ -202,7 +212,8 @@ aside {
             <br />
             <br />
             <label for="password">Password:</label>
-            <asp:TextBox class="input" ID="userPassword" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="userPassword" runat="server" Width="258px" TextMode="Password"></asp:TextBox>
+            
             <br />
             <br />
 
