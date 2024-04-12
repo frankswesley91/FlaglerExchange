@@ -50,12 +50,12 @@ namespace FlaglerExchange.Views
                 sqlConnection.Open();
                 using (var sqlCommand = new SqlCommand(insertStatement, sqlConnection))
                 {
-                    sqlCommand.Parameters.AddWithValue("ListingName", "OldTextbook");
+                    sqlCommand.Parameters.AddWithValue("ListingName", "NewTextbook");
                     sqlCommand.Parameters.AddWithValue("ListingStatus", "Available");
-                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Available, need gone ASAP");
+                    sqlCommand.Parameters.AddWithValue("ListingDescription", "Available, still want it");
                     sqlCommand.Parameters.AddWithValue("ListingImage", "");
                     sqlCommand.Parameters.AddWithValue("Price", "19.99");
-                    sqlCommand.Parameters.AddWithValue("UserID", "1");
+                    sqlCommand.Parameters.AddWithValue("UserID", "2");
                     sqlCommand.Parameters.AddWithValue("PostDate", "4/11/2024");
                     sqlCommand.ExecuteNonQuery();
                 }
