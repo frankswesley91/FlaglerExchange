@@ -67,6 +67,15 @@ nav li a.indexNava:hover{
     color: white;
 }
 
+.indexNav a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indexNav a:hover, .indexNav a:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 .create-listing-button {
     margin-top: 20px;
     padding: 10px;

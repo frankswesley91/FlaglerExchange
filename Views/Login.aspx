@@ -71,6 +71,15 @@ nav li a.indexNava:hover{
     background-color: #9e2339;
     color: white;
 }
+/*Java Script cool animation stuff*/
+.indexNav a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.indexNav a:hover, .indexNav a:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
 
 
 /*CSS FOR LOGIN/PASSWORD FEATURE*/
@@ -160,16 +169,82 @@ aside {
     margin: 0 auto;
     font-family: 'Times New Roman';
 }
+/*Light theme*/
+:root {
+    background-color: #9e2339;
+    --text-color: #333;
+    --form-background: #f0f0f0;
+    --form-text: #333;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    background-color: #9e2339;
+    --text-color: #ccc;
+    --form-background: #444;
+    --form-text: #ccc;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-container {
+    background-color: var(--form-background);
+    color: var(--form-text);
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
 
 
 </style>
 
     <!--Index.cshtml will be where we construct the home page and nav bar. We will include a navigation menue for logining that will send the user to a place to login.-->
+<div style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+    <button class="more-info" id="theme-toggle" onclick="toggleTheme()">Switch to Dark Mode</button>
+</div>
+
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateButtonText();
+        }
+
+        function updateButtonText() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            const button = document.getElementById('theme-toggle');
+            button.textContent = currentTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        }
+
+        // Load theme from localStorage on initial load
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.setAttribute('data-theme', savedTheme);
+            updateButtonText();
+        }
+    </script>
+
+
+
+
+
+
+
 <div class="text-center">
     <h1 class="title" style="color:white">Flagler Exchange</h1>
     <img src="/Images/Flagler.jpeg" alt="Flagler Logo"/>
     <p class="slogan"style="color:white">An easy platform to trade your items!</p>
 </div>
+    =
 
 <!--Basic Nav bar allowing for the navigation to different parts of the site (THIS WILL BE CHANGED OBVIOUSLY)-->
 <nav class="indexNav">
@@ -184,6 +259,7 @@ aside {
         <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Profile.aspx">Profile</a></li>
         <li class="indexNavList" style="border-style:double; border-color:#9e2339; border-width:thick"><a class="indexNava" href="/Views/Login.aspx">Logout</a></li>
     </ul>
+        
 </nav>
 
 <!---------------------------------------Login and Password Portion--------------------------------------------->
@@ -202,7 +278,8 @@ aside {
             <br />
             <br />
             <label for="password">Password:</label>
-            <asp:TextBox class="input" ID="userPassword" runat="server" Width="258px"></asp:TextBox>
+            <asp:TextBox class="input" ID="userPassword" runat="server" Width="258px" TextMode="Password"></asp:TextBox>
+            
             <br />
             <br />
 

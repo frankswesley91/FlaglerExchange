@@ -43,15 +43,7 @@ namespace FlaglerExchange.Views
 
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
-            //Make variables
           
-
-
-
-
-
-
-
             // Navigate to the More Info page
 
             var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
@@ -80,9 +72,6 @@ namespace FlaglerExchange.Views
 
         }
  
-       /* protected System.Void ButtonToMyListingPage_Click(System.Object sender, System.EventArgs e)
-        {
-
-        }*/
+       
     }
 }
