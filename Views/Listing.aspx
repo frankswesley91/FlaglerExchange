@@ -174,124 +174,18 @@ img.Product {
 
         <!------------------------------------------------------------MY LISTINGS------------------------------------------------------------------->
         <!--Row #1-->
-        <!-------------Product#1---------->
-     <div class="row">
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
-
-                    </td>
-                </tr>
-             
-                 <tr>
-                     <td>
-            <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToEditListingPage1" runat="server" Height="39px" Text="Edit Listing" OnClick="ButtonToEditListingPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel1" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                </tr>
-             </table>
-        </div>
-
-         <!-------------Product#2---------->
-         
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage2" runat="server" ImageUrl="~/Images/backpack.jpeg" AlternateText="Backpack" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-             <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToEditListingPage2" runat="server" Height="39px" Text="Edit Listing" OnClick="ButtonToEditListingPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel2" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                 </tr>
+    <asp:ListView ID="ListView1" runat="server">
+            <ItemTemplate>
+        <div>
+            <table>
+                <tr><td><h3><%#Eval("ListingName") %></h3></td></tr>
+                <tr><td><h3><%#Eval("Price") %></h3></td></tr>
+                <tr><td><h3> <asp:Button class=more-info ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/></h3></td></tr>
             </table>
         </div>
-
-        <!-------------Product#3---------->
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage3" runat="server" ImageUrl="~/Images/bed.jpeg" AlternateText="Bed" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToEditListingPage3" runat="server" Height="39px" Text="Edit Listing" OnClick="ButtonToEditListingPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel3" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                </tr>
-             </table>
-       </div>
-    </div>
-
-        <!--Row #2-->
-        <!-------------Product#4---------->
-      <div class="row">
-        <div class="column">
-            <table style ="margin: 0 auto;">
-                <tr>
-                    <td>
-                <asp:Image class="Product" ID="ProductImage4" runat="server" ImageUrl="~/Images/car.jpeg" AlternateText="Car" />
-                   </td>
-                </tr>
-                <tr>
-                    <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToEditListingPage4" runat="server" Height="39px" Text="Edit Listing" OnClick="ButtonToEditListingPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel4" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                    </tr>
-             </table>
-        </div>
-       
-
-        <!-------------Product#5---------->
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage5" runat="server" ImageUrl="~/Images/Controller.jpeg" AlternateText="Controller" />
-                    </td>
-                </tr>
-
-                <tr>
-                   <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToEditListingPage5" runat="server" Height="39px" Text="Edit Listing" OnClick="ButtonToEditListingPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel5" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                   </td>
-                </tr>
-             </table>
-        </div>
-
-
-        <!-------------Product#6---------->
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage6" runat="server" ImageUrl="~/Images/labtop.jpeg" AlternateText="labtop" />
-                    </td>
-                </tr>
-                     <tr>
-                        <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToEditListingPage6" runat="server" Height="39px" Text="Edit Listing" OnClick="ButtonToEditListingPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel6" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-        </div>
-     </div>
+    </ItemTemplate>
+    </asp:ListView>
+    
 
         
     </body>

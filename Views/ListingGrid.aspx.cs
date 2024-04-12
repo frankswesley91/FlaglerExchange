@@ -22,5 +22,9 @@ namespace FlaglerExchange.Views
             ListView1.DataSource = dt;
             ListView1.DataBind();
         }
+        protected void ButtonToItemPage_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/Item.aspx");
+        }
     }
 }

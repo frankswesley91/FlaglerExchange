@@ -7,6 +7,7 @@
             <table>
                 <tr><td><h3><%#Eval("ListingName") %></h3></td></tr>
                 <tr><td><h3><%#Eval("Price") %></h3></td></tr>
+                <tr><td><h3> <asp:Button ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/></h3></td></tr>
             </table>
         </div>
     </ItemTemplate>
