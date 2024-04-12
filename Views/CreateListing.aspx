@@ -129,6 +129,18 @@ input[type="email"] {
 .createListingLabel {
     font-size: xx-large;
 }
+
+.input{
+    font-family: 'Times New Roman';
+}
+
+
+.alert-warning{
+    font-size: large;
+    align-content: center;
+    margin: 0 auto;
+    font-family: 'Times New Roman';
+}
     </style>
 
 
@@ -224,6 +236,20 @@ input[type="email"] {
         <tr>
             <td>
                 <asp:TextBox class="input" ID="listingPrice" runat="server" Width="258px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:RegularExpressionValidator
+                        ID="revPrice" 
+                        runat="server" 
+                        ControlToValidate="listingprice" 
+                        ErrorMessage="Please enter a valid number (whole or decimal)" 
+                        ValidationExpression="^\d+(\.\d{1,2})?$" 
+                        ForeColor="Red"
+                        Display="Dynamic"
+                        class="alert-warning">
+                    </asp:RegularExpressionValidator>
             </td>
         </tr>
         
