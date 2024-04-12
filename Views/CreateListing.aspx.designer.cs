@@ -33,13 +33,13 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label label2;
 
         /// <summary>
-        /// listingName control.
+        /// listName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox listingName;
+        protected global::System.Web.UI.WebControls.TextBox listName;
 
         /// <summary>
         /// AddImageButton control.
@@ -69,6 +69,15 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.Label ItemDescriptionlabel;
 
         /// <summary>
+        /// listingDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea listingDescription;
+
+        /// <summary>
         /// ItemPriceLabel control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace FlaglerExchange.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox listingPrice;
+
+        /// <summary>
+        /// revPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPrice;
 
         /// <summary>
         /// Label5 control.
@@ -105,175 +123,175 @@ namespace FlaglerExchange.Views
         protected global::System.Web.UI.WebControls.CheckBoxList listingCategories;
 
         /// <summary>
-        /// Category1 control.
+        /// CategoryElectronics control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category1;
+        protected global::System.Web.UI.WebControls.ListItem CategoryElectronics;
 
         /// <summary>
-        /// Category2 control.
+        /// CategoryPets control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category2;
+        protected global::System.Web.UI.WebControls.ListItem CategoryPets;
 
         /// <summary>
-        /// Category3 control.
+        /// CategoryBooks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category3;
+        protected global::System.Web.UI.WebControls.ListItem CategoryBooks;
 
         /// <summary>
-        /// Category4 control.
+        /// CategoryFurtniture control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category4;
+        protected global::System.Web.UI.WebControls.ListItem CategoryFurtniture;
 
         /// <summary>
-        /// Category5 control.
+        /// CategoryTools control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category5;
+        protected global::System.Web.UI.WebControls.ListItem CategoryTools;
 
         /// <summary>
-        /// Category6 control.
+        /// CategoryGames control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category6;
+        protected global::System.Web.UI.WebControls.ListItem CategoryGames;
 
         /// <summary>
-        /// Category7 control.
+        /// CategoryClothing control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category7;
+        protected global::System.Web.UI.WebControls.ListItem CategoryClothing;
 
         /// <summary>
-        /// Category8 control.
+        /// CategoryPhones control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category8;
+        protected global::System.Web.UI.WebControls.ListItem CategoryPhones;
 
         /// <summary>
-        /// Category9 control.
+        /// CategoryBags control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category9;
+        protected global::System.Web.UI.WebControls.ListItem CategoryBags;
 
         /// <summary>
-        /// Category10 control.
+        /// CategoryJewelry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category10;
+        protected global::System.Web.UI.WebControls.ListItem CategoryJewelry;
 
         /// <summary>
-        /// Category11 control.
+        /// CategoryAccessories control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category11;
+        protected global::System.Web.UI.WebControls.ListItem CategoryAccessories;
 
         /// <summary>
-        /// Category12 control.
+        /// CategoryPhotos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category12;
+        protected global::System.Web.UI.WebControls.ListItem CategoryPhotos;
 
         /// <summary>
-        /// Category13 control.
+        /// CategorySchool control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category13;
+        protected global::System.Web.UI.WebControls.ListItem CategorySchool;
 
         /// <summary>
-        /// Category14 control.
+        /// CategoryPlants control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category14;
+        protected global::System.Web.UI.WebControls.ListItem CategoryPlants;
 
         /// <summary>
-        /// Category15 control.
+        /// CategoryShoes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category15;
+        protected global::System.Web.UI.WebControls.ListItem CategoryShoes;
 
         /// <summary>
-        /// Category16 control.
+        /// CategoryFood control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category16;
+        protected global::System.Web.UI.WebControls.ListItem CategoryFood;
 
         /// <summary>
-        /// Category17 control.
+        /// CategorySports control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category17;
+        protected global::System.Web.UI.WebControls.ListItem CategorySports;
 
         /// <summary>
-        /// Category18 control.
+        /// CategoryHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category18;
+        protected global::System.Web.UI.WebControls.ListItem CategoryHome;
 
         /// <summary>
-        /// Category19 control.
+        /// CategoryCleaning control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListItem Category19;
+        protected global::System.Web.UI.WebControls.ListItem CategoryCleaning;
 
         /// <summary>
         /// Label3 control.
