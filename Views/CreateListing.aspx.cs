@@ -54,7 +54,7 @@ namespace FlaglerExchange.Views
 
             // Navigate to the More Info page
 
-            var connectionString = ConfigurationManager.ConnectionStrings["LocalHost"].ConnectionString;
+            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
 
             var insertStatement = "INSERT into Listing (ListingName, ListingStatus, ListingDescription, ListingImage" +
                     ", Price, UserID, PostDate) values (@ListingName, @ListingStatus," +

@@ -14,7 +14,7 @@ namespace FlaglerExchange.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var connectionString = ConfigurationManager.ConnectionStrings["LocalHost"].ConnectionString;
+            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
             SqlConnection con = new SqlConnection(connectionString);
             SqlDataAdapter sda = new SqlDataAdapter("select * from Listing", con);
             DataTable dt = new DataTable();
