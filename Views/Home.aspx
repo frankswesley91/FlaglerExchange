@@ -169,6 +169,9 @@ img.Product {
     padding: 20px;
     box-sizing: border-box;
     float: left;
+    border-radius: 10px; /* Rounded corners */
+    border-color: black;
+    border:solid;
 }
 
 .main-content {
