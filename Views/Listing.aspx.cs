@@ -23,6 +23,8 @@ namespace FlaglerExchange.Views
             ListView1.DataBind();
 
             Session["CreateEditListingLabel"] = "Edit Listing";
+
+
         }
 
         protected void ButtonToEditListingPage_Click(object sender, EventArgs e)
