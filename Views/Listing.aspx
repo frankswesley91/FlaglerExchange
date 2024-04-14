@@ -136,35 +136,57 @@ img.Product {
 .more-info:hover{
     background-color: #9e2339;
     color: white;
+    border-color: #fdb924;
 }
 
 
 /*Grid list view stuff*/
 
-.grid-container {
-    display: flex;
-    gap: 10px; /* spacing between grid items */
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Three items per row */
+    grid-gap: 20px;
+    padding: 20px;
 }
 
 .grid-item {
-    padding: 10px; /* Padding within each grid item */
-    border: 1px solid #fdb924; /* Border for visibility */
-    background-color: var(--form-background);
-    color: var(--form-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Gold color */
+    border: 5px solid #ffd700; /* Darker gold border */
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
+.grid-item:hover {
+    transform: translateY(-10px) scale(1.05); /* 3D hover effect */
+    box-shadow: 0 15px 24px rgba(0,0,0,0.25); /* Enhanced shadow on hover */
+}
+
+.Product {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
 
 .DBdata {
-    font-family: 'Times New Roman'; 
-    font-weight: bold;
-    border: 1px solid #ccc;
-    color: white;
-    border-style:groove;
-    border-color: #fdb924;
-    margin-top: 10px;
-   padding: 10px;
-
+    margin: 10px 0;
+    font-family: 'Times New Roman';
+    font-size: large;
 }
+
+.more-info {
+    width: 80%;  /* adjust as needed */
+    padding: 10px;
+    margin-top: 10px;  /* spacing from the element above */
+}
+
+
     </style>
 
 
@@ -210,36 +232,21 @@ img.Product {
         <!------------------------------------------------------------MY LISTINGS------------------------------------------------------------------->
         <!--Row #1-->
     <asp:ListView ID="ListView1" runat="server">
-            <LayoutTemplate>
-               <table id="itemPlaceholder" runat="server" class="table-grid"></table>
-            </LayoutTemplate>
-            <ItemTemplate>
-        <div class="row">
-        <div class="column">
-           <div class="grid-item">
-            <table style="margin: 0 auto">
-                <tr>
-                    <td>
-                <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
-
-                    </td>
-                </tr>
-                    <tr><td></td></tr>
-                <tr><td class="DBdata"><%#Eval("ListingName") %></td></tr>
-                <tr><td class="DBdata">$<%#Eval("Price") %></td></tr>
-                 <tr>
-                     <td>
-            <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-                    </td>
-                </tr>
-                
-             </table>
-           </div>
+    <LayoutTemplate>
+        <div class="table-grid">
+            <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
         </div>
-      </div>
+    </LayoutTemplate>
+    <ItemTemplate>
+        <div class="grid-item">
+            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
+            <div class="DBdata"><%# Eval("ListingName") %></div>
+            <div class="DBdata">$<%# Eval("Price") %></div>
+            <asp:Button ID="ButtonToItemPage" runat="server" Text="More Info" OnClick="ButtonToItemPage_Click" class="more-info" />
+        </div>
     </ItemTemplate>
-    </asp:ListView>     
+</asp:ListView>
+
     </body>
 </asp:Content>
 
