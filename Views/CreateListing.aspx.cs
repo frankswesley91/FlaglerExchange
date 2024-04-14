@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -43,7 +44,49 @@ namespace FlaglerExchange.Views
 
         protected void ButtonToMyListingPage_Click(object sender, EventArgs e)
         {
-          
+            string destinationFilePath = "", sqlFilePath= ""; 
+
+            //Possible Image URL storage code?
+
+            if (listingImage.HasFile)
+            {
+                try
+                {
+                    //Get the file name and extension
+                    string fileName =
+                        Path.GetFileName(listingImage.FileName);
+                    string fileExtension =
+                        Path.GetExtension(fileName);
+
+
+                    // Contruct the destination file path
+                    destinationFilePath = Path.Combine(Server.MapPath("~/Images/"), fileName);
+                    sqlFilePath = "~/Images/" + fileName;
+
+
+                    // Save the uploaded file to the destination folder
+                    listingImage.SaveAs(destinationFilePath);
+
+
+                    // Display a success message
+                }
+
+                catch
+                {
+                    //Display an error message still needs labels set up
+                }
+
+            }
+            else
+            {
+                //Display a message if no file was uploaded still needs label set up
+            }
+            
+
+
+
+
+
             // Navigate to the More Info page
 
             var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
@@ -59,7 +102,7 @@ namespace FlaglerExchange.Views
                     sqlCommand.Parameters.AddWithValue("ListingName", listName.Text);
                     sqlCommand.Parameters.AddWithValue("ListingStatus", listingAvailabillity.SelectedIndex);
                     sqlCommand.Parameters.AddWithValue("ListingDescription", listingDescription.Value);
-                    sqlCommand.Parameters.AddWithValue("ListingImage", "Image");
+                    sqlCommand.Parameters.AddWithValue("ListingImage", sqlFilePath);
                     sqlCommand.Parameters.AddWithValue("Price", listingPrice.Text);
                     sqlCommand.Parameters.AddWithValue("UserID", "1");
                     sqlCommand.Parameters.AddWithValue("PostDate", DateTime.UtcNow);

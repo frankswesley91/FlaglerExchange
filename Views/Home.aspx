@@ -135,7 +135,7 @@ button.Search{
 }
 
 img.Product {
-  max-width: 200px;
+  max-width: 300px;
   height: 200px;
 
 }
@@ -376,7 +376,7 @@ h2 {
     </LayoutTemplate>
     <ItemTemplate>
         <div class="grid-item">
-            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
+            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl=<%# Eval("ListingImage") %> AlternateText="Listing" />
             <div class="DBdata"><%# Eval("ListingName") %></div>
             <div class="DBdata">$<%# Eval("Price") %></div>
             <asp:Button ID="ButtonToItemPage" runat="server" Text="More Info" OnClick="ButtonToItemPage_Click" class="more-info" />
