@@ -167,7 +167,7 @@ img.Product {
 .grid-item:hover {
     transform: translateY(-10px) scale(1.05); /* 3D hover effect */
     box-shadow: 0 15px 24px rgba(0,0,0,0.25); /* Enhanced shadow on hover */
-    background-color: #ffd700; /* Gold color */
+    background-color: #fdb924;
     border: 5px solid black;
     color: black;
     

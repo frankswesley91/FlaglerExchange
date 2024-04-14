@@ -204,6 +204,60 @@ h2 {
 }
 
 
+/* HOME SCREEN GRID STUFFFFFFF*/
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Three items per row */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #9e2339; /* Gold color */
+    border: 5px solid #ffd700; /* Darker gold border */
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    color: white;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px) scale(1.05); /* 3D hover effect */
+    box-shadow: 0 15px 24px rgba(0,0,0,0.25); /* Enhanced shadow on hover */
+    background-color: #fdb924; /* Gold color */
+    border: 5px solid black;
+    color: black;
+    
+}
+
+.Product {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.DBdata {
+    margin: 10px 0;
+    font-family: 'Times New Roman';
+    font-size: larger;
+}
+
+.DBdata:hover{
+    color: black;
+}
+
+.more-info {
+    width: 80%;  /* adjust as needed */
+    padding: 10px;
+    margin-top: 10px;  /* spacing from the element above */
+}
+
 </style>
 
     
@@ -301,186 +355,21 @@ h2 {
  <!----------------------------IMAGES OF THE PRODUCTS AND THEIR MORE INFO BUTTONS!--------------------------------->
 
         <!----THIS WILL NEED TO BE ON ANOTHER FILE I THINK, HOW DO WE GET THE PAGE TO REFRESH.----->
-        <asp:GridView ID="giveResults" runat="server"></asp:GridView>
-        <!--Row #1-->
-        <!-------------Product#1---------->
-    
-     <div class="row">
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
-
-                    </td>
-                </tr>
-             
-                 <tr>
-                     <td>
-            <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel1" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                </tr>
-             </table>
+         <asp:ListView ID="ListView1" runat="server">
+    <LayoutTemplate>
+        <div class="table-grid">
+            <asp:PlaceHolder ID="itemPlaceholder" runat="server"></asp:PlaceHolder>
         </div>
-
-         <!-------------Product#2---------->
-         
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage2" runat="server" ImageUrl="~/Images/backpack.jpeg" AlternateText="Backpack" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-             <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage2" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel2" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                 </tr>
-            </table>
+    </LayoutTemplate>
+    <ItemTemplate>
+        <div class="grid-item">
+            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
+            <div class="DBdata"><%# Eval("ListingName") %></div>
+            <div class="DBdata">$<%# Eval("Price") %></div>
+            <asp:Button ID="ButtonToItemPage" runat="server" Text="More Info" OnClick="ButtonToItemPage_Click" class="more-info" />
         </div>
-
-        <!-------------Product#3---------->
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage3" runat="server" ImageUrl="~/Images/bed.jpeg" AlternateText="Bed" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage3" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel3" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                </tr>
-             </table>
-       </div>
-    </div>
-
-        <!--Row #2-->
-        <!-------------Product#4---------->
-      <div class="row">
-        <div class="column">
-            <table style ="margin: 0 auto;">
-                <tr>
-                    <td>
-                <asp:Image class="Product" ID="ProductImage4" runat="server" ImageUrl="~/Images/car.jpeg" AlternateText="Car" />
-                   </td>
-                </tr>
-                <tr>
-                    <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage4" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel4" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-                    </tr>
-             </table>
-        </div>
-       
-
-        <!-------------Product#5---------->
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage5" runat="server" ImageUrl="~/Images/Controller.jpeg" AlternateText="Controller" />
-                    </td>
-                </tr>
-
-                <tr>
-                   <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage5" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel5" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                   </td>
-                </tr>
-             </table>
-        </div>
-
-
-        <!-------------Product#6---------->
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage6" runat="server" ImageUrl="~/Images/labtop.jpeg" AlternateText="labtop" />
-                    </td>
-                </tr>
-                     <tr>
-                        <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage6" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel6" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-        </div>
-     </div>
-
-        <!---Row #3--->
-        <!-------------Product#7---------->
-      <div class="row">
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage7" runat="server" ImageUrl="~/Images/stuffedcat.jpeg" AlternateText="StuffedCat" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage7" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel7" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                    </td>
-               </tr>
-            </table>
-        </div>
-
-        <!-------------Product#8---------->
-        <div class="column">
-            <table style="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage8" runat="server" ImageUrl="~/Images/Teashirt.jpeg" AlternateText="Teashirt" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage8" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel8" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                   </td>
-               </tr>
-            </table>
-        </div>
-
-
-
-        <!-------------Product#9---------->
-        <div class="column">
-            <table style ="margin: 0 auto;">
-                <tr>
-                    <td>
-             <asp:Image class="Product" ID="ProductImage9" runat="server" ImageUrl="~/Images/textbook.jpeg" AlternateText="Textbook" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                <!---ASP More Info Button and Price Label--->
-             <asp:Button class="more-info" ID="ButtonToItemPage9" runat="server" Height="39px" Text="More Info" OnClick="ButtonToItemPage_Click"/>
-             <asp:Label class="priceLabel" ID="PriceLabel9" runat="server" Text="Insert Price" Font-Names="Times New Roman" Font-Strikeout="False" Font-Bold="true"></asp:Label>
-                   </td>
-                </tr>
-            </table>
-        </div>
-      </div>
+    </ItemTemplate>
+    </asp:ListView>
 
     
 

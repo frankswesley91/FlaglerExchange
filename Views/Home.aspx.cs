@@ -16,7 +16,15 @@ namespace FlaglerExchange.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
+            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Listing", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
+
+            Session["CreateEditListingLabel"] = "Edit Listing";
 
 
         }
@@ -32,10 +40,7 @@ namespace FlaglerExchange.Views
         {
             // This is where you call your method to search the products. 
             // that returns a DataTable and takes the search query as a parameter.
-            DataTable results = SearchItems(SearchTextBox.Text);
-
-            giveResults.DataSource = results;
-            giveResults.DataBind();
+            
         }
 
         //WILL NEED TO UPDATE ONCE WE GET TO LOOK AT THE DATABASE NAD IT GETS CONNECTED!!!!!
