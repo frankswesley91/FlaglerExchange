@@ -116,8 +116,8 @@ nav li a.indexNava:hover{
   text-align: center;
 }
 
-img.Product {
-  max-width: 200px;
+img.Product { 
+  max-width: 300px;
   height: 200px;
 
 }
@@ -136,7 +136,7 @@ img.Product {
 .more-info:hover{
     background-color: #9e2339;
     color: white;
-    border-color: #fdb924;
+    border-color: black;
 }
 
 
@@ -154,18 +154,23 @@ img.Product {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white; /* Gold color */
+    background-color: #9e2339; /* Gold color */
     border: 5px solid #ffd700; /* Darker gold border */
     padding: 15px;
     text-align: center;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    color: white;
 }
 
 .grid-item:hover {
     transform: translateY(-10px) scale(1.05); /* 3D hover effect */
     box-shadow: 0 15px 24px rgba(0,0,0,0.25); /* Enhanced shadow on hover */
+    background-color: #ffd700; /* Gold color */
+    border: 5px solid black;
+    color: black;
+    
 }
 
 .Product {
@@ -177,7 +182,11 @@ img.Product {
 .DBdata {
     margin: 10px 0;
     font-family: 'Times New Roman';
-    font-size: large;
+    font-size: larger;
+}
+
+.DBdata:hover{
+    color: black;
 }
 
 .more-info {
