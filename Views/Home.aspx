@@ -88,18 +88,36 @@ button.Search{
     font-family: 'Times New Roman';
 }
 
- button.Search:hover {
-        background-color: #9e2339;
-         color: white;
-        
-    }
+.search-button{
+     margin-top: 20px;
+    padding: 10px;
+    background-color: #fdb924;
+    color: black;
+    border:solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+}
+
+
+.search-button:hover{
+    background-color: #9e2339;
+    color: white;
+}
+
 
  .search-bar {
-     width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
- }
+    width: 100%;
+    padding: 10px;  /* Adjust padding to your preference */
+    box-sizing: border-box; /* Includes padding and border in the element's width */
+    border: 1px solid #ccc; /* Optional border styling */
+}
+
+
+ .search-elements{
+    width: 100%;  /* Spans full width of the viewport */
+    box-sizing: border-box; 
+}
 
 
  /*-------------Product CSS-------------------------------*/
@@ -288,14 +306,8 @@ h2 {
          <p style="font-size:xx-large; font-family:'Times New Roman'; color: white; ">Welcome back,</p> <asp:Label class="StudentName" ID="userName" runat="server" Text="Enter Student Name" Font-Names="Times New Roman" Font-Strikeout="False"></asp:Label>
               
         <div class="search-elements">
-            <table style="width: 1000px">
-                <tr>
-                    <td>
-            <asp:TextBox class="search-bar" ID="SearchTextBox" runat="server"></asp:TextBox>
-            <asp:Button class="more-info" ID="SearchButton" runat="server" Height="39px" Text="Search" OnClick="btnSearch_Click"/>
-                     </td>
-                    </tr>
-             </table>
+            <asp:TextBox class="search-bar" ID="SearchTextBox" runat="server" width="100%"></asp:TextBox>
+            <asp:Button class="search-button" ID="SearchButton" runat="server" Height="39px" Text="Search" OnClick="btnSearch_Click"/>   
         </div>
         <br />
         <br />
@@ -366,7 +378,7 @@ h2 {
             <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
             <div class="DBdata"><%# Eval("ListingName") %></div>
             <div class="DBdata">$<%# Eval("Price") %></div>
-            <asp:Button ID="ButtonToItemPage" runat="server" Text="More Info" OnClick="ButtonToItemPage_Click" class="more-info" />
+            <asp:Button ID="ButtonToItemPage" runat="server" CommandArgument='<%# Container.DataItemIndex %>' Text="More Info" OnClick="ButtonToItemPage_Click" CommandName="MoreInfo" class="more-info" />
         </div>
     </ItemTemplate>
     </asp:ListView>
