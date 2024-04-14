@@ -36,5 +36,21 @@ namespace FlaglerExchange.Views
             Response.Redirect("/Views/Item.aspx");
         }
 
+
+        //Same c# from the home page to look at more info??? trying to grab the index and query string retrieve it? more info button is currently broken
+        protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            if (String.Equals(e.CommandName, "MoreInfo"))
+            {
+                // Determine the index of the item that was clicked
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                // Use the index to get data key value, e.g., the ID of the item
+                string itemId = ListView1.DataKeys[index].Value.ToString();
+
+                // Navigate to another page with the item ID as a query string
+                Response.Redirect($"Item.aspx?itemID={itemId}");
+            }
+        }
     }
 }

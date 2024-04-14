@@ -16,7 +16,15 @@ namespace FlaglerExchange.Views
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
+            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Listing", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
+
+            Session["CreateEditListingLabel"] = "Edit Listing";
 
 
         }
@@ -32,10 +40,7 @@ namespace FlaglerExchange.Views
         {
             // This is where you call your method to search the products. 
             // that returns a DataTable and takes the search query as a parameter.
-            DataTable results = SearchItems(SearchTextBox.Text);
-
-            giveResults.DataSource = results;
-            giveResults.DataBind();
+            
         }
 
         //WILL NEED TO UPDATE ONCE WE GET TO LOOK AT THE DATABASE NAD IT GETS CONNECTED!!!!!
@@ -96,7 +101,25 @@ namespace FlaglerExchange.Views
                 }
             }
         }
-        
+
+
+
+        //Send and retrieve more info????
+        protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            if (String.Equals(e.CommandName, "MoreInfo"))
+            {
+                // Determine the index of the item that was clicked
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                // Use the index to get data key value, e.g., the ID of the item
+                string itemId = ListView1.DataKeys[index].Value.ToString();
+
+                // Navigate to another page with the item ID as a query string
+                Response.Redirect($"Item.aspx?itemID={itemId}");
+            }
+        }
+
 
 
 
