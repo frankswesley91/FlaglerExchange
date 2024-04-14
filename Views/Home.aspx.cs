@@ -15,16 +15,18 @@ namespace FlaglerExchange.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
-            var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
-            SqlConnection con = new SqlConnection(connectionString);
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Listing", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            ListView1.DataSource = dt;
-            ListView1.DataBind();
+                var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+                SqlConnection con = new SqlConnection(connectionString);
+                SqlDataAdapter sda = new SqlDataAdapter("select * from Listing", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                ListView1.DataSource = dt;
+                ListView1.DataBind();
 
-            Session["CreateEditListingLabel"] = "Edit Listing";
+                Session["CreateEditListingLabel"] = "Edit Listing";
+            
 
 
         }
@@ -40,35 +42,30 @@ namespace FlaglerExchange.Views
         {
             // This is where you call your method to search the products. 
             // that returns a DataTable and takes the search query as a parameter.
+                string searchCriteria = SearchTextBox.Text;
+
+                string constr = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
+                using (SqlConnection con = new SqlConnection(constr))
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.CommandText = "SELECT * FROM Listing WHERE ListingName LIKE '%" + searchCriteria + "%';";
+                        cmd.Connection = con;
+
+
+                        DataTable dt = new DataTable();
+                        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                        {
+                            sda.Fill(dt);
+                            ListView1.DataSource = dt;
+                            ListView1.DataBind();
+                        }
+                    }
+                }
             
         }
 
         //WILL NEED TO UPDATE ONCE WE GET TO LOOK AT THE DATABASE NAD IT GETS CONNECTED!!!!!
-        private DataTable SearchItems(string query)
-        {
-            // Establish your database connection
-            // This connection string should be replaced with your actual database connection string
-            using (SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["Data Source=misapps.flagler.edu;Initial Catalog=Shilliday705;Persist Security Info=True;User ID=shilliday705;Password=39264546"].ConnectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand())
-                {
-                    cmd.Connection = conn;
-                    // Example SQL - you should replace this with your actual query
-                    // and make sure to parameterize it to prevent SQL injection
-                    cmd.CommandText = "SELECT * FROM ListingInfo WHERE ListingName LIKE @query";
-                    cmd.Parameters.AddWithValue("@query", "%" + query + "%");
-
-                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-                    {
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-                        return dt;
-                    }
-                }
-            }
-        }
-      
 
         public void LoadUserName()
         {
@@ -103,27 +100,7 @@ namespace FlaglerExchange.Views
         }
 
 
-
-        //Send and retrieve more info????
-        protected void ListView1_ItemCommand(object sender, ListViewCommandEventArgs e)
-        {
-            if (String.Equals(e.CommandName, "MoreInfo"))
-            {
-                // Determine the index of the item that was clicked
-                int index = Convert.ToInt32(e.CommandArgument);
-
-                // Use the index to get data key value, e.g., the ID of the item
-                string itemId = ListView1.DataKeys[index].Value.ToString();
-
-                // Navigate to another page with the item ID as a query string
-                Response.Redirect($"Item.aspx?itemID={itemId}");
-            }
-        }
-
-
-
-
-
+       
 
 
     }

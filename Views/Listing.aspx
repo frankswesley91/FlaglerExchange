@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Listing.aspx.cs" Inherits="FlaglerExchange.Views.Listing" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Listing.aspx.cs" Inherits="FlaglerExchange.Views.Listing" EnableEventValidation="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         html {
@@ -248,7 +248,7 @@ img.Product {
     </LayoutTemplate>
     <ItemTemplate>
         <div class="grid-item">
-            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl="~/Images/Cat.jpeg" AlternateText="Cat" />
+            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl=<%# Eval("ListingImage") %> AlternateText="Listing" />
             <div class="DBdata"><%# Eval("ListingName") %></div>
             <div class="DBdata">$<%# Eval("Price") %></div>
             <asp:Button ID="ButtonToItemPage" runat="server" Text="More Info" OnClick="ButtonToItemPage_Click" class="more-info" />

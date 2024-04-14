@@ -23,6 +23,7 @@ namespace FlaglerExchange.Views
             string[] showen = images;
             //productImage.ImageUrl = showen[0];
 
+
         }
 
         // redirects user to the profile page, will need updates to go directly to the seller's profile
