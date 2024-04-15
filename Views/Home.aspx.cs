@@ -71,7 +71,7 @@ namespace FlaglerExchange.Views
         {
             //test string to store the userID
             //FIX CONNECTION STRING YOU LOSER
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["FlaglerExchangeDB"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString);
             {
                 try
                 {
