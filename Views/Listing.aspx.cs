@@ -16,7 +16,7 @@ namespace FlaglerExchange.Views
         {
             var connectionString = ConfigurationManager.ConnectionStrings["Shilliday705"].ConnectionString;
             SqlConnection con = new SqlConnection(connectionString);
-            SqlDataAdapter sda = new SqlDataAdapter("select * from Listing", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from Listing WHERE UserID LIKE 1", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             ListView1.DataSource = dt;

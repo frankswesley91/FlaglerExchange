@@ -104,7 +104,7 @@ namespace FlaglerExchange.Views
                     sqlCommand.Parameters.AddWithValue("ListingDescription", listingDescription.Value);
                     sqlCommand.Parameters.AddWithValue("ListingImage", sqlFilePath);
                     sqlCommand.Parameters.AddWithValue("Price", listingPrice.Text);
-                    sqlCommand.Parameters.AddWithValue("UserID", "1");
+                    sqlCommand.Parameters.AddWithValue("UserID", "2");
                     sqlCommand.Parameters.AddWithValue("PostDate", DateTime.UtcNow);
                     sqlCommand.ExecuteNonQuery();
                 }
