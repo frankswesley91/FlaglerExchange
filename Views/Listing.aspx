@@ -248,7 +248,7 @@ img.Product {
     </LayoutTemplate>
     <ItemTemplate>
         <div class="grid-item">
-            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl=<%# Eval("ListingImage") %> AlternateText="Listing" />
+            <asp:Image class="Product" ID="ProductImage1" runat="server" ImageUrl=<%# Eval("ListingImage") %> AlternateText="Listingz" />
             <div class="DBdata"><%# Eval("ListingName") %></div>
             <div class="DBdata">$<%# Eval("Price") %></div>
             <asp:Button ID="ButtonToItemPage" runat="server" Text="More Info" OnClick="ButtonToItemPage_Click" class="more-info" />
